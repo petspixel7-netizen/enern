@@ -24,6 +24,9 @@ Flagg:
 - `--poll-interval`: sekunder mellom hver syklus (default 30)
 - `--min-edge-bps`: minste edge i basispunkter som må til før en handel
 - `--max-orders`: maks antall ordre per syklus
+- `--order-size`: størrelsen på hver ordre (default 10)
+- `--request-timeout`: HTTP-timeout i sekunder
+- `--max-retries`: hvor mange ganger klienten prøver ved feil
 
 Nøkler kan settes som env-variabler:
 
@@ -33,6 +36,9 @@ POLLYMARKET_API_BASE=https://clob.polymarket.com
 POLLYMARKET_POLL_INTERVAL=60
 POLLYMARKET_MIN_EDGE_BPS=75
 POLLYMARKET_MAX_ORDERS_PER_CYCLE=2
+POLLYMARKET_ORDER_SIZE=15
+POLLYMARKET_REQUEST_TIMEOUT=20
+POLLYMARKET_MAX_RETRIES=5
 ```
 
 ## Kjøre 24/7

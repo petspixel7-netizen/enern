@@ -15,6 +15,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--poll-interval", type=float, help="Seconds between polling cycles")
     parser.add_argument("--min-edge-bps", type=float, help="Minimum edge (basis points) to trade")
     parser.add_argument("--max-orders", type=int, help="Maximum number of orders per cycle")
+    parser.add_argument("--order-size", type=float, help="Order size for each submitted trade")
+    parser.add_argument("--request-timeout", type=float, help="HTTP timeout in seconds")
+    parser.add_argument("--max-retries", type=int, help="Number of retries on transient failures")
     return parser.parse_args()
 
 
@@ -26,6 +29,12 @@ def build_config(args: argparse.Namespace) -> BotConfig:
         config.min_edge_bps = args.min_edge_bps
     if args.max_orders:
         config.max_orders_per_cycle = args.max_orders
+    if args.order_size:
+        config.order_size = args.order_size
+    if args.request_timeout:
+        config.request_timeout = args.request_timeout
+    if args.max_retries:
+        config.max_retries = args.max_retries
     config.dry_run = args.dry_run
     return config
 

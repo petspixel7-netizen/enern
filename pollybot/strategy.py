@@ -13,7 +13,9 @@ class MarketSignal:
     reason: str
 
 
-def find_edges(markets: list[dict[str, Any]], *, min_edge_bps: float, max_orders: int) -> list[MarketSignal]:
+def find_edges(
+    markets: list[dict[str, Any]], *, min_edge_bps: float, max_orders: int, order_size: float
+) -> list[MarketSignal]:
     """Pick simple opportunities based on outcome probability mispricing.
 
     The heuristic looks for markets with both "yes" and "no" prices where the
@@ -37,7 +39,7 @@ def find_edges(markets: list[dict[str, Any]], *, min_edge_bps: float, max_orders
                 MarketSignal(
                     market_id=str(market.get("id")),
                     outcome="yes" if yes_price < no_price else "no",
-                    size=10,
+                    size=order_size,
                     price=yes_price if yes_price < no_price else no_price,
                     reason=f"Edge {edge:.0f} bps on {market.get('question', 'unknown')}",
                 )

@@ -18,6 +18,9 @@ class BotConfig:
     poll_interval: float = float(os.environ.get("POLLYMARKET_POLL_INTERVAL", "30"))
     min_edge_bps: float = float(os.environ.get("POLLYMARKET_MIN_EDGE_BPS", "50"))
     max_orders_per_cycle: int = int(os.environ.get("POLLYMARKET_MAX_ORDERS_PER_CYCLE", "1"))
+    order_size: float = float(os.environ.get("POLLYMARKET_ORDER_SIZE", "10"))
+    request_timeout: float = float(os.environ.get("POLLYMARKET_REQUEST_TIMEOUT", "30"))
+    max_retries: int = int(os.environ.get("POLLYMARKET_MAX_RETRIES", "3"))
     dry_run: bool = False
 
     def headers(self) -> dict[str, str]:
