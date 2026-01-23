@@ -7,6 +7,7 @@ from datetime import UTC, datetime, timedelta
 
 from .client import PollymarketClient
 from .config import BotConfig
+from .metrics import BotMetrics
 from .strategy import MarketSignal, find_edges
 
 logger = logging.getLogger(__name__)
@@ -131,6 +132,7 @@ def liquidity_and_spread_ok(market: dict[str, object]) -> tuple[bool, str]:
 async def run_bot(config: BotConfig) -> None:
     client = PollymarketClient(config)
     risk = RiskManager(config)
+    metrics = BotMetrics()
     logger.info("Starting Pollymarket bot with interval %.1fs", config.poll_interval)
     next_scan: datetime = datetime.now(UTC)
 
@@ -141,6 +143,7 @@ async def run_bot(config: BotConfig) -> None:
             pass
         risk.record_market_trade(signal.market_id, now)
         risk.record_trade(0.0, now)
+        metrics.record_execution(0.0)
         if config.dry_run:
             try:
                 logger.info("Dry-run enabled, not sending order: %s", describe_signal(signal))
@@ -169,6 +172,7 @@ async def run_bot(config: BotConfig) -> None:
                     max_orders=config.max_orders_per_cycle,
                     order_size=order_size,
                 )
+                metrics.record_cycle(len(markets), len(signals))
                 market_by_id = {str(market.get("id")): market for market in markets}
 
                 if not signals:
@@ -196,10 +200,15 @@ async def run_bot(config: BotConfig) -> None:
 
                         await _execute_signal(signal, now)
 
+                # Log status report periodically
+                if metrics.should_report_status(interval_minutes=15):
+                    metrics.log_status_report()
+
                 next_scan = now + timedelta(hours=1) if config.hourly_scan else now + timedelta(seconds=config.poll_interval)
 
             except Exception:  # noqa: BLE001 - log unexpected failures per cycle
                 logger.exception("Cycle failed; will retry after backoff")
+                metrics.record_reconnect()
             await asyncio.sleep(config.poll_interval)
     except asyncio.CancelledError:
         logger.info("Bot cancelled, shutting down")
