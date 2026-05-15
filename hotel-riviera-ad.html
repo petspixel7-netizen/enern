@@ -547,55 +547,6 @@
             100% { transform: translateY(-110px) translateX(15px); opacity: 0; }
         }
 
-        /* ── PLAY OVERLAY ── */
-        #play-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(6,15,30,0.92);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 200;
-            cursor: pointer;
-            gap: 2em;
-        }
-        .play-hotel {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            font-size: clamp(10px, 1.5vw, 16px);
-            letter-spacing: 0.8em;
-            color: var(--gold);
-        }
-        .play-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
-            font-size: clamp(36px, 7vw, 88px);
-            color: var(--white);
-            letter-spacing: 0.15em;
-        }
-        .play-btn {
-            width: clamp(56px, 7vw, 90px);
-            height: clamp(56px, 7vw, 90px);
-            border: 1px solid var(--gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1em;
-            transition: all 0.3s ease;
-        }
-        .play-btn:hover { background: var(--gold); }
-        .play-btn svg { width: 32%; fill: var(--gold); margin-left: 6%; }
-        .play-btn:hover svg { fill: var(--navy-dark); }
-        .play-hint {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            font-size: clamp(8px, 1.1vw, 13px);
-            letter-spacing: 0.5em;
-            color: rgba(201,169,110,0.6);
-            text-transform: uppercase;
-        }
 
         /* ── KEYFRAMES ── */
         @keyframes fadeScaleIn {
@@ -630,16 +581,6 @@
     </style>
 </head>
 <body>
-
-<!-- ── PLAY OVERLAY ── -->
-<div id="play-overlay">
-    <span class="play-hotel">HOTEL</span>
-    <span class="play-title">Riviera</span>
-    <div class="play-btn">
-        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-    </div>
-    <span class="play-hint">Spill av reklamefilm · 60 sek</span>
-</div>
 
 <div id="video-wrapper">
     <div id="progress-bar"></div>
@@ -870,9 +811,40 @@
     let fired = new Set();
     let rafId = null;
 
+    function resetAnimations() {
+        SCENES.forEach(s => {
+            const el = document.getElementById(s.id);
+            el.classList.remove('active');
+        });
+        const animatedIds = [
+            'logo-wrap','logo-line','logo-sub',
+            'loc-label','loc-city','loc-sub','loc-rule','loc-dist',
+            'rooms-label','rc1','rc2','rc3','rc4',
+            'well-glyph','well-title','well-sub','wi1','wi2','wi3',
+            'rest-pre','rest-name','rest-div','rest-menu',
+            'cta-badge','cta-title','cta-price','cta-offer','cta-btn',
+            'outro-tagline','outro-logo','outro-rule','outro-url'
+        ];
+        animatedIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.className = el.className.replace(/\b(animate|a1|a2|a3|a4|b1|b2|b3)\b/g, '').trim();
+            void el.offsetWidth; // force reflow
+        });
+        document.getElementById('stars').innerHTML = '';
+    }
+
     function tick(ts) {
         if (!t0) t0 = ts;
         const elapsed = (ts - t0) / 1000;
+
+        if (elapsed >= TOTAL) {
+            resetAnimations();
+            fired.clear();
+            t0 = ts;
+            rafId = requestAnimationFrame(tick);
+            return;
+        }
 
         document.getElementById('progress-bar').style.width =
             Math.min(elapsed / TOTAL * 100, 100) + '%';
@@ -892,19 +864,10 @@
             }
         });
 
-        if (elapsed < TOTAL) rafId = requestAnimationFrame(tick);
+        rafId = requestAnimationFrame(tick);
     }
 
-    document.getElementById('play-overlay').addEventListener('click', function () {
-        this.style.display = 'none';
-        t0 = null;
-        fired.clear();
-        SCENES.forEach(s => {
-            document.getElementById(s.id).classList.remove('active');
-        });
-        if (rafId) cancelAnimationFrame(rafId);
-        rafId = requestAnimationFrame(tick);
-    });
+    rafId = requestAnimationFrame(tick);
 </script>
 </body>
 </html>
