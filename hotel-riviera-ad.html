@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Riviera — Reklamevideo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C9A96E;
+            --gold-light: #E8D5A3;
+            --navy: #0B1F3A;
+            --navy-dark: #060F1E;
+            --white: #F8F6F0;
+            --cream: #F2EDE3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        #video-wrapper {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            background: var(--gold);
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s linear;
+        }
+
+        /* ── SCENES ── */
+        .scene {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 1.4s ease-in-out;
+            overflow: hidden;
+        }
+        .scene.active { opacity: 1; }
+
+        /* ── SCENE 1: LOGO REVEAL ── */
+        #scene1 { background: #000; }
+
+        .logo-wrap {
+            text-align: center;
+            opacity: 0;
+            animation: none;
+        }
+        .logo-wrap.animate { animation: fadeScaleIn 2s ease forwards; }
+
+        .logo-hotel {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(13px, 2vw, 22px);
+            letter-spacing: 0.9em;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.4em;
+        }
+        .logo-riviera {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(52px, 11vw, 130px);
+            letter-spacing: 0.12em;
+            color: var(--white);
+            display: block;
+            line-height: 1;
+        }
+        .logo-line {
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            margin: 1.4em auto;
+        }
+        .logo-line.animate { animation: lineExpand 1.8s ease forwards 1.2s; }
+
+        .logo-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(14px, 2vw, 22px);
+            color: var(--gold-light);
+            opacity: 0;
+            letter-spacing: 0.08em;
+        }
+        .logo-sub.animate { animation: fadeIn 1.5s ease forwards 2.2s; }
+
+        /* ── SCENE 2: LOCATION ── */
+        #scene2 {
+            background: linear-gradient(160deg, #060F1E 0%, #0D2B4A 60%, #143352 100%);
+        }
+
+        .stars { position: absolute; inset: 0; }
+        .star {
+            position: absolute;
+            width: 2px; height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        .waves {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%; height: 28%;
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 200%; height: 100%;
+        }
+        .wave-1 { animation: waveMove 9s ease-in-out infinite; opacity: 0.3; }
+        .wave-2 { animation: waveMove 7s ease-in-out infinite reverse; opacity: 0.2; bottom: -8px; }
+        .wave-3 { animation: waveMove 11s ease-in-out infinite; opacity: 0.15; bottom: -18px; }
+
+        .loc-content { text-align: center; z-index: 2; position: relative; }
+
+        .loc-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(10px, 1.3vw, 15px);
+            letter-spacing: 0.7em;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 1.2em;
+            opacity: 0;
+        }
+        .loc-label.animate { animation: slideUp 1s ease forwards 0.3s; }
+
+        .loc-city {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(52px, 10vw, 120px);
+            color: var(--white);
+            display: block;
+            line-height: 0.95;
+            opacity: 0;
+        }
+        .loc-city.animate { animation: slideUp 1.2s ease forwards 0.6s; }
+
+        .loc-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(20px, 3.5vw, 44px);
+            color: var(--gold-light);
+            display: block;
+            margin-top: 0.3em;
+            opacity: 0;
+        }
+        .loc-sub.animate { animation: slideUp 1.2s ease forwards 0.9s; }
+
+        .loc-rule {
+            width: 0; height: 1px;
+            background: var(--gold);
+            margin: 2em auto;
+        }
+        .loc-rule.animate { animation: lineExpand 1.2s ease forwards 1.5s; }
+
+        .loc-dist {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(10px, 1.5vw, 16px);
+            letter-spacing: 0.35em;
+            color: var(--cream);
+            opacity: 0;
+        }
+        .loc-dist.animate { animation: fadeIn 1s ease forwards 1.9s; }
+
+        /* ── SCENE 3: ROOMS ── */
+        #scene3 { background: var(--navy-dark); }
+
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(9px, 1.1vw, 13px);
+            letter-spacing: 0.8em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 2.5em;
+            opacity: 0;
+        }
+        .section-label.animate { animation: fadeIn 0.8s ease forwards; }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(16px, 2.5vw, 40px);
+            max-width: min(90vw, 900px);
+            width: 100%;
+        }
+
+        .room-card {
+            border: 1px solid rgba(201,169,110,0.2);
+            padding: clamp(18px, 2.5vw, 36px);
+            position: relative;
+            background: rgba(255,255,255,0.02);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .room-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 28px; height: 1px;
+            background: var(--gold);
+        }
+        .room-card.a1 { animation: slideUp 0.9s ease forwards 0.2s; }
+        .room-card.a2 { animation: slideUp 0.9s ease forwards 0.45s; }
+        .room-card.a3 { animation: slideUp 0.9s ease forwards 0.7s; }
+        .room-card.a4 { animation: slideUp 0.9s ease forwards 0.95s; }
+
+        .room-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(16px, 2.2vw, 26px);
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        .room-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(8px, 1vw, 12px);
+            color: rgba(248,246,240,0.55);
+            letter-spacing: 0.04em;
+            line-height: 1.7;
+            display: block;
+            margin-bottom: 1.2em;
+        }
+        .room-price {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: clamp(9px, 1.2vw, 14px);
+            color: var(--gold);
+            letter-spacing: 0.1em;
+        }
+
+        /* ── SCENE 4: WELLNESS ── */
+        #scene4 {
+            background: radial-gradient(ellipse at center, #0A2540 0%, #040C18 100%);
+        }
+
+        .ripples {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.12;
+        }
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            animation: rippleOut 5s ease-out infinite;
+            width: 80px; height: 80px;
+        }
+        .ripple:nth-child(1) { animation-delay: 0s; }
+        .ripple:nth-child(2) { animation-delay: 1.25s; }
+        .ripple:nth-child(3) { animation-delay: 2.5s; }
+        .ripple:nth-child(4) { animation-delay: 3.75s; }
+
+        .well-content { text-align: center; z-index: 2; position: relative; }
+
+        .well-glyph {
+            font-size: clamp(28px, 4vw, 52px);
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.6em;
+            opacity: 0;
+        }
+        .well-glyph.animate { animation: fadeIn 1s ease forwards; }
+
+        .well-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(38px, 7vw, 90px);
+            color: var(--white);
+            display: block;
+            letter-spacing: 0.05em;
+            opacity: 0;
+        }
+        .well-title.animate { animation: slideUp 1.2s ease forwards 0.3s; }
+
+        .well-sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(16px, 2.5vw, 32px);
+            color: var(--gold-light);
+            display: block;
+            margin-top: 0.3em;
+            opacity: 0;
+        }
+        .well-sub.animate { animation: slideUp 1.2s ease forwards 0.6s; }
+
+        .well-list {
+            display: flex;
+            gap: clamp(16px, 4vw, 60px);
+            margin-top: 2.8em;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .well-item {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(8px, 1.1vw, 13px);
+            letter-spacing: 0.35em;
+            color: rgba(248,246,240,0.65);
+            text-transform: uppercase;
+            opacity: 0;
+        }
+        .well-item.b1 { animation: fadeIn 0.8s ease forwards 1.1s; }
+        .well-item.b2 { animation: fadeIn 0.8s ease forwards 1.4s; }
+        .well-item.b3 { animation: fadeIn 0.8s ease forwards 1.7s; }
+
+        /* ── SCENE 5: RESTAURANT ── */
+        #scene5 {
+            background: linear-gradient(135deg, #180C08 0%, #2A150E 55%, #180C08 100%);
+        }
+        .warm-glow {
+            position: absolute;
+            top: 40%; left: 50%;
+            transform: translate(-50%,-50%);
+            width: 60vw; height: 60vw;
+            background: radial-gradient(circle, rgba(190,80,20,0.14) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .rest-content { text-align: center; z-index: 2; position: relative; }
+
+        .rest-pre {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(9px, 1.2vw, 14px);
+            letter-spacing: 0.8em;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 1em;
+            opacity: 0;
+        }
+        .rest-pre.animate { animation: fadeIn 0.8s ease forwards 0.2s; }
+
+        .rest-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: clamp(34px, 6.5vw, 82px);
+            color: var(--white);
+            display: block;
+            line-height: 1.1;
+            opacity: 0;
+        }
+        .rest-name.animate { animation: slideUp 1.2s ease forwards 0.5s; }
+
+        .rest-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 2em 0;
+            opacity: 0;
+            color: var(--gold);
+            font-size: 10px;
+        }
+        .rest-divider::before,
+        .rest-divider::after {
+            content: '';
+            width: 80px; height: 1px;
+            background: var(--gold);
+            opacity: 0.5;
+        }
+        .rest-divider.animate { animation: fadeIn 1s ease forwards 1.2s; }
+
+        .rest-menu {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(9px, 1.3vw, 15px);
+            letter-spacing: 0.3em;
+            color: rgba(248,246,240,0.65);
+            display: block;
+            opacity: 0;
+        }
+        .rest-menu.animate { animation: fadeIn 1s ease forwards 1.5s; }
+
+        /* ── SCENE 6: CTA ── */
+        #scene6 { background: var(--navy-dark); }
+
+        .cta-wrap { text-align: center; max-width: 80%; }
+
+        .cta-badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            padding: 0.5em 2em;
+            margin-bottom: 2em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(8px, 1.1vw, 13px);
+            letter-spacing: 0.5em;
+            color: var(--gold);
+            text-transform: uppercase;
+            opacity: 0;
+        }
+        .cta-badge.animate { animation: fadeIn 0.8s ease forwards 0.2s; }
+
+        .cta-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(38px, 7vw, 90px);
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.3em;
+            opacity: 0;
+        }
+        .cta-title.animate { animation: slideUp 1.2s ease forwards 0.5s; }
+
+        .cta-price {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: clamp(13px, 1.8vw, 22px);
+            color: var(--gold);
+            display: block;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.8em;
+            opacity: 0;
+        }
+        .cta-price.animate { animation: slideUp 1s ease forwards 0.8s; }
+
+        .cta-offer {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(9px, 1.2vw, 14px);
+            color: rgba(248,246,240,0.55);
+            display: block;
+            letter-spacing: 0.1em;
+            margin-bottom: 3em;
+            opacity: 0;
+        }
+        .cta-offer.animate { animation: fadeIn 0.8s ease forwards 1.1s; }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy-dark);
+            padding: 1em 3em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: clamp(9px, 1.2vw, 13px);
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            opacity: 0;
+        }
+        .cta-btn.animate { animation: fadeIn 1s ease forwards 1.5s; }
+
+        /* ── SCENE 7: OUTRO ── */
+        #scene7 { background: #000; }
+
+        .outro-wrap { text-align: center; }
+
+        .outro-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(18px, 3.2vw, 46px);
+            color: var(--white);
+            display: block;
+            margin-bottom: 2em;
+            max-width: 80vw;
+            line-height: 1.4;
+            opacity: 0;
+        }
+        .outro-tagline.animate { animation: fadeIn 2.5s ease forwards; }
+
+        .outro-logo { opacity: 0; }
+        .outro-logo.animate { animation: fadeIn 1.5s ease forwards 1.8s; }
+
+        .outro-hotel-txt {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(10px, 1.6vw, 18px);
+            letter-spacing: 0.9em;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.3em;
+        }
+        .outro-riviera-txt {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(38px, 8vw, 100px);
+            color: var(--white);
+            letter-spacing: 0.18em;
+            display: block;
+        }
+        .outro-rule {
+            width: 0; height: 1px;
+            background: var(--gold);
+            margin: 1.4em auto;
+        }
+        .outro-rule.animate { animation: lineExpand 1.8s ease forwards 2.8s; }
+
+        .outro-url {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(9px, 1.2vw, 14px);
+            letter-spacing: 0.35em;
+            color: rgba(201,169,110,0.65);
+            display: block;
+            opacity: 0;
+        }
+        .outro-url.animate { animation: fadeIn 1s ease forwards 3.2s; }
+
+        /* ── PARTICLES ── */
+        .particle {
+            position: absolute;
+            width: 2px; height: 2px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: particleFloat 7s ease-in-out infinite;
+            opacity: 0;
+        }
+        @keyframes particleFloat {
+            0%   { transform: translateY(0) translateX(0); opacity: 0; }
+            20%  { opacity: 0.5; }
+            80%  { opacity: 0.2; }
+            100% { transform: translateY(-110px) translateX(15px); opacity: 0; }
+        }
+
+        /* ── PLAY OVERLAY ── */
+        #play-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(6,15,30,0.92);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 200;
+            cursor: pointer;
+            gap: 2em;
+        }
+        .play-hotel {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(10px, 1.5vw, 16px);
+            letter-spacing: 0.8em;
+            color: var(--gold);
+        }
+        .play-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: clamp(36px, 7vw, 88px);
+            color: var(--white);
+            letter-spacing: 0.15em;
+        }
+        .play-btn {
+            width: clamp(56px, 7vw, 90px);
+            height: clamp(56px, 7vw, 90px);
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1em;
+            transition: all 0.3s ease;
+        }
+        .play-btn:hover { background: var(--gold); }
+        .play-btn svg { width: 32%; fill: var(--gold); margin-left: 6%; }
+        .play-btn:hover svg { fill: var(--navy-dark); }
+        .play-hint {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: clamp(8px, 1.1vw, 13px);
+            letter-spacing: 0.5em;
+            color: rgba(201,169,110,0.6);
+            text-transform: uppercase;
+        }
+
+        /* ── KEYFRAMES ── */
+        @keyframes fadeScaleIn {
+            0%   { opacity: 0; transform: scale(0.97); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes lineExpand {
+            0%   { width: 0; opacity: 0; }
+            100% { width: 100px; opacity: 1; }
+        }
+        @keyframes fadeIn {
+            0%   { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideUp {
+            0%   { opacity: 0; transform: translateY(22px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes waveMove {
+            0%   { transform: translateX(0); }
+            50%  { transform: translateX(-25%); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50%       { opacity: 0.9; }
+        }
+        @keyframes rippleOut {
+            0%   { transform: scale(1); opacity: 0.9; }
+            100% { transform: scale(10); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── PLAY OVERLAY ── -->
+<div id="play-overlay">
+    <span class="play-hotel">HOTEL</span>
+    <span class="play-title">Riviera</span>
+    <div class="play-btn">
+        <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+    </div>
+    <span class="play-hint">Spill av reklamefilm · 60 sek</span>
+</div>
+
+<div id="video-wrapper">
+    <div id="progress-bar"></div>
+
+    <!-- SCENE 1 · LOGO -->
+    <div class="scene" id="scene1">
+        <div class="particle" style="left:18%;top:72%;animation-delay:0s;animation-duration:6s;"></div>
+        <div class="particle" style="left:42%;top:80%;animation-delay:1.2s;animation-duration:8s;"></div>
+        <div class="particle" style="left:65%;top:75%;animation-delay:2.4s;animation-duration:5.5s;"></div>
+        <div class="particle" style="left:82%;top:68%;animation-delay:0.6s;animation-duration:7s;"></div>
+
+        <div class="logo-wrap" id="logo-wrap">
+            <span class="logo-hotel">HOTEL</span>
+            <span class="logo-riviera">Riviera</span>
+            <div class="logo-line" id="logo-line"></div>
+            <span class="logo-sub" id="logo-sub">Moss · Norge</span>
+        </div>
+    </div>
+
+    <!-- SCENE 2 · LOCATION -->
+    <div class="scene" id="scene2">
+        <div class="stars" id="stars"></div>
+        <div class="waves">
+            <div class="wave wave-1">
+                <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+                    <path d="M0,100 C360,180 720,20 1080,100 C1260,140 1350,60 1440,100 L1440,200 L0,200 Z"
+                          fill="rgba(13,43,74,0.65)"/>
+                </svg>
+            </div>
+            <div class="wave wave-2">
+                <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+                    <path d="M0,80 C300,160 600,20 900,80 C1050,110 1200,40 1440,80 L1440,200 L0,200 Z"
+                          fill="rgba(10,37,64,0.5)"/>
+                </svg>
+            </div>
+            <div class="wave wave-3">
+                <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+                    <path d="M0,120 C240,60 480,180 720,120 C960,60 1200,180 1440,120 L1440,200 L0,200 Z"
+                          fill="rgba(6,15,30,0.7)"/>
+                </svg>
+            </div>
+        </div>
+        <div class="loc-content">
+            <span class="loc-label" id="loc-label">OPPLEV</span>
+            <span class="loc-city"  id="loc-city">Moss</span>
+            <span class="loc-sub"   id="loc-sub">ved sjøen</span>
+            <div  class="loc-rule"  id="loc-rule"></div>
+            <span class="loc-dist"  id="loc-dist">50 MINUTTER FRA OSLO</span>
+        </div>
+    </div>
+
+    <!-- SCENE 3 · ROOMS -->
+    <div class="scene" id="scene3">
+        <div class="section-label" id="rooms-label">OVERNATTING</div>
+        <div class="rooms-grid">
+            <div class="room-card" id="rc1">
+                <span class="room-name">Riviera Stay</span>
+                <span class="room-desc">Franske balkonger med kanal- og byutsikt over Moss</span>
+                <span class="room-price">Fra 1 145 kr / natt</span>
+            </div>
+            <div class="room-card" id="rc2">
+                <span class="room-name">Superior Ocean View</span>
+                <span class="room-desc">Strandnær med marina- og havutsikt</span>
+                <span class="room-price">Fra 1 220 kr / natt</span>
+            </div>
+            <div class="room-card" id="rc3">
+                <span class="room-name">Ocean Front Premium</span>
+                <span class="room-desc">Nærmest vannet — hør bølgene fra sengen</span>
+                <span class="room-price">Fra 1 545 kr / natt</span>
+            </div>
+            <div class="room-card" id="rc4">
+                <span class="room-name">Ocean Front Suite</span>
+                <span class="room-desc">Toppetasje med uovertruffen panoramautsikt</span>
+                <span class="room-price">Fra 2 545 kr / natt</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCENE 4 · WELLNESS -->
+    <div class="scene" id="scene4">
+        <div class="ripples">
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+        </div>
+        <div class="well-content">
+            <span class="well-glyph" id="well-glyph">◈</span>
+            <span class="well-title" id="well-title">Pool &amp; Wellness</span>
+            <span class="well-sub"   id="well-sub">Din personlige flukt</span>
+            <ul class="well-list">
+                <li class="well-item" id="wi1">BASSENG</li>
+                <li class="well-item" id="wi2">SPA &amp; BEHANDLINGER</li>
+                <li class="well-item" id="wi3">DAG SPA PAKKER</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SCENE 5 · RESTAURANT -->
+    <div class="scene" id="scene5">
+        <div class="warm-glow"></div>
+        <div class="rest-content">
+            <span class="rest-pre"  id="rest-pre">RESTAURANTEN</span>
+            <span class="rest-name" id="rest-name">Brasserie Bon Vivant</span>
+            <div  class="rest-divider animate" id="rest-div">✦</div>
+            <span class="rest-menu" id="rest-menu">LUNSJ &nbsp;·&nbsp; MIDDAG &nbsp;·&nbsp; PIZZA &nbsp;·&nbsp; BAR</span>
+        </div>
+    </div>
+
+    <!-- SCENE 6 · CTA -->
+    <div class="scene" id="scene6">
+        <div class="cta-wrap">
+            <span class="cta-badge" id="cta-badge">Spesialtilbud</span>
+            <span class="cta-title" id="cta-title">Riviera Sundays</span>
+            <span class="cta-price" id="cta-price">Fra 1 795 kr for 2 personer</span>
+            <span class="cta-offer" id="cta-offer">− 30 % Early Bird Rabatt på sommer −</span>
+            <div class="cta-btn"   id="cta-btn">BOOK PÅ HOTELRIVIERA.NO</div>
+        </div>
+    </div>
+
+    <!-- SCENE 7 · OUTRO -->
+    <div class="scene" id="scene7">
+        <div class="particle" style="left:12%;top:60%;animation-delay:0s;"></div>
+        <div class="particle" style="left:50%;top:78%;animation-delay:1s;"></div>
+        <div class="particle" style="left:88%;top:65%;animation-delay:2s;"></div>
+
+        <div class="outro-wrap">
+            <span class="outro-tagline" id="outro-tagline">
+                "It's not just a place – it's a feeling"
+            </span>
+            <div class="outro-logo" id="outro-logo">
+                <span class="outro-hotel-txt">HOTEL</span>
+                <span class="outro-riviera-txt">Riviera</span>
+                <div class="outro-rule" id="outro-rule"></div>
+                <span class="outro-url" id="outro-url">hotelriviera.no</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ── TIMING ── */
+    const SCENES = [
+        { id: 'scene1', start:  0, end:  7 },
+        { id: 'scene2', start:  6, end: 17 },
+        { id: 'scene3', start: 16, end: 27 },
+        { id: 'scene4', start: 26, end: 37 },
+        { id: 'scene5', start: 36, end: 47 },
+        { id: 'scene6', start: 46, end: 57 },
+        { id: 'scene7', start: 56, end: 64 },
+    ];
+    const TOTAL = 64;
+
+    /* ── PER-SCENE ANIMATION TRIGGERS ── */
+    const TRIGGERS = {
+        scene1: () => {
+            animate('logo-wrap', 'animate');
+            animate('logo-line', 'animate');
+            animate('logo-sub',  'animate');
+        },
+        scene2: () => {
+            buildStars();
+            animate('loc-label', 'animate');
+            animate('loc-city',  'animate');
+            animate('loc-sub',   'animate');
+            animate('loc-rule',  'animate');
+            animate('loc-dist',  'animate');
+        },
+        scene3: () => {
+            animate('rooms-label', 'animate');
+            animate('rc1', 'a1');
+            animate('rc2', 'a2');
+            animate('rc3', 'a3');
+            animate('rc4', 'a4');
+        },
+        scene4: () => {
+            animate('well-glyph', 'animate');
+            animate('well-title', 'animate');
+            animate('well-sub',   'animate');
+            animate('wi1', 'b1');
+            animate('wi2', 'b2');
+            animate('wi3', 'b3');
+        },
+        scene5: () => {
+            animate('rest-pre',  'animate');
+            animate('rest-name', 'animate');
+            animate('rest-div',  'animate');
+            animate('rest-menu', 'animate');
+        },
+        scene6: () => {
+            animate('cta-badge', 'animate');
+            animate('cta-title', 'animate');
+            animate('cta-price', 'animate');
+            animate('cta-offer', 'animate');
+            animate('cta-btn',   'animate');
+        },
+        scene7: () => {
+            animate('outro-tagline', 'animate');
+            animate('outro-logo',    'animate');
+            animate('outro-rule',    'animate');
+            animate('outro-url',     'animate');
+        },
+    };
+
+    function animate(id, cls) {
+        const el = document.getElementById(id);
+        if (el) el.classList.add(cls);
+    }
+
+    /* ── STARS ── */
+    function buildStars() {
+        const c = document.getElementById('stars');
+        if (c.childElementCount > 0) return;
+        for (let i = 0; i < 90; i++) {
+            const s = document.createElement('div');
+            s.className = 'star';
+            s.style.left = Math.random() * 100 + '%';
+            s.style.top  = Math.random() * 70 + '%';
+            s.style.animationDelay    = (Math.random() * 3) + 's';
+            s.style.animationDuration = (2 + Math.random() * 3) + 's';
+            s.style.opacity = (Math.random() * 0.4).toString();
+            c.appendChild(s);
+        }
+    }
+
+    /* ── PLAYBACK ENGINE ── */
+    let t0 = null;
+    let fired = new Set();
+    let rafId = null;
+
+    function tick(ts) {
+        if (!t0) t0 = ts;
+        const elapsed = (ts - t0) / 1000;
+
+        document.getElementById('progress-bar').style.width =
+            Math.min(elapsed / TOTAL * 100, 100) + '%';
+
+        SCENES.forEach(s => {
+            const el = document.getElementById(s.id);
+            const on = elapsed >= s.start && elapsed < s.end;
+
+            if (on) {
+                el.classList.add('active');
+                if (!fired.has(s.id) && TRIGGERS[s.id]) {
+                    TRIGGERS[s.id]();
+                    fired.add(s.id);
+                }
+            } else if (elapsed >= s.end) {
+                el.classList.remove('active');
+            }
+        });
+
+        if (elapsed < TOTAL) rafId = requestAnimationFrame(tick);
+    }
+
+    document.getElementById('play-overlay').addEventListener('click', function () {
+        this.style.display = 'none';
+        t0 = null;
+        fired.clear();
+        SCENES.forEach(s => {
+            document.getElementById(s.id).classList.remove('active');
+        });
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(tick);
+    });
+</script>
+</body>
+</html>
