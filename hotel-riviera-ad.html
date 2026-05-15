@@ -12,10 +12,27 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;
   font-family:'Cormorant Garamond',Didot,Georgia,serif}
 
 /* ── CINEMATIC LETTERBOX ── */
-body::before,body::after{
-  content:'';position:fixed;left:0;right:0;
-  height:clamp(18px,4.5vh,52px);background:#000;z-index:50}
+body::before,body::after{content:'';position:fixed;left:0;right:0;
+  height:clamp(16px,4vh,50px);background:#000;z-index:50;pointer-events:none}
 body::before{top:0} body::after{bottom:2px}
+
+/* ── VIGNETTE ── */
+#vignette{position:fixed;inset:0;
+  background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.75) 100%);
+  z-index:45;pointer-events:none}
+
+/* ── FILM GRAIN ── */
+#grain{position:fixed;inset:0;z-index:44;pointer-events:none;opacity:.028;
+  animation:grainAnim .15s steps(1) infinite}
+@keyframes grainAnim{
+  0%  {transform:translate(0,0)}
+  25% {transform:translate(-3px,2px)}
+  50% {transform:translate(2px,-3px)}
+  75% {transform:translate(-2px,-2px)}
+}
+
+/* ── PARTICLE CANVAS ── */
+#particles{position:fixed;inset:0;z-index:43;pointer-events:none}
 
 /* ── PROGRESS BAR ── */
 #pb{position:fixed;bottom:2px;left:0;height:1px;background:var(--g);
@@ -25,16 +42,16 @@ body::before{top:0} body::after{bottom:2px}
 /* ── SCENES ── */
 .scene{position:absolute;inset:0;overflow:hidden;opacity:0}
 
-/* Ken Burns on background images */
+/* Ken Burns on bg images */
 .bg{position:absolute;inset:-6%;background-size:cover;background-position:center;
-  animation:kb 16s ease-in-out infinite alternate}
+  animation:kb 18s ease-in-out infinite alternate}
 .bg-r{animation-direction:alternate-reverse}
-@keyframes kb{0%{transform:scale(1) translate(0,0)} 100%{transform:scale(1.09) translate(-2%,-1%)}}
+@keyframes kb{0%{transform:scale(1) translate(0,0)} 100%{transform:scale(1.09) translate(-2.5%,-1%)}}
 
 /* Overlays */
-.ov-l{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.82) 0%,rgba(0,0,0,.15) 100%)}
-.ov-b{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.1) 55%)}
-.ov-d{position:absolute;inset:0;background:rgba(0,0,0,.48)}
+.ov-l{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.84) 0%,rgba(0,0,0,.12) 100%)}
+.ov-b{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.08) 55%)}
+.ov-d{position:absolute;inset:0}
 
 /* Content areas */
 .cnt{position:absolute;inset:0;display:flex;flex-direction:column;
@@ -42,150 +59,142 @@ body::before{top:0} body::after{bottom:2px}
 .cnt-c{align-items:center;text-align:center}
 .cnt-bot{justify-content:flex-end;padding-bottom:clamp(48px,9vh,120px)}
 
-/* ── TYPOGRAPHY (taste-skill: strong hierarchy, not generic) ── */
+/* ── TYPOGRAPHY ── */
 .lbl{font-family:'Montserrat',sans-serif;font-weight:200;
-  font-size:clamp(9px,.9vw,12px);letter-spacing:.65em;color:var(--g);
+  font-size:clamp(9px,.85vw,12px);letter-spacing:.7em;color:var(--g);
   text-transform:uppercase;display:block;margin-bottom:1.1em;opacity:0}
 
-.h-xl{font-weight:300;font-size:clamp(52px,10vw,128px);
+.h-xl{font-weight:300;font-size:clamp(50px,10vw,126px);
   line-height:.92;color:var(--w);display:block;opacity:0}
 
-.h-l{font-weight:300;font-size:clamp(34px,5.5vw,80px);
+.h-l{font-weight:300;font-size:clamp(32px,5.5vw,78px);
   line-height:1;color:var(--w);display:block;opacity:0}
 
-.h-it{font-weight:300;font-style:italic;font-size:clamp(28px,4.5vw,64px);
+.h-it{font-weight:300;font-style:italic;font-size:clamp(26px,4.5vw,62px);
   line-height:1.1;color:var(--w);display:block;opacity:0}
 
 .sub{font-family:'Montserrat',sans-serif;font-weight:200;
-  font-size:clamp(9px,1.1vw,14px);letter-spacing:.22em;
+  font-size:clamp(9px,1vw,13px);letter-spacing:.22em;
   color:rgba(248,246,240,.68);display:block;margin-top:.8em;opacity:0}
 
 .rule{height:1px;background:var(--g);width:0}
 
-/* ── SCENE TIMING: 70 second loop ──────────────────────
-   S1  0–8s    0%→1.4%  stay  →10%→11.4%
-   S2  7–18s   10%→11.4%      →24.3%→25.7%
-   S3  17–28s  24.3%→25.7%    →38.6%→40%
-   S4  27–38s  38.6%→40%      →52.9%→54.3%
-   S5  37–48s  52.9%→54.3%    →67.1%→68.6%
-   S6  47–58s  67.1%→68.6%    →81.4%→82.9%
-   S7  57–70s  81.4%→82.9%    →98.6%→100%
-──────────────────────────────────────────────────────── */
+/* character split */
+@keyframes charUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.char-span{display:inline-block}
+
+/* gold glow on logo */
+@keyframes glow{
+  0%,100%{text-shadow:0 0 20px rgba(201,169,110,0),0 0 40px rgba(201,169,110,0)}
+  50%    {text-shadow:0 0 20px rgba(201,169,110,.3),0 0 60px rgba(201,169,110,.15)}
+}
+
+/* horizontal gold wipe */
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0% 0 0)}}
+
+/* ── SCENE TIMING: 70s loop ── */
 #s1{animation:A1 70s ease infinite}
 @keyframes A1{0%{opacity:0}1.4%{opacity:1}10%{opacity:1}11.4%{opacity:0}100%{opacity:0}}
-
 #s2{animation:A2 70s ease infinite}
 @keyframes A2{0%{opacity:0}10%{opacity:0}11.4%{opacity:1}24.3%{opacity:1}25.7%{opacity:0}100%{opacity:0}}
-
 #s3{animation:A3 70s ease infinite}
 @keyframes A3{0%{opacity:0}24.3%{opacity:0}25.7%{opacity:1}38.6%{opacity:1}40%{opacity:0}100%{opacity:0}}
-
 #s4{animation:A4 70s ease infinite}
 @keyframes A4{0%{opacity:0}38.6%{opacity:0}40%{opacity:1}52.9%{opacity:1}54.3%{opacity:0}100%{opacity:0}}
-
 #s5{animation:A5 70s ease infinite}
 @keyframes A5{0%{opacity:0}52.9%{opacity:0}54.3%{opacity:1}67.1%{opacity:1}68.6%{opacity:0}100%{opacity:0}}
-
 #s6{animation:A6 70s ease infinite}
 @keyframes A6{0%{opacity:0}67.1%{opacity:0}68.6%{opacity:1}81.4%{opacity:1}82.9%{opacity:0}100%{opacity:0}}
-
 #s7{animation:A7 70s ease infinite}
 @keyframes A7{0%{opacity:0}81.4%{opacity:0}82.9%{opacity:1}98.6%{opacity:1}100%{opacity:0}}
 
-/* ── INNER ELEMENT REVEALS ── */
-/* parent scene opacity controls visibility on re-loop */
-@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+/* ── INNER REVEALS ── */
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fd{from{opacity:0}to{opacity:1}}
 @keyframes ex{from{width:0}to{width:42px}}
-@keyframes ex-long{from{width:0}to{width:90px}}
+@keyframes ex-lg{from{width:0}to{width:88px}}
 
-/* S1 — logo */
-.a-s1-hotel{animation:fd   .7s ease  .3s both}
-.a-s1-name {animation:up  1.1s ease  .5s both}
-.a-s1-line {animation:ex-long 1.4s ease 1.4s both}
-.a-s1-sub  {animation:fd   .9s ease 2.4s both}
+/* S1 */
+.s1-hotel{animation:fd   .7s ease  .3s both}
+.s1-line {animation:ex-lg 1.3s ease 2.1s both}
+.s1-sub  {animation:fd   .9s ease 2.9s both}
 
-/* S2 — location */
-.a-s2-lbl  {animation:fd  .7s ease 7.5s both}
-.a-s2-city {animation:up 1.1s ease 7.8s both}
-.a-s2-sub  {animation:up  .9s ease 8.3s both}
-.a-s2-rule {animation:ex   1s ease 9.0s both}
-.a-s2-dist {animation:fd  .8s ease 9.5s both}
+/* S2 */
+.s2-lbl  {animation:fd  .7s ease 7.5s both}
+.s2-city {animation:up 1.1s ease 7.8s both}
+.s2-sub  {animation:up  .9s ease 8.3s both}
+.s2-rule {animation:ex   1s ease 9.0s both}
+.s2-dist {animation:fd  .8s ease 9.5s both}
 
-/* S3 — rooms */
-.a-s3-lbl  {animation:fd  .6s ease 17.5s both}
-.a-s3-head {animation:up 1.1s ease 17.8s both}
-.a-s3-r1   {animation:up  .7s ease 18.3s both}
-.a-s3-r2   {animation:up  .7s ease 18.6s both}
-.a-s3-r3   {animation:up  .7s ease 18.9s both}
-.a-s3-r4   {animation:up  .7s ease 19.2s both}
+/* S3 */
+.s3-lbl  {animation:fd  .6s ease 17.5s both}
+.s3-head {animation:up 1.1s ease 17.8s both}
+.s3-r1   {animation:up  .7s ease 18.3s both}
+.s3-r2   {animation:up  .7s ease 18.6s both}
+.s3-r3   {animation:up  .7s ease 18.9s both}
+.s3-r4   {animation:up  .7s ease 19.2s both}
 
-/* S4 — wellness */
-.a-s4-lbl  {animation:fd  .7s ease 27.5s both}
-.a-s4-head {animation:up 1.1s ease 27.8s both}
-.a-s4-sub  {animation:fd  .8s ease 28.8s both}
-.a-s4-rule {animation:ex   1s ease 29.3s both}
+/* S4 */
+.s4-lbl  {animation:fd  .7s ease 27.5s both}
+.s4-head {animation:up 1.1s ease 27.8s both}
+.s4-sub  {animation:fd  .8s ease 28.8s both}
+.s4-rule {animation:ex   1s ease 29.3s both}
 
-/* S5 — restaurant */
-.a-s5-lbl  {animation:fd  .6s ease 37.5s both}
-.a-s5-head {animation:up 1.2s ease 37.8s both}
-.a-s5-rule {animation:ex   1s ease 38.9s both}
-.a-s5-menu {animation:fd  .8s ease 39.4s both}
+/* S5 */
+.s5-lbl  {animation:fd  .6s ease 37.5s both}
+.s5-head {animation:up 1.2s ease 37.8s both}
+.s5-rule {animation:ex   1s ease 38.9s both}
+.s5-menu {animation:fd  .8s ease 39.4s both}
 
-/* S6 — offer */
-.a-s6-lbl  {animation:fd  .6s ease 47.5s both}
-.a-s6-head {animation:up 1.1s ease 47.8s both}
-.a-s6-price{animation:up  .9s ease 48.4s both}
-.a-s6-disc {animation:fd  .8s ease 49.0s both}
-.a-s6-btn  {animation:fd  .9s ease 49.6s both}
+/* S6 */
+.s6-lbl  {animation:fd  .6s ease 47.5s both}
+.s6-head {animation:up 1.1s ease 47.8s both}
+.s6-price{animation:up  .9s ease 48.4s both}
+.s6-disc {animation:fd  .8s ease 49.0s both}
+.s6-btn  {animation:fd  .9s ease 49.6s both}
 
-/* S7 — outro */
-.a-s7-quote{animation:fd 2.2s ease 57.5s both}
-.a-s7-logo {animation:fd 1.1s ease 59.8s both}
-.a-s7-rule {animation:ex-long 1.5s ease 60.5s both}
-.a-s7-url  {animation:fd  .9s ease 61.3s both}
+/* S7 */
+.s7-quote{animation:fd 2.2s ease 57.5s both}
+.s7-logo {animation:fd 1.1s ease 59.8s both}
+.s7-rule {animation:ex-lg 1.5s ease 60.5s both}
+.s7-url  {animation:fd  .9s ease 61.3s both}
 
-/* ── ROOMS LAYOUT (asymmetric: images right, text left) ── */
-.room-mosaic{
-  position:absolute;right:0;top:0;bottom:0;width:42%;
+/* ── ROOMS LAYOUT ── */
+.room-mosaic{position:absolute;right:0;top:0;bottom:0;width:42%;
   display:grid;grid-template-columns:1fr 1fr;gap:3px}
 .room-img{background-size:cover;background-position:center}
-
-.room-text{
-  position:absolute;left:0;top:50%;transform:translateY(-50%);
+.room-fade{position:absolute;inset:0;
+  background:linear-gradient(to right,#060F1E 50%,transparent 100%)}
+.room-text{position:absolute;left:0;top:50%;transform:translateY(-50%);
   padding:0 clamp(28px,5vw,88px);max-width:54%}
-.room-fade{
-  position:absolute;inset:0;
-  background:linear-gradient(to right,#060F1E 52%,transparent 100%)}
-
-.room-row{
-  border-bottom:1px solid rgba(201,169,110,.22);
+.room-row{border-bottom:1px solid rgba(201,169,110,.2);
   padding:clamp(9px,1.4vw,20px) 0;
-  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
-  opacity:0}
-.room-row-name{font-weight:300;font-size:clamp(14px,1.8vw,22px);color:var(--w)}
-.room-row-price{font-family:'Montserrat',sans-serif;font-weight:200;
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;opacity:0}
+.rrn{font-weight:300;font-size:clamp(14px,1.8vw,22px);color:var(--w)}
+.rrp{font-family:'Montserrat',sans-serif;font-weight:200;
   font-size:clamp(8px,.9vw,12px);color:var(--g);letter-spacing:.08em;white-space:nowrap}
 
-/* ── LOGO & OUTRO ── */
+/* ── LOGO STYLES ── */
 .logo-hotel{font-family:'Montserrat',sans-serif;font-weight:200;
   font-size:clamp(12px,1.6vw,18px);letter-spacing:.9em;color:var(--g);
   display:block;margin-bottom:.4em;opacity:0}
 .logo-name{font-weight:300;font-size:clamp(58px,12vw,148px);
-  letter-spacing:.1em;color:var(--w);display:block;line-height:1;opacity:0}
+  letter-spacing:.1em;color:var(--w);display:block;line-height:1;
+  animation:glow 4s ease-in-out 2s infinite}
 .logo-sub{font-weight:300;font-style:italic;font-size:clamp(14px,2vw,26px);
   color:var(--gl);letter-spacing:.06em;opacity:0}
 
+/* ── OUTRO ── */
 .outro-hotel{font-family:'Montserrat',sans-serif;font-weight:200;
   font-size:clamp(10px,1.3vw,15px);letter-spacing:.9em;color:var(--g);
   display:block;text-align:center;margin-bottom:.4em}
-.outro-name{font-weight:300;font-size:clamp(42px,9vw,114px);
+.outro-name{font-weight:300;font-size:clamp(40px,9vw,112px);
   color:var(--w);letter-spacing:.14em;display:block;text-align:center}
 .outro-url{font-family:'Montserrat',sans-serif;font-weight:200;
   font-size:clamp(9px,1vw,13px);letter-spacing:.32em;
   color:rgba(201,169,110,.6);display:block;text-align:center}
 
-/* CTA button */
+/* CTA */
 .btn{display:inline-block;border:1px solid var(--g);padding:.75em 2.4em;
   font-family:'Montserrat',sans-serif;font-weight:300;
   font-size:clamp(8px,1vw,12px);letter-spacing:.45em;
@@ -197,32 +206,32 @@ body::before{top:0} body::after{bottom:2px}
 .wv1{animation:wvm 9s ease-in-out infinite;opacity:.22}
 .wv2{animation:wvm 7s ease-in-out infinite reverse;opacity:.16;bottom:-7px}
 @keyframes wvm{0%,100%{transform:translateX(0)}50%{transform:translateX(-25%)}}
-
-/* gold divider with icon */
-.divider{display:flex;align-items:center;gap:16px;margin:1.6em 0;opacity:0}
-.divider::before,.divider::after{content:'';flex:0 0 50px;height:1px;background:var(--g);opacity:.55}
-.divider span{font-size:9px;color:var(--g)}
 </style>
 </head>
 <body>
 
+<!-- ── WOW LAYERS ── -->
+<canvas id="particles"></canvas>
+<div id="grain">
+  <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n)" opacity="1"/>
+  </svg>
+</div>
+<div id="vignette"></div>
 <div id="pb"></div>
 
-<!-- ══════════════════════════════════
-     S1 · LOGO REVEAL
-══════════════════════════════════ -->
+<!-- S1 · LOGO -->
 <div class="scene" id="s1">
   <div class="cnt cnt-c">
-    <span class="logo-hotel a-s1-hotel">HOTEL</span>
-    <span class="logo-name  a-s1-name">Riviera</span>
-    <div  class="rule a-s1-line" style="margin:1.4em auto"></div>
-    <span class="logo-sub   a-s1-sub">Moss · Norge</span>
+    <span class="logo-hotel s1-hotel">HOTEL</span>
+    <span class="logo-name" id="logo-name">Riviera</span>
+    <div class="rule s1-line" style="margin:1.4em auto"></div>
+    <span class="logo-sub s1-sub">Moss · Norge</span>
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     S2 · ATMOSPHERE — real hotel photo
-══════════════════════════════════ -->
+<!-- S2 · ATMOSPHERE -->
 <div class="scene" id="s2">
   <div class="bg" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2024/09/5R9A3316-fixresized-1600x1200.jpg')"></div>
   <div class="ov-l"></div>
@@ -234,24 +243,21 @@ body::before{top:0} body::after{bottom:2px}
     </div>
     <div class="wv wv2">
       <svg viewBox="0 0 1440 200" preserveAspectRatio="none" width="100%" height="100%">
-        <path d="M0,80 C300,160 600,20 900,80 C1050,110 1200,40 1440,80 L1440,200 L0,200Z" fill="rgba(6,15,30,.4)"/>
+        <path d="M0,80 C300,160 600,20 900,80 C1050,110 1200,40 1440,80 L1440,200 L0,200Z" fill="rgba(6,15,30,.38)"/>
       </svg>
     </div>
   </div>
   <div class="cnt">
-    <span class="lbl   a-s2-lbl">OPPLEV</span>
-    <span class="h-xl  a-s2-city">Moss</span>
-    <span class="h-it  a-s2-sub" style="color:var(--gl)">ved sjøen</span>
-    <div  class="rule  a-s2-rule" style="margin:1.8em 0"></div>
-    <span class="sub   a-s2-dist">50 MINUTTER FRA OSLO</span>
+    <span class="lbl   s2-lbl">OPPLEV</span>
+    <span class="h-xl  s2-city" id="s2-city">Moss</span>
+    <span class="h-it  s2-sub" style="color:var(--gl)">ved sjøen</span>
+    <div  class="rule  s2-rule" style="margin:1.8em 0"></div>
+    <span class="sub   s2-dist">50 MINUTTER FRA OSLO</span>
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     S3 · ROOMS — asymmetric split
-══════════════════════════════════ -->
+<!-- S3 · ROOMS -->
 <div class="scene" id="s3" style="background:var(--nv)">
-  <!-- image mosaic right -->
   <div class="room-mosaic">
     <div class="room-img" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2022/06/AHF_0300-800x1200.jpg')"></div>
     <div class="room-img" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/11/5R9A2328-fix-600x900.jpg')"></div>
@@ -259,92 +265,124 @@ body::before{top:0} body::after{bottom:2px}
     <div class="room-img" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2022/02/5R9A5152-fix4-600x900.jpg')"></div>
   </div>
   <div class="room-fade"></div>
-  <!-- text left -->
   <div class="room-text">
-    <span class="lbl   a-s3-lbl">OVERNATTING</span>
-    <span class="h-l   a-s3-head" style="margin-bottom:.7em">Velg din<br><em>utsikt</em></span>
-    <div class="room-row a-s3-r1">
-      <span class="room-row-name">Riviera Stay</span>
-      <span class="room-row-price">fra 1 145 kr</span>
-    </div>
-    <div class="room-row a-s3-r2">
-      <span class="room-row-name">Superior Ocean View</span>
-      <span class="room-row-price">fra 1 220 kr</span>
-    </div>
-    <div class="room-row a-s3-r3">
-      <span class="room-row-name">Ocean Front Premium</span>
-      <span class="room-row-price">fra 1 545 kr</span>
-    </div>
-    <div class="room-row a-s3-r4">
-      <span class="room-row-name">Ocean Front Suite</span>
-      <span class="room-row-price">fra 2 545 kr</span>
-    </div>
+    <span class="lbl  s3-lbl">OVERNATTING</span>
+    <span class="h-l  s3-head" style="margin-bottom:.7em">Velg din<br><em>utsikt</em></span>
+    <div class="room-row s3-r1"><span class="rrn">Riviera Stay</span><span class="rrp">fra 1 145 kr</span></div>
+    <div class="room-row s3-r2"><span class="rrn">Superior Ocean View</span><span class="rrp">fra 1 220 kr</span></div>
+    <div class="room-row s3-r3"><span class="rrn">Ocean Front Premium</span><span class="rrp">fra 1 545 kr</span></div>
+    <div class="room-row s3-r4"><span class="rrn">Ocean Front Suite</span><span class="rrp">fra 2 545 kr</span></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     S4 · WELLNESS — full bleed
-══════════════════════════════════ -->
+<!-- S4 · WELLNESS -->
 <div class="scene" id="s4">
   <div class="bg bg-r" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/07/905_TTL_8452-600x900.jpg');background-position:center top"></div>
   <div class="ov-b"></div>
   <div class="ov-d" style="background:rgba(0,0,0,.35)"></div>
   <div class="cnt cnt-bot">
-    <span class="lbl  a-s4-lbl">AVSLAPNING</span>
-    <span class="h-xl a-s4-head">Pool &amp;<br>Wellness</span>
-    <span class="sub  a-s4-sub">Spa · Basseng · Behandlinger · Dag Spa Pakker</span>
-    <div  class="rule a-s4-rule" style="margin-top:1.8em"></div>
+    <span class="lbl  s4-lbl">AVSLAPNING</span>
+    <span class="h-xl s4-head">Pool &amp;<br>Wellness</span>
+    <span class="sub  s4-sub">Spa · Basseng · Behandlinger · Dag Spa Pakker</span>
+    <div  class="rule s4-rule" style="margin-top:1.8em"></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     S5 · RESTAURANT — cinematic
-══════════════════════════════════ -->
+<!-- S5 · RESTAURANT -->
 <div class="scene" id="s5">
   <div class="bg" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/07/Brasserie-Bon-Vivant-1-600x900.png')"></div>
-  <div class="ov-d"></div>
+  <div class="ov-d" style="background:rgba(0,0,0,.45)"></div>
   <div class="ov-b"></div>
   <div class="cnt cnt-bot">
-    <span class="lbl   a-s5-lbl">RESTAURANTEN</span>
-    <span class="h-it  a-s5-head">Brasserie<br>Bon Vivant</span>
-    <div  class="rule  a-s5-rule" style="margin:1.6em 0"></div>
-    <span class="sub   a-s5-menu">Lunsj &nbsp;·&nbsp; Middag &nbsp;·&nbsp; Pizza &nbsp;·&nbsp; Bar</span>
+    <span class="lbl   s5-lbl">RESTAURANTEN</span>
+    <span class="h-it  s5-head">Brasserie<br>Bon Vivant</span>
+    <div  class="rule  s5-rule" style="margin:1.6em 0"></div>
+    <span class="sub   s5-menu">Lunsj &nbsp;·&nbsp; Middag &nbsp;·&nbsp; Pizza &nbsp;·&nbsp; Bar</span>
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     S6 · OFFER — editorial dark
-══════════════════════════════════ -->
+<!-- S6 · OFFER -->
 <div class="scene" id="s6">
   <div class="bg bg-r" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2022/09/capri-2-600x900.jpg')"></div>
-  <div class="ov-d" style="background:rgba(4,10,22,.78)"></div>
+  <div class="ov-d" style="background:rgba(4,10,22,.8)"></div>
   <div class="cnt">
-    <span class="lbl   a-s6-lbl">SPESIALTILBUD</span>
-    <span class="h-xl  a-s6-head">Riviera<br>Sundays</span>
-    <span class="h-it  a-s6-price" style="color:var(--g);font-size:clamp(18px,2.8vw,38px)">fra 1 795 kr for 2 personer</span>
-    <span class="sub   a-s6-disc">— 30 % Early Bird Rabatt på sommer —</span>
-    <div  class="btn   a-s6-btn">BOOK PÅ HOTELRIVIERA.NO</div>
+    <span class="lbl   s6-lbl">SPESIALTILBUD</span>
+    <span class="h-xl  s6-head">Riviera<br>Sundays</span>
+    <span class="h-it  s6-price" style="color:var(--g);font-size:clamp(18px,2.8vw,38px);opacity:0">fra 1 795 kr for 2 personer</span>
+    <span class="sub   s6-disc">— 30 % Early Bird Rabatt på sommer —</span>
+    <div  class="btn   s6-btn">BOOK PÅ HOTELRIVIERA.NO</div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════
-     S7 · OUTRO — logo over real photo
-══════════════════════════════════ -->
+<!-- S7 · OUTRO -->
 <div class="scene" id="s7">
   <div class="bg" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/02/5S0A6557-fix-683x1024.jpg')"></div>
-  <div class="ov-d" style="background:rgba(0,0,0,.7)"></div>
+  <div class="ov-d" style="background:rgba(0,0,0,.72)"></div>
   <div class="cnt cnt-c">
-    <span class="h-it a-s7-quote" style="font-size:clamp(16px,2.4vw,34px);max-width:72vw;line-height:1.55;margin-bottom:2.4em">
+    <span class="h-it s7-quote" style="font-size:clamp(16px,2.4vw,34px);max-width:72vw;line-height:1.55;margin-bottom:2.4em">
       "It's not just a place – it's a feeling"
     </span>
-    <div class="a-s7-logo">
+    <div class="s7-logo">
       <span class="outro-hotel">HOTEL</span>
       <span class="outro-name">Riviera</span>
-      <div class="rule a-s7-rule" style="margin:1.3em auto"></div>
-      <span class="outro-url a-s7-url">hotelriviera.no</span>
+      <div class="rule s7-rule" style="margin:1.3em auto"></div>
+      <span class="outro-url s7-url">hotelriviera.no</span>
     </div>
   </div>
 </div>
 
+<script>
+/* ── GOLD PARTICLE SYSTEM ── */
+(function(){
+  var c = document.getElementById('particles');
+  var ctx = c.getContext('2d');
+  function resize(){ c.width = innerWidth; c.height = innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var N = 70;
+  var pts = [];
+  for(var i=0;i<N;i++){
+    pts.push({
+      x: Math.random()*innerWidth,
+      y: Math.random()*innerHeight,
+      r: Math.random()*1.4+0.3,
+      sp: Math.random()*0.35+0.08,
+      dr: (Math.random()-.5)*.25,
+      op: Math.random()*.5+.05,
+      dop: (Math.random()-.5)*.008
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    pts.forEach(function(p){
+      p.y -= p.sp;
+      p.x += p.dr;
+      p.op += p.dop;
+      if(p.op > .55){ p.op=.55; p.dop*=-1; }
+      if(p.op < .03){ p.op=.03; p.dop*=-1; }
+      if(p.y < -5){ p.y=c.height+5; p.x=Math.random()*c.width; }
+      if(p.x < -5) p.x=c.width+5;
+      if(p.x > c.width+5) p.x=-5;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(201,169,110,'+p.op.toFixed(3)+')';
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── CHARACTER SPLIT on logo ── */
+(function(){
+  var el = document.getElementById('logo-name');
+  var text = 'Riviera';
+  el.innerHTML = text.split('').map(function(ch,i){
+    return '<span class="char-span" style="opacity:0;animation:charUp .55s ease '+(0.55+i*.07)+'s both">'+ch+'</span>';
+  }).join('');
+})();
+</script>
 </body>
 </html>
