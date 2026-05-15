@@ -34,6 +34,58 @@ body::before{top:0} body::after{bottom:2px}
 /* ── PARTICLE CANVAS ── */
 #particles{position:fixed;inset:0;z-index:43;pointer-events:none}
 
+/* ── GOLD WIPE TRANSITIONS ── */
+/* A thin gold vertical line sweeps left→right at each scene handoff */
+.wipe{position:fixed;top:0;bottom:0;left:-4px;width:4px;
+  background:linear-gradient(to bottom,transparent 0%,var(--g) 15%,var(--gl) 50%,var(--g) 85%,transparent 100%);
+  z-index:49;pointer-events:none;box-shadow:0 0 12px 2px rgba(201,169,110,.6)}
+
+/* Transition times (70s loop): 7s→10%, 17s→24.3%, 27s→38.6%, 37s→52.9%, 47s→67.1%, 57s→81.4% */
+/* Each sweep takes 0.55s = 0.78% of 70s */
+.w1{animation:W1 70s linear infinite}
+.w2{animation:W2 70s linear infinite}
+.w3{animation:W3 70s linear infinite}
+.w4{animation:W4 70s linear infinite}
+.w5{animation:W5 70s linear infinite}
+.w6{animation:W6 70s linear infinite}
+
+@keyframes W1{
+  0%,9.8%  {transform:translateX(0);opacity:0}
+  9.9%     {transform:translateX(0);opacity:1}
+  10.7%    {transform:translateX(calc(100vw + 8px));opacity:1}
+  10.8%,100%{transform:translateX(calc(100vw + 8px));opacity:0}
+}
+@keyframes W2{
+  0%,24.1% {transform:translateX(0);opacity:0}
+  24.2%    {transform:translateX(0);opacity:1}
+  25.0%    {transform:translateX(calc(100vw + 8px));opacity:1}
+  25.1%,100%{transform:translateX(calc(100vw + 8px));opacity:0}
+}
+@keyframes W3{
+  0%,38.4% {transform:translateX(0);opacity:0}
+  38.5%    {transform:translateX(0);opacity:1}
+  39.3%    {transform:translateX(calc(100vw + 8px));opacity:1}
+  39.4%,100%{transform:translateX(calc(100vw + 8px));opacity:0}
+}
+@keyframes W4{
+  0%,52.7% {transform:translateX(0);opacity:0}
+  52.8%    {transform:translateX(0);opacity:1}
+  53.6%    {transform:translateX(calc(100vw + 8px));opacity:1}
+  53.7%,100%{transform:translateX(calc(100vw + 8px));opacity:0}
+}
+@keyframes W5{
+  0%,66.9% {transform:translateX(0);opacity:0}
+  67.0%    {transform:translateX(0);opacity:1}
+  67.8%    {transform:translateX(calc(100vw + 8px));opacity:1}
+  67.9%,100%{transform:translateX(calc(100vw + 8px));opacity:0}
+}
+@keyframes W6{
+  0%,81.2% {transform:translateX(0);opacity:0}
+  81.3%    {transform:translateX(0);opacity:1}
+  82.1%    {transform:translateX(calc(100vw + 8px));opacity:1}
+  82.2%,100%{transform:translateX(calc(100vw + 8px));opacity:0}
+}
+
 /* ── PROGRESS BAR ── */
 #pb{position:fixed;bottom:2px;left:0;height:1px;background:var(--g);
   animation:prog 70s linear infinite;z-index:60}
@@ -210,6 +262,14 @@ body::before{top:0} body::after{bottom:2px}
 </head>
 <body>
 
+<!-- ── GOLD WIPE LINES ── -->
+<div class="wipe w1"></div>
+<div class="wipe w2"></div>
+<div class="wipe w3"></div>
+<div class="wipe w4"></div>
+<div class="wipe w5"></div>
+<div class="wipe w6"></div>
+
 <!-- ── WOW LAYERS ── -->
 <canvas id="particles"></canvas>
 <div id="grain">
@@ -233,7 +293,7 @@ body::before{top:0} body::after{bottom:2px}
 
 <!-- S2 · ATMOSPHERE -->
 <div class="scene" id="s2">
-  <div class="bg" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2024/09/5R9A3316-fixresized-1600x1200.jpg')"></div>
+  <div class="bg" style="background-image:url('img/exterior.jpg')"></div>
   <div class="ov-l"></div>
   <div class="waves">
     <div class="wv wv1">
@@ -259,10 +319,10 @@ body::before{top:0} body::after{bottom:2px}
 <!-- S3 · ROOMS -->
 <div class="scene" id="s3" style="background:var(--nv)">
   <div class="room-mosaic">
-    <div class="room-img" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2022/06/AHF_0300-800x1200.jpg')"></div>
-    <div class="room-img" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/11/5R9A2328-fix-600x900.jpg')"></div>
-    <div class="room-img" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/07/5R9A1142-fix-600x900.jpg')"></div>
-    <div class="room-img" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2022/02/5R9A5152-fix4-600x900.jpg')"></div>
+    <div class="room-img" style="background-image:url('img/room1.jpg')"></div>
+    <div class="room-img" style="background-image:url('img/room2.jpg')"></div>
+    <div class="room-img" style="background-image:url('img/room3.jpg')"></div>
+    <div class="room-img" style="background-image:url('img/room4.jpg')"></div>
   </div>
   <div class="room-fade"></div>
   <div class="room-text">
@@ -277,7 +337,7 @@ body::before{top:0} body::after{bottom:2px}
 
 <!-- S4 · WELLNESS -->
 <div class="scene" id="s4">
-  <div class="bg bg-r" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/07/905_TTL_8452-600x900.jpg');background-position:center top"></div>
+  <div class="bg bg-r" style="background-image:url('img/wellness.jpg');background-position:center top"></div>
   <div class="ov-b"></div>
   <div class="ov-d" style="background:rgba(0,0,0,.35)"></div>
   <div class="cnt cnt-bot">
@@ -290,7 +350,7 @@ body::before{top:0} body::after{bottom:2px}
 
 <!-- S5 · RESTAURANT -->
 <div class="scene" id="s5">
-  <div class="bg" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/07/Brasserie-Bon-Vivant-1-600x900.png')"></div>
+  <div class="bg" style="background-image:url('img/restaurant.jpg')"></div>
   <div class="ov-d" style="background:rgba(0,0,0,.45)"></div>
   <div class="ov-b"></div>
   <div class="cnt cnt-bot">
@@ -303,7 +363,7 @@ body::before{top:0} body::after{bottom:2px}
 
 <!-- S6 · OFFER -->
 <div class="scene" id="s6">
-  <div class="bg bg-r" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2022/09/capri-2-600x900.jpg')"></div>
+  <div class="bg bg-r" style="background-image:url('img/offer.jpg')"></div>
   <div class="ov-d" style="background:rgba(4,10,22,.8)"></div>
   <div class="cnt">
     <span class="lbl   s6-lbl">SPESIALTILBUD</span>
@@ -316,7 +376,7 @@ body::before{top:0} body::after{bottom:2px}
 
 <!-- S7 · OUTRO -->
 <div class="scene" id="s7">
-  <div class="bg" style="background-image:url('https://hotelriviera.no/wp-content/uploads/2023/02/5S0A6557-fix-683x1024.jpg')"></div>
+  <div class="bg" style="background-image:url('img/outro.jpg')"></div>
   <div class="ov-d" style="background:rgba(0,0,0,.72)"></div>
   <div class="cnt cnt-c">
     <span class="h-it s7-quote" style="font-size:clamp(16px,2.4vw,34px);max-width:72vw;line-height:1.55;margin-bottom:2.4em">
