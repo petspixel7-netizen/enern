@@ -5,222 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hotel Riviera</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+<!-- GSAP 3.12 — all plugins free -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <style>
 /* ══════════════════════════════════════════════
-   HOTEL RIVIERA · REAL BRAND PALETTE
-   Pink blush  : #F0C4C4  (logo circle bg)
-   Burgundy    : #3D1A2A  (palm tree + text)
-   Rose        : #C4889A  (warm accent)
-   Deep bg     : #2A0F1C  (scene backgrounds)
-   Cream       : #FDF5F0  (off-white text)
+   HOTEL RIVIERA — EKTE BRAND FARGER
+   Pink    : #F0C4C4   (logo sirkel)
+   Burgundy: #3D1A2A   (palmetre + tekst)
+   Rose    : #C4889A   (aksent)
+   Mørk    : #2A0F1C   (bakgrunn)
+   Krem    : #FDF5F0   (tekst)
 ══════════════════════════════════════════════ */
 :root{
-  --pink:    #F0C4C4;
-  --pink-dk: #D4959A;
-  --rose:    #C4889A;
-  --burg:    #3D1A2A;
-  --burg-dk: #2A0F1C;
-  --burg-lt: #5C2438;
-  --cream:   #FDF5F0;
-  --white:   #ffffff;
+  --pink:   #F0C4C4;
+  --rose:   #C4889A;
+  --burg:   #3D1A2A;
+  --dark:   #2A0F1C;
+  --cream:  #FDF5F0;
 }
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;height:100%;background:var(--burg-dk);overflow:hidden;
-  font-family:'Cormorant Garamond',Didot,Georgia,serif}
+html,body{width:100%;height:100%;background:var(--dark);overflow:hidden;
+  font-family:'Cormorant Garamond',Georgia,serif}
 
 /* ── LETTERBOX ── */
 body::before,body::after{content:'';position:fixed;left:0;right:0;
-  height:clamp(16px,4vh,48px);background:#000;z-index:50;pointer-events:none}
-body::before{top:0} body::after{bottom:2px}
+  height:clamp(16px,4vh,48px);background:#000;z-index:55;pointer-events:none}
+body::before{top:0}body::after{bottom:0}
 
 /* ── VIGNETTE ── */
-#vig{position:fixed;inset:0;
-  background:radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.82) 100%);
-  z-index:45;pointer-events:none}
+#vig{position:fixed;inset:0;z-index:46;pointer-events:none;
+  background:radial-gradient(ellipse 80% 80% at 50% 50%,transparent 38%,rgba(0,0,0,.88) 100%)}
 
 /* ── FILM GRAIN ── */
-#grain{position:fixed;inset:0;z-index:44;pointer-events:none;opacity:.03;
-  animation:grn .14s steps(1) infinite}
-@keyframes grn{0%{transform:translate(0,0)}25%{transform:translate(-3px,2px)}
-  50%{transform:translate(2px,-2px)}75%{transform:translate(-2px,-3px)}}
+#grain{position:fixed;inset:0;z-index:45;pointer-events:none;opacity:.026;
+  animation:grn .12s steps(1) infinite}
+@keyframes grn{
+  0%{transform:translate(0,0)}  25%{transform:translate(-3px,2px)}
+  50%{transform:translate(2px,-3px)}  75%{transform:translate(-2px,-1px)}}
 
-/* ── PARTICLES ── */
-#particles{position:fixed;inset:0;z-index:43;pointer-events:none}
+/* ── CANVAS ── */
+#pcv{position:fixed;inset:0;z-index:44;pointer-events:none}
+
+/* ── CURTAIN WIPE (GSAP controlled) ── */
+#curt{position:fixed;inset:0;z-index:48;background:var(--burg);pointer-events:none;
+  clip-path:inset(0 100% 0 0)}
 
 /* ── PROGRESS ── */
-#pb{position:fixed;bottom:2px;left:0;height:1px;background:var(--rose);
-  animation:prog 70s linear infinite;z-index:60}
-@keyframes prog{from{width:0}to{width:100%}}
-
-/* ── ROSE WIPE TRANSITIONS ── */
-.wipe{position:fixed;top:0;bottom:0;left:-5px;width:5px;
-  background:linear-gradient(to bottom,transparent,var(--rose) 20%,var(--pink) 50%,var(--rose) 80%,transparent);
-  z-index:49;pointer-events:none;
-  box-shadow:0 0 16px 4px rgba(196,136,154,.6)}
-
-.w1{animation:W1 70s linear infinite}
-.w2{animation:W2 70s linear infinite}
-.w3{animation:W3 70s linear infinite}
-.w4{animation:W4 70s linear infinite}
-.w5{animation:W5 70s linear infinite}
-.w6{animation:W6 70s linear infinite}
-
-@keyframes W1{0%,9.8%{transform:translateX(0);opacity:0}9.9%{transform:translateX(0);opacity:1}
-  10.7%{transform:translateX(calc(100vw+10px));opacity:1}10.8%,100%{transform:translateX(calc(100vw+10px));opacity:0}}
-@keyframes W2{0%,24.1%{transform:translateX(0);opacity:0}24.2%{transform:translateX(0);opacity:1}
-  25.0%{transform:translateX(calc(100vw+10px));opacity:1}25.1%,100%{transform:translateX(calc(100vw+10px));opacity:0}}
-@keyframes W3{0%,38.4%{transform:translateX(0);opacity:0}38.5%{transform:translateX(0);opacity:1}
-  39.3%{transform:translateX(calc(100vw+10px));opacity:1}39.4%,100%{transform:translateX(calc(100vw+10px));opacity:0}}
-@keyframes W4{0%,52.7%{transform:translateX(0);opacity:0}52.8%{transform:translateX(0);opacity:1}
-  53.6%{transform:translateX(calc(100vw+10px));opacity:1}53.7%,100%{transform:translateX(calc(100vw+10px));opacity:0}}
-@keyframes W5{0%,66.9%{transform:translateX(0);opacity:0}67.0%{transform:translateX(0);opacity:1}
-  67.8%{transform:translateX(calc(100vw+10px));opacity:1}67.9%,100%{transform:translateX(calc(100vw+10px));opacity:0}}
-@keyframes W6{0%,81.2%{transform:translateX(0);opacity:0}81.3%{transform:translateX(0);opacity:1}
-  82.1%{transform:translateX(calc(100vw+10px));opacity:1}82.2%,100%{transform:translateX(calc(100vw+10px));opacity:0}}
+#pb{position:fixed;bottom:2px;left:0;height:1px;background:var(--rose);z-index:60;
+  animation:pgr 70s linear infinite}
+@keyframes pgr{from{width:0}to{width:100%}}
 
 /* ── SCENES ── */
 .scene{position:absolute;inset:0;overflow:hidden;opacity:0}
-.bg{position:absolute;inset:-6%;background-size:cover;background-position:center;
-  animation:kb 18s ease-in-out infinite alternate}
-.bg-r{animation-direction:alternate-reverse}
-@keyframes kb{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.09) translate(-2.5%,-1%)}}
+.bg{position:absolute;inset:-8%;background-size:cover;background-position:center;will-change:transform}
 
-.ov-burg{position:absolute;inset:0;
-  background:linear-gradient(to right,rgba(42,15,28,.9) 0%,rgba(42,15,28,.12) 100%)}
-.ov-burgb{position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(42,15,28,.95) 0%,rgba(42,15,28,.06) 55%)}
-.ov-dark{position:absolute;inset:0}
+/* overlays */
+.ov-l{position:absolute;inset:0;background:linear-gradient(to right,rgba(42,15,28,.92) 0%,rgba(42,15,28,.08) 100%)}
+.ov-b{position:absolute;inset:0;background:linear-gradient(to top,rgba(42,15,28,.96) 0%,rgba(42,15,28,.05) 55%)}
+.ov{position:absolute;inset:0}
 
+/* layouts */
 .cnt{position:absolute;inset:0;display:flex;flex-direction:column;
   justify-content:center;padding:clamp(28px,5vw,88px);z-index:2}
-.cnt-c{align-items:center;text-align:center}
-.cnt-bot{justify-content:flex-end;padding-bottom:clamp(48px,9vh,110px)}
+.cc{align-items:center;text-align:center}
+.cb{justify-content:flex-end;padding-bottom:clamp(48px,9vh,110px)}
 
-/* ── LACE ── */
-.lace-top{position:absolute;top:clamp(20px,4vh,60px);left:0;right:0;
-  height:clamp(18px,3vh,40px);
-  background:url('img/lace1.png') center/auto 100% repeat-x;
-  opacity:.4;z-index:3;pointer-events:none}
-.lace-bot{position:absolute;bottom:clamp(20px,4vh,60px);left:0;right:0;
-  height:clamp(18px,3vh,40px);
-  background:url('img/lace1.png') center/auto 100% repeat-x;
-  opacity:.4;z-index:3;pointer-events:none;transform:scaleY(-1)}
+/* lace */
+.lt{position:absolute;top:clamp(20px,4vh,60px);left:0;right:0;
+  height:clamp(16px,2.8vh,38px);background:url('img/lace1.png') center/auto 100% repeat-x;
+  opacity:.38;z-index:3;pointer-events:none}
+.lb{position:absolute;bottom:clamp(20px,4vh,60px);left:0;right:0;
+  height:clamp(16px,2.8vh,38px);background:url('img/lace1.png') center/auto 100% repeat-x;
+  opacity:.38;z-index:3;pointer-events:none;transform:scaleY(-1)}
+
+/* ── LINE MASK: overflow clips the rising element ── */
+.lm{overflow:hidden;display:block}
 
 /* ── TYPOGRAPHY ── */
-.lbl{font-family:'Montserrat',sans-serif;font-weight:200;
-  font-size:clamp(8px,.8vw,11px);letter-spacing:.75em;color:var(--rose);
-  text-transform:uppercase;display:block;margin-bottom:1em;opacity:0}
-.h-xl{font-weight:300;font-size:clamp(50px,10vw,124px);
-  line-height:.92;color:var(--cream);display:block;opacity:0}
-.h-l{font-weight:300;font-size:clamp(30px,5vw,74px);
-  line-height:1;color:var(--cream);display:block;opacity:0}
-.h-it{font-weight:300;font-style:italic;font-size:clamp(26px,4.5vw,62px);
-  line-height:1.1;color:var(--cream);display:block;opacity:0}
-.sub{font-family:'Montserrat',sans-serif;font-weight:200;
-  font-size:clamp(8px,1vw,13px);letter-spacing:.22em;
-  color:rgba(253,245,240,.65);display:block;margin-top:.8em;opacity:0}
-.rule{height:1px;background:var(--rose);width:0;opacity:.8}
+.tag{font-family:'Montserrat',sans-serif;font-weight:200;
+  font-size:clamp(8px,.78vw,10px);letter-spacing:.72em;color:var(--rose);
+  text-transform:uppercase;display:block;margin-bottom:.8em}
+.xl{font-weight:300;font-size:clamp(48px,9.5vw,122px);
+  line-height:.92;color:var(--cream);display:block}
+.lg{font-weight:300;font-size:clamp(28px,4.8vw,72px);
+  line-height:1;color:var(--cream);display:block}
+.it{font-weight:300;font-style:italic;font-size:clamp(24px,4.3vw,60px);
+  line-height:1.1;color:var(--cream);display:block}
+.sm{font-family:'Montserrat',sans-serif;font-weight:200;
+  font-size:clamp(8px,.95vw,12px);letter-spacing:.24em;
+  color:rgba(253,245,240,.62);display:block;margin-top:.8em}
+.rl{height:1px;background:var(--rose);opacity:.75;display:block}
 
-/* ── SCENE TIMING 70s ── */
-#s1{animation:A1 70s ease infinite}
-@keyframes A1{0%{opacity:0}1.4%{opacity:1}10%{opacity:1}11.4%{opacity:0}100%{opacity:0}}
-#s2{animation:A2 70s ease infinite}
-@keyframes A2{0%{opacity:0}10%{opacity:0}11.4%{opacity:1}24.3%{opacity:1}25.7%{opacity:0}100%{opacity:0}}
-#s3{animation:A3 70s ease infinite}
-@keyframes A3{0%{opacity:0}24.3%{opacity:0}25.7%{opacity:1}38.6%{opacity:1}40%{opacity:0}100%{opacity:0}}
-#s4{animation:A4 70s ease infinite}
-@keyframes A4{0%{opacity:0}38.6%{opacity:0}40%{opacity:1}52.9%{opacity:1}54.3%{opacity:0}100%{opacity:0}}
-#s5{animation:A5 70s ease infinite}
-@keyframes A5{0%{opacity:0}52.9%{opacity:0}54.3%{opacity:1}67.1%{opacity:1}68.6%{opacity:0}100%{opacity:0}}
-#s6{animation:A6 70s ease infinite}
-@keyframes A6{0%{opacity:0}67.1%{opacity:0}68.6%{opacity:1}81.4%{opacity:1}82.9%{opacity:0}100%{opacity:0}}
-#s7{animation:A7 70s ease infinite}
-@keyframes A7{0%{opacity:0}81.4%{opacity:0}82.9%{opacity:1}98.6%{opacity:1}100%{opacity:0}}
-
-/* ── INNER REVEALS ── */
-@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fd{from{opacity:0}to{opacity:1}}
-@keyframes ex{from{width:0}to{width:44px}}
-@keyframes ex-lg{from{width:0}to{width:90px}}
-@keyframes charUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-@keyframes logoRise{from{opacity:0;transform:translateY(18px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
-@keyframes pulse-ring{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.04);opacity:.55}}
-
-/* S1 */
-.s1-orn{animation:fd .7s ease .15s both}
-.s1-logo{animation:logoRise 1.6s cubic-bezier(.16,1,.3,1) .4s both}
-.s1-h{animation:fd .7s ease .3s both}
-.s1-l{animation:ex-lg 1.4s ease 2.2s both}
-.s1-s{animation:fd .9s ease 2.9s both}
-/* S2 */ .s2-lb{animation:fd .7s ease 7.5s both} .s2-c{animation:up 1.1s ease 7.8s both} .s2-s{animation:up .9s ease 8.3s both} .s2-r{animation:ex 1s ease 9s both} .s2-d{animation:fd .8s ease 9.5s both}
-/* S3 */ .s3-lb{animation:fd .6s ease 17.5s both} .s3-h{animation:up 1.1s ease 17.8s both}
-         .s3-r1{animation:up .7s ease 18.3s both} .s3-r2{animation:up .7s ease 18.6s both}
-         .s3-r3{animation:up .7s ease 18.9s both} .s3-r4{animation:up .7s ease 19.2s both}
-/* S4 */ .s4-lb{animation:fd .7s ease 27.5s both} .s4-h{animation:up 1.1s ease 27.8s both} .s4-s{animation:fd .8s ease 28.8s both} .s4-r{animation:ex 1s ease 29.3s both}
-/* S5 */ .s5-lb{animation:fd .6s ease 37.5s both} .s5-h{animation:up 1.2s ease 37.8s both} .s5-r{animation:ex 1s ease 38.9s both} .s5-m{animation:fd .8s ease 39.4s both}
-/* S6 */ .s6-lb{animation:fd .6s ease 47.5s both} .s6-h{animation:up 1.1s ease 47.8s both} .s6-p{animation:up .9s ease 48.4s both} .s6-d{animation:fd .8s ease 49s both} .s6-b{animation:fd .9s ease 49.6s both}
-/* S7 */ .s7-q{animation:fd 2.2s ease 57.5s both} .s7-l{animation:fd 1.1s ease 59.8s both} .s7-r{animation:ex-lg 1.5s ease 60.5s both} .s7-u{animation:fd .9s ease 61.3s both}
-
-/* ── LOGO TEXT ── */
-.logo-wrap{text-align:center}
-.logo-hotel{font-family:'Montserrat',sans-serif;font-weight:200;
-  font-size:clamp(11px,1.5vw,17px);letter-spacing:1em;color:var(--rose);
-  display:block;margin-bottom:.5em;opacity:0}
-.logo-name{font-weight:300;font-size:clamp(60px,13vw,155px);
+/* S1 logo */
+.lhtl{font-family:'Montserrat',sans-serif;font-weight:200;
+  font-size:clamp(10px,1.4vw,16px);letter-spacing:1em;color:var(--rose);display:block}
+.lnm{font-weight:300;font-size:clamp(58px,12.5vw,148px);
   letter-spacing:.08em;color:var(--cream);display:block;line-height:1;
-  animation:glow 5s ease-in-out 2.5s infinite}
-@keyframes glow{0%,100%{text-shadow:none}50%{text-shadow:0 0 40px rgba(196,136,154,.45),0 0 80px rgba(240,196,196,.18)}}
-.logo-sub{font-weight:300;font-style:italic;font-size:clamp(13px,1.8vw,22px);
-  color:var(--pink);letter-spacing:.08em;opacity:0}
+  animation:glow 5.5s ease-in-out 3s infinite}
+@keyframes glow{
+  0%,100%{text-shadow:none}
+  50%{text-shadow:0 0 50px rgba(196,136,154,.48),0 0 100px rgba(240,196,196,.18)}}
+.lsub{font-weight:300;font-style:italic;font-size:clamp(12px,1.7vw,21px);
+  color:var(--pink);letter-spacing:.1em;display:block}
 
-/* ── ROOMS ── */
-.room-mosaic{position:absolute;right:0;top:0;bottom:0;width:42%;
+/* rooms */
+.rmosaic{position:absolute;right:0;top:0;bottom:0;width:42%;
   display:grid;grid-template-columns:1fr 1fr;gap:3px}
-.room-img{background-size:cover;background-position:center}
-.room-fade{position:absolute;inset:0;
-  background:linear-gradient(to right,var(--burg-dk) 48%,transparent 100%)}
-.room-text{position:absolute;left:0;top:50%;transform:translateY(-50%);
+.ri{background-size:cover;background-position:center}
+.rfade{position:absolute;inset:0;
+  background:linear-gradient(to right,var(--dark) 44%,transparent 100%)}
+.rtxt{position:absolute;left:0;top:50%;transform:translateY(-50%);
   padding:0 clamp(28px,5vw,88px);max-width:54%}
-.room-row{border-bottom:1px solid rgba(196,136,154,.22);
-  padding:clamp(9px,1.3vw,18px) 0;
-  display:flex;justify-content:space-between;align-items:baseline;gap:16px;opacity:0}
-.rrn{font-weight:300;font-size:clamp(14px,1.7vw,21px);color:var(--cream)}
-.rrp{font-family:'Montserrat',sans-serif;font-weight:200;
-  font-size:clamp(8px,.85vw,11px);color:var(--rose);letter-spacing:.08em;white-space:nowrap}
+.rrow{border-bottom:1px solid rgba(196,136,154,.2);
+  padding:clamp(8px,1.3vw,17px) 0;
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.rn{font-weight:300;font-size:clamp(13px,1.6vw,20px);color:var(--cream)}
+.rp{font-family:'Montserrat',sans-serif;font-weight:200;
+  font-size:clamp(8px,.84vw,11px);color:var(--rose);letter-spacing:.08em;white-space:nowrap}
 
-/* ── CTA ── */
+/* CTA button */
 .btn{display:inline-block;border:1px solid var(--rose);padding:.75em 2.4em;
   font-family:'Montserrat',sans-serif;font-weight:300;
-  font-size:clamp(8px,1vw,12px);letter-spacing:.45em;
-  color:var(--rose);text-transform:uppercase;margin-top:2.4em;opacity:0}
+  font-size:clamp(8px,.95vw,11px);letter-spacing:.45em;
+  color:var(--rose);text-transform:uppercase;margin-top:2.4em}
 
-/* ── OUTRO ── */
-.outro-h{font-family:'Montserrat',sans-serif;font-weight:200;
-  font-size:clamp(10px,1.3vw,15px);letter-spacing:1em;color:var(--rose);
+/* outro */
+.oh{font-family:'Montserrat',sans-serif;font-weight:200;
+  font-size:clamp(9px,1.2vw,14px);letter-spacing:1em;color:var(--rose);
   display:block;text-align:center;margin-bottom:.4em}
-.outro-n{font-weight:300;font-size:clamp(42px,9.5vw,118px);
+.on{font-weight:300;font-size:clamp(40px,9vw,115px);
   color:var(--cream);letter-spacing:.12em;display:block;text-align:center;line-height:1}
-.outro-url{font-family:'Montserrat',sans-serif;font-weight:200;
-  font-size:clamp(8px,1vw,13px);letter-spacing:.32em;
-  color:rgba(196,136,154,.7);display:block;text-align:center}
+.ou{font-family:'Montserrat',sans-serif;font-weight:200;
+  font-size:clamp(8px,.95vw,12px);letter-spacing:.32em;
+  color:rgba(196,136,154,.68);display:block;text-align:center}
 
-/* ── WAVES ── */
-.waves{position:absolute;bottom:0;left:0;width:100%;height:22%;z-index:1;pointer-events:none}
+/* waves */
+.wvs{position:absolute;bottom:0;left:0;width:100%;height:20%;z-index:1;pointer-events:none}
 .wv{position:absolute;bottom:0;width:200%;height:100%}
-.wv1{animation:wvm 9s ease-in-out infinite;opacity:.2}
-.wv2{animation:wvm 7s ease-in-out infinite reverse;opacity:.14;bottom:-7px}
-@keyframes wvm{0%,100%{transform:translateX(0)}50%{transform:translateX(-25%)}}
+.wv1{animation:wm 9s ease-in-out infinite;opacity:.18}
+.wv2{animation:wm 7s ease-in-out infinite reverse;opacity:.13;bottom:-6px}
+@keyframes wm{0%,100%{transform:translateX(0)}50%{transform:translateX(-25%)}}
 
-.cs{display:inline-block}
+/* ── SCENE TIMING — linear keeps GSAP inner reveals in sync ── */
+#s1{animation:A1 70s linear infinite}
+@keyframes A1{0%{opacity:0}1.4%{opacity:1}10%{opacity:1}11.4%{opacity:0}100%{opacity:0}}
+#s2{animation:A2 70s linear infinite}
+@keyframes A2{0%{opacity:0}10%{opacity:0}11.4%{opacity:1}24.3%{opacity:1}25.7%{opacity:0}100%{opacity:0}}
+#s3{animation:A3 70s linear infinite}
+@keyframes A3{0%{opacity:0}24.3%{opacity:0}25.7%{opacity:1}38.6%{opacity:1}40%{opacity:0}100%{opacity:0}}
+#s4{animation:A4 70s linear infinite}
+@keyframes A4{0%{opacity:0}38.6%{opacity:0}40%{opacity:1}52.9%{opacity:1}54.3%{opacity:0}100%{opacity:0}}
+#s5{animation:A5 70s linear infinite}
+@keyframes A5{0%{opacity:0}52.9%{opacity:0}54.3%{opacity:1}67.1%{opacity:1}68.6%{opacity:0}100%{opacity:0}}
+#s6{animation:A6 70s linear infinite}
+@keyframes A6{0%{opacity:0}67.1%{opacity:0}68.6%{opacity:1}81.4%{opacity:1}82.9%{opacity:0}100%{opacity:0}}
+#s7{animation:A7 70s linear infinite}
+@keyframes A7{0%{opacity:0}81.4%{opacity:0}82.9%{opacity:1}98.6%{opacity:1}100%{opacity:0}}
+
+.gsap-word{display:inline-block}
 </style>
 </head>
 <body>
 
-<!-- WOW LAYERS -->
-<div class="wipe w1"></div><div class="wipe w2"></div><div class="wipe w3"></div>
-<div class="wipe w4"></div><div class="wipe w5"></div><div class="wipe w6"></div>
-<canvas id="particles"></canvas>
+<!-- ── EFFECTS LAYERS ── -->
+<div id="curt"></div>
+<canvas id="pcv"></canvas>
 <div id="grain">
   <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
     <filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="4" stitchTiles="stitch"/></filter>
@@ -230,119 +180,82 @@ body::before{top:0} body::after{bottom:2px}
 <div id="vig"></div>
 <div id="pb"></div>
 
-<!-- ════ S1 · LOGO REVEAL ════ -->
+<!-- ════════════════════════
+  S1 · LOGO REVEAL
+════════════════════════ -->
 <div class="scene" id="s1" style="background:radial-gradient(ellipse at center,#3D1A2A 0%,#2A0F1C 100%)">
-  <div class="lace-top"></div>
-  <div class="lace-bot"></div>
-  <div class="cnt cnt-c">
+  <div class="lt"></div>
+  <div class="lb"></div>
+  <div class="cnt cc">
 
     <!-- Art Deco fan ornament -->
-    <svg class="s1-orn" viewBox="0 0 200 42" xmlns="http://www.w3.org/2000/svg"
-         style="width:clamp(90px,16vw,190px);margin-bottom:.6em;opacity:0">
+    <svg id="fan1" viewBox="0 0 200 42" xmlns="http://www.w3.org/2000/svg"
+         style="width:clamp(88px,15vw,185px);margin-bottom:.5em">
       <g stroke="#C4889A" stroke-width=".6" fill="none" opacity=".75">
         <path d="M100,40 A38,38 0 0,1 62,40"/><path d="M100,40 A38,38 0 0,0 138,40"/>
         <path d="M100,40 A27,27 0 0,1 73,40"/><path d="M100,40 A27,27 0 0,0 127,40"/>
         <path d="M100,40 A16,16 0 0,1 84,40"/><path d="M100,40 A16,16 0 0,0 116,40"/>
         <path d="M100,40 A7,7 0 0,1 93,40"/> <path d="M100,40 A7,7 0 0,0 107,40"/>
-        <line x1="100" y1="40" x2="62" y2="2"/>
-        <line x1="100" y1="40" x2="73" y2="0"/>
-        <line x1="100" y1="40" x2="85" y2="0"/>
-        <line x1="100" y1="40" x2="100" y2="0"/>
-        <line x1="100" y1="40" x2="115" y2="0"/>
-        <line x1="100" y1="40" x2="127" y2="0"/>
+        <line x1="100" y1="40" x2="62" y2="2"/><line x1="100" y1="40" x2="73" y2="0"/>
+        <line x1="100" y1="40" x2="85" y2="0"/><line x1="100" y1="40" x2="100" y2="0"/>
+        <line x1="100" y1="40" x2="115" y2="0"/><line x1="100" y1="40" x2="127" y2="0"/>
         <line x1="100" y1="40" x2="138" y2="2"/>
         <line x1="54" y1="40" x2="146" y2="40" stroke-width=".9"/>
       </g>
     </svg>
 
-    <!-- CIRCULAR BRAND LOGO — replicating Instagram style -->
-    <div class="s1-logo" style="opacity:0;margin-bottom:1em">
+    <!-- Circular brand logo — matches Instagram -->
+    <div id="logoico" style="margin-bottom:.9em">
       <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"
-           style="width:clamp(90px,13vw,150px);filter:drop-shadow(0 4px 24px rgba(0,0,0,.5))">
-        <!-- Blush circle -->
+           style="width:clamp(88px,12.5vw,145px);filter:drop-shadow(0 6px 28px rgba(0,0,0,.6))">
         <circle cx="65" cy="65" r="62" fill="#F0C4C4"/>
-        <!-- Decorative rings -->
         <circle cx="65" cy="65" r="59" fill="none" stroke="#3D1A2A" stroke-width=".9" opacity=".35"/>
-        <circle cx="65" cy="65" r="55" fill="none" stroke="#3D1A2A" stroke-width=".4" opacity=".2"/>
-
-        <!-- ── PALM TREE ── -->
-        <!-- Main trunk — slight S-curve -->
-        <path d="M65,97 C63,88 62,79 63,70 C64,61 65,54 65,48"
+        <circle cx="65" cy="65" r="55" fill="none" stroke="#3D1A2A" stroke-width=".4" opacity=".18"/>
+        <!-- trunk -->
+        <path d="M65,96 C63,87 62,78 63,69 C64,60 65,54 65,48"
               stroke="#3D1A2A" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <!-- Trunk shadow line -->
-        <path d="M67,97 C65.5,88 65,80 65.5,72"
-              stroke="#3D1A2A" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".3"/>
-
-        <!-- Left major frond -->
-        <path d="M64,52 C52,44 40,41 33,46"
-              stroke="#3D1A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <path d="M64,54 C53,48 45,45 40,49"
-              stroke="#3D1A2A" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".45"/>
-        <!-- Left lower frond -->
-        <path d="M64,57 C55,53 49,50 44,54"
-              stroke="#3D1A2A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-
-        <!-- Right major frond -->
-        <path d="M66,52 C78,44 90,41 97,46"
-              stroke="#3D1A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <path d="M66,54 C77,48 85,45 90,49"
-              stroke="#3D1A2A" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".45"/>
-        <!-- Right lower frond -->
-        <path d="M66,57 C75,53 81,50 86,54"
-              stroke="#3D1A2A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-
-        <!-- Center top frond -->
-        <path d="M65,48 C62,38 60,30 62,23"
-              stroke="#3D1A2A" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M65,49 C68,39 70,31 68,23"
-              stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-
-        <!-- Upper-left frond -->
-        <path d="M65,50 C57,41 52,36 48,33"
-              stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-        <!-- Upper-right frond -->
-        <path d="M65,50 C73,41 78,36 82,33"
-              stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-
-        <!-- ── TEXT ── -->
-        <!-- HOTEL — small caps top of circle -->
-        <text x="65" y="21" font-family="'Montserrat','Arial Narrow',Arial,sans-serif"
-              font-size="7.5" font-weight="400" fill="#3D1A2A"
-              text-anchor="middle" letter-spacing="4">HOTEL</text>
-
-        <!-- RIVIERA — bold serif bottom of circle -->
-        <text x="65" y="112" font-family="Georgia,'Times New Roman',serif"
-              font-size="13" font-weight="bold" fill="#3D1A2A"
-              text-anchor="middle" letter-spacing="2.5">RIVIERA</text>
-
-        <!-- Decorative rule under RIVIERA -->
-        <line x1="30" y1="116" x2="100" y2="116"
-              stroke="#3D1A2A" stroke-width=".7" opacity=".35"/>
-
-        <!-- Tiny dot ornaments -->
-        <circle cx="65" cy="119" r="1.2" fill="#3D1A2A" opacity=".35"/>
-        <circle cx="57" cy="119" r=".8" fill="#3D1A2A" opacity=".25"/>
-        <circle cx="73" cy="119" r=".8" fill="#3D1A2A" opacity=".25"/>
+        <path d="M67,96 C65.5,87 65,79 65.5,71"
+              stroke="#3D1A2A" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".26"/>
+        <!-- left fronds -->
+        <path d="M64,52 C52,44 40,41 33,46" stroke="#3D1A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M64,54 C53,48 45,45 40,49" stroke="#3D1A2A" stroke-width="1.1" fill="none" stroke-linecap="round" opacity=".38"/>
+        <path d="M64,57 C55,53 49,50 44,54" stroke="#3D1A2A" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+        <!-- right fronds -->
+        <path d="M66,52 C78,44 90,41 97,46" stroke="#3D1A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M66,54 C77,48 85,45 90,49" stroke="#3D1A2A" stroke-width="1.1" fill="none" stroke-linecap="round" opacity=".38"/>
+        <path d="M66,57 C75,53 81,50 86,54" stroke="#3D1A2A" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+        <!-- center top fronds -->
+        <path d="M65,48 C62,38 60,30 62,23" stroke="#3D1A2A" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M65,49 C68,39 70,31 68,23" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M65,50 C57,41 52,36 48,33" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M65,50 C73,41 78,36 82,33" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <!-- text -->
+        <text x="65" y="21" font-family="'Montserrat',Arial,sans-serif" font-size="7.5"
+              font-weight="400" fill="#3D1A2A" text-anchor="middle" letter-spacing="4">HOTEL</text>
+        <text x="65" y="111" font-family="Georgia,serif" font-size="13"
+              font-weight="bold" fill="#3D1A2A" text-anchor="middle" letter-spacing="2.5">RIVIERA</text>
+        <line x1="30" y1="115" x2="100" y2="115" stroke="#3D1A2A" stroke-width=".7" opacity=".3"/>
+        <circle cx="65" cy="119" r="1.2" fill="#3D1A2A" opacity=".3"/>
       </svg>
     </div>
 
-    <div class="logo-wrap">
-      <span class="logo-hotel s1-h">HOTEL</span>
-      <span class="logo-name" id="logo-name">Riviera</span>
-      <div class="rule s1-l" style="margin:1.3em auto"></div>
-      <span class="logo-sub s1-s">Moss · Norge</span>
+    <div>
+      <div class="lm"><div id="lhtl" class="lhtl">HOTEL</div></div>
+      <div id="lnm" class="lnm">Riviera</div>
+      <div id="lrl" class="rl" style="width:0;margin:1.2em auto"></div>
+      <div class="lm" style="margin-top:.5em"><div id="lsub" class="lsub">Moss · Norge</div></div>
     </div>
 
-    <!-- Mirror fan -->
-    <svg class="s1-orn" viewBox="0 0 200 42" xmlns="http://www.w3.org/2000/svg"
-         style="width:clamp(90px,16vw,190px);margin-top:.6em;opacity:0;transform:scaleY(-1)">
-      <g stroke="#C4889A" stroke-width=".6" fill="none" opacity=".45">
+    <!-- mirror fan -->
+    <svg id="fan2" viewBox="0 0 200 42" xmlns="http://www.w3.org/2000/svg"
+         style="width:clamp(88px,15vw,185px);margin-top:.5em;transform:scaleY(-1)">
+      <g stroke="#C4889A" stroke-width=".6" fill="none" opacity=".42">
         <path d="M100,40 A38,38 0 0,1 62,40"/><path d="M100,40 A38,38 0 0,0 138,40"/>
         <path d="M100,40 A22,22 0 0,1 78,40"/><path d="M100,40 A22,22 0 0,0 122,40"/>
         <path d="M100,40 A10,10 0 0,1 90,40"/><path d="M100,40 A10,10 0 0,0 110,40"/>
         <line x1="100" y1="40" x2="62" y2="2"/><line x1="100" y1="40" x2="78" y2="0"/>
-        <line x1="100" y1="40" x2="100" y2="0"/>
-        <line x1="100" y1="40" x2="122" y2="0"/><line x1="100" y1="40" x2="138" y2="2"/>
+        <line x1="100" y1="40" x2="100" y2="0"/><line x1="100" y1="40" x2="122" y2="0"/>
+        <line x1="100" y1="40" x2="138" y2="2"/>
         <line x1="54" y1="40" x2="146" y2="40" stroke-width=".9"/>
       </g>
     </svg>
@@ -350,177 +263,373 @@ body::before{top:0} body::after{bottom:2px}
   </div>
 </div>
 
-<!-- ════ S2 · ATMOSFÆRE ════ -->
+<!-- ════════════════════════
+  S2 · ATMOSFÆRE
+════════════════════════ -->
 <div class="scene" id="s2">
-  <div class="bg" style="background-image:url('img/exterior.jpg')"></div>
-  <div class="ov-burg"></div>
-  <div class="lace-bot"></div>
-  <div class="waves">
+  <div class="bg" id="bg2" style="background-image:url('img/exterior.jpg')"></div>
+  <div class="ov-l"></div>
+  <div class="lb"></div>
+  <div class="wvs">
     <div class="wv wv1">
       <svg viewBox="0 0 1440 200" preserveAspectRatio="none" width="100%" height="100%">
-        <path d="M0,100 C360,180 720,20 1080,100 C1260,140 1350,60 1440,100 L1440,200 L0,200Z"
-              fill="rgba(42,15,28,.6)"/>
+        <path d="M0,100 C360,180 720,20 1080,100 C1260,140 1350,60 1440,100 L1440,200 L0,200Z" fill="rgba(42,15,28,.55)"/>
       </svg>
     </div>
     <div class="wv wv2">
       <svg viewBox="0 0 1440 200" preserveAspectRatio="none" width="100%" height="100%">
-        <path d="M0,80 C300,160 600,20 900,80 C1050,110 1200,40 1440,80 L1440,200 L0,200Z"
-              fill="rgba(42,15,28,.4)"/>
+        <path d="M0,80 C300,160 600,20 900,80 C1050,110 1200,40 1440,80 L1440,200 L0,200Z" fill="rgba(42,15,28,.38)"/>
       </svg>
     </div>
   </div>
   <div class="cnt">
-    <span class="lbl  s2-lb">OPPLEV</span>
-    <span class="h-xl s2-c">Moss</span>
-    <span class="h-it s2-s" style="color:var(--pink)">ved sjøen</span>
-    <div  class="rule s2-r" style="margin:1.8em 0"></div>
-    <span class="sub  s2-d">50 MINUTTER FRA OSLO</span>
+    <div class="lm"><div id="s2t" class="tag">OPPLEV</div></div>
+    <div class="lm"><div id="s2h1" class="xl">Moss</div></div>
+    <div class="lm"><div id="s2h2" class="it" style="color:var(--pink)">ved sjøen</div></div>
+    <div id="s2rl" class="rl" style="width:0;margin:1.8em 0"></div>
+    <div id="s2sm" class="sm">50 MINUTTER FRA OSLO</div>
   </div>
 </div>
 
-<!-- ════ S3 · ROM ════ -->
-<div class="scene" id="s3" style="background:var(--burg-dk)">
-  <div class="room-mosaic">
-    <div class="room-img" style="background-image:url('img/room1.jpg')"></div>
-    <div class="room-img" style="background-image:url('img/room2.jpg')"></div>
-    <div class="room-img" style="background-image:url('img/room3.jpg')"></div>
-    <div class="room-img" style="background-image:url('img/room4.jpg')"></div>
+<!-- ════════════════════════
+  S3 · ROM
+════════════════════════ -->
+<div class="scene" id="s3" style="background:var(--dark)">
+  <div class="rmosaic">
+    <div class="ri" style="background-image:url('img/room1.jpg')"></div>
+    <div class="ri" style="background-image:url('img/room2.jpg')"></div>
+    <div class="ri" style="background-image:url('img/room3.jpg')"></div>
+    <div class="ri" style="background-image:url('img/room4.jpg')"></div>
   </div>
-  <div class="room-fade"></div>
-  <div class="lace-bot"></div>
-  <div class="room-text">
-    <span class="lbl  s3-lb">OVERNATTING</span>
-    <span class="h-l  s3-h" style="margin-bottom:.7em">Velg din<br><em>utsikt</em></span>
-    <div class="room-row s3-r1"><span class="rrn">Riviera Stay</span><span class="rrp">fra 1 145 kr</span></div>
-    <div class="room-row s3-r2"><span class="rrn">Superior Ocean View</span><span class="rrp">fra 1 220 kr</span></div>
-    <div class="room-row s3-r3"><span class="rrn">Ocean Front Premium</span><span class="rrp">fra 1 545 kr</span></div>
-    <div class="room-row s3-r4"><span class="rrn">Ocean Front Suite</span><span class="rrp">fra 2 545 kr</span></div>
+  <div class="rfade"></div>
+  <div class="lb"></div>
+  <div class="rtxt">
+    <div class="lm"><div id="s3t" class="tag">OVERNATTING</div></div>
+    <div class="lm"><div id="s3h" class="lg" style="margin-bottom:.7em">Velg din<br><em>utsikt</em></div></div>
+    <div id="r1" class="rrow"><span class="rn">Riviera Stay</span><span class="rp">fra 1 145 kr</span></div>
+    <div id="r2" class="rrow"><span class="rn">Superior Ocean View</span><span class="rp">fra 1 220 kr</span></div>
+    <div id="r3" class="rrow"><span class="rn">Ocean Front Premium</span><span class="rp">fra 1 545 kr</span></div>
+    <div id="r4" class="rrow"><span class="rn">Ocean Front Suite</span><span class="rp">fra 2 545 kr</span></div>
   </div>
 </div>
 
-<!-- ════ S4 · WELLNESS ════ -->
+<!-- ════════════════════════
+  S4 · WELLNESS
+════════════════════════ -->
 <div class="scene" id="s4">
-  <div class="bg bg-r" style="background-image:url('img/pool.jpg');background-position:center top"></div>
-  <div class="ov-burgb"></div>
-  <div class="ov-dark" style="background:rgba(42,15,28,.32)"></div>
-  <div class="lace-top"></div>
-  <div class="cnt cnt-bot">
-    <span class="lbl  s4-lb">AVSLAPNING</span>
-    <span class="h-xl s4-h">Pool &amp;<br>Wellness</span>
-    <span class="sub  s4-s">Spa · Basseng · Behandlinger · Dag Spa Pakker</span>
-    <div  class="rule s4-r" style="margin-top:1.8em"></div>
+  <div class="bg" id="bg4" style="background-image:url('img/pool.jpg');background-position:center top"></div>
+  <div class="ov-b"></div>
+  <div class="ov" style="background:rgba(42,15,28,.28)"></div>
+  <div class="lt"></div>
+  <div class="cnt cb">
+    <div class="lm"><div id="s4t" class="tag">AVSLAPNING</div></div>
+    <div class="lm"><div id="s4h1" class="xl">Pool &amp;</div></div>
+    <div class="lm"><div id="s4h2" class="xl">Wellness</div></div>
+    <div id="s4sm" class="sm">Spa · Basseng · Behandlinger · Dag Spa Pakker</div>
+    <div id="s4rl" class="rl" style="width:0;margin-top:1.6em"></div>
   </div>
 </div>
 
-<!-- ════ S5 · RESTAURANT ════ -->
+<!-- ════════════════════════
+  S5 · RESTAURANT
+════════════════════════ -->
 <div class="scene" id="s5">
-  <div class="bg" style="background-image:url('img/restaurant.jpg')"></div>
-  <div class="ov-dark" style="background:rgba(42,15,28,.48)"></div>
-  <div class="ov-burgb"></div>
-  <div class="lace-top"></div>
-  <div class="cnt cnt-bot">
-    <span class="lbl  s5-lb">RESTAURANTEN</span>
-    <span class="h-it s5-h">Brasserie<br>Bon Vivant</span>
-    <div  class="rule s5-r" style="margin:1.6em 0"></div>
-    <span class="sub  s5-m">Lunsj &nbsp;·&nbsp; Middag &nbsp;·&nbsp; Pizza &nbsp;·&nbsp; Bar</span>
+  <div class="bg" id="bg5" style="background-image:url('img/restaurant.jpg')"></div>
+  <div class="ov" style="background:rgba(42,15,28,.46)"></div>
+  <div class="ov-b"></div>
+  <div class="lt"></div>
+  <div class="cnt cb">
+    <div class="lm"><div id="s5t" class="tag">RESTAURANTEN</div></div>
+    <div class="lm"><div id="s5h1" class="it">Brasserie</div></div>
+    <div class="lm"><div id="s5h2" class="it">Bon Vivant</div></div>
+    <div id="s5rl" class="rl" style="width:0;margin:1.5em 0"></div>
+    <div id="s5sm" class="sm">Lunsj &nbsp;·&nbsp; Middag &nbsp;·&nbsp; Pizza &nbsp;·&nbsp; Bar</div>
   </div>
 </div>
 
-<!-- ════ S6 · TILBUD ════ -->
+<!-- ════════════════════════
+  S6 · TILBUD
+════════════════════════ -->
 <div class="scene" id="s6">
-  <div class="bg bg-r" style="background-image:url('img/offer.jpg')"></div>
-  <div class="ov-dark" style="background:rgba(42,15,28,.84)"></div>
-  <div class="lace-top"></div><div class="lace-bot"></div>
+  <div class="bg" id="bg6" style="background-image:url('img/offer.jpg')"></div>
+  <div class="ov" style="background:rgba(42,15,28,.86)"></div>
+  <div class="lt"></div><div class="lb"></div>
   <div class="cnt">
-    <span class="lbl   s6-lb">SPESIALTILBUD</span>
-    <span class="h-xl  s6-h">Riviera<br>Sundays</span>
-    <span class="h-it  s6-p" style="color:var(--rose);font-size:clamp(18px,2.8vw,38px);opacity:0">fra 1 795 kr for 2 personer</span>
-    <span class="sub   s6-d">— 30 % Early Bird Rabatt på sommer —</span>
-    <div  class="btn   s6-b">BOOK PÅ HOTELRIVIERA.NO</div>
+    <div class="lm"><div id="s6t" class="tag">SPESIALTILBUD</div></div>
+    <div class="lm"><div id="s6h1" class="xl">Riviera</div></div>
+    <div class="lm"><div id="s6h2" class="xl">Sundays</div></div>
+    <div class="lm"><div id="s6pr" class="it" style="color:var(--rose);font-size:clamp(16px,2.6vw,36px)">fra 1 795 kr for 2 personer</div></div>
+    <div id="s6sm" class="sm">— 30 % Early Bird Rabatt på sommer —</div>
+    <div id="s6btn" class="btn">BOOK PÅ HOTELRIVIERA.NO</div>
   </div>
 </div>
 
-<!-- ════ S7 · OUTRO ════ -->
+<!-- ════════════════════════
+  S7 · OUTRO
+════════════════════════ -->
 <div class="scene" id="s7">
-  <div class="bg" style="background-image:url('img/outro.jpg')"></div>
-  <div class="ov-dark" style="background:rgba(42,15,28,.76)"></div>
-  <div class="lace-top"></div><div class="lace-bot"></div>
-  <div class="cnt cnt-c">
-    <span class="h-it s7-q"
-      style="font-size:clamp(15px,2.3vw,33px);max-width:72vw;line-height:1.6;margin-bottom:2.4em;color:var(--pink)">
+  <div class="bg" id="bg7" style="background-image:url('img/outro.jpg')"></div>
+  <div class="ov" style="background:rgba(42,15,28,.78)"></div>
+  <div class="lt"></div><div class="lb"></div>
+  <div class="cnt cc">
+
+    <div id="s7q" style="font-style:italic;font-size:clamp(14px,2.2vw,31px);
+      max-width:70vw;line-height:1.65;margin-bottom:2.2em;color:var(--pink)">
       "It's not just a place – it's a feeling"
-    </span>
-    <div class="s7-l">
-      <!-- Outro SVG logo (smaller) -->
-      <div style="display:flex;justify-content:center;margin-bottom:1em">
-        <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg"
-             style="width:clamp(52px,7vw,84px);opacity:.9">
-          <circle cx="65" cy="65" r="62" fill="#F0C4C4"/>
-          <circle cx="65" cy="65" r="59" fill="none" stroke="#3D1A2A" stroke-width=".9" opacity=".35"/>
-          <path d="M65,97 C63,88 62,79 63,70 C64,61 65,54 65,48"
-                stroke="#3D1A2A" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M64,52 C52,44 40,41 33,46" stroke="#3D1A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M64,57 C55,53 49,50 44,54" stroke="#3D1A2A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-          <path d="M66,52 C78,44 90,41 97,46" stroke="#3D1A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          <path d="M66,57 C75,53 81,50 86,54" stroke="#3D1A2A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-          <path d="M65,48 C62,38 60,30 62,23" stroke="#3D1A2A" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <path d="M65,49 C68,39 70,31 68,23" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-          <path d="M65,50 C57,41 52,36 48,33" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-          <path d="M65,50 C73,41 78,36 82,33" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-          <text x="65" y="21" font-family="'Montserrat','Arial Narrow',Arial,sans-serif"
-                font-size="7.5" font-weight="400" fill="#3D1A2A" text-anchor="middle" letter-spacing="4">HOTEL</text>
-          <text x="65" y="112" font-family="Georgia,'Times New Roman',serif"
-                font-size="13" font-weight="bold" fill="#3D1A2A" text-anchor="middle" letter-spacing="2.5">RIVIERA</text>
-          <line x1="30" y1="116" x2="100" y2="116" stroke="#3D1A2A" stroke-width=".7" opacity=".35"/>
-        </svg>
-      </div>
-      <span class="outro-h">HOTEL</span>
-      <span class="outro-n">Riviera</span>
-      <div class="rule s7-r" style="margin:1.3em auto"></div>
-      <span class="outro-url s7-u">hotelriviera.no</span>
     </div>
+
+    <!-- outro logo icon -->
+    <div id="s7ico" style="display:flex;justify-content:center;margin-bottom:.8em">
+      <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg" style="width:clamp(50px,6.5vw,80px)">
+        <circle cx="65" cy="65" r="62" fill="#F0C4C4"/>
+        <circle cx="65" cy="65" r="59" fill="none" stroke="#3D1A2A" stroke-width=".9" opacity=".35"/>
+        <path d="M65,96 C63,87 62,78 63,69 C64,60 65,54 65,48" stroke="#3D1A2A" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M64,52 C52,44 40,41 33,46" stroke="#3D1A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M64,57 C55,53 49,50 44,54" stroke="#3D1A2A" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+        <path d="M66,52 C78,44 90,41 97,46" stroke="#3D1A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M66,57 C75,53 81,50 86,54" stroke="#3D1A2A" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+        <path d="M65,48 C62,38 60,30 62,23" stroke="#3D1A2A" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M65,49 C68,39 70,31 68,23" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M65,50 C57,41 52,36 48,33" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M65,50 C73,41 78,36 82,33" stroke="#3D1A2A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <text x="65" y="21" font-family="'Montserrat',Arial,sans-serif" font-size="7.5" fill="#3D1A2A" text-anchor="middle" letter-spacing="4">HOTEL</text>
+        <text x="65" y="111" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#3D1A2A" text-anchor="middle" letter-spacing="2.5">RIVIERA</text>
+        <line x1="30" y1="115" x2="100" y2="115" stroke="#3D1A2A" stroke-width=".7" opacity=".3"/>
+      </svg>
+    </div>
+
+    <div class="lm"><div id="s7oh" class="oh">HOTEL</div></div>
+    <div class="lm"><div id="s7on" class="on">Riviera</div></div>
+    <div id="s7rl" class="rl" style="width:0;margin:1.2em auto"></div>
+    <div id="s7ou" class="ou">hotelriviera.no</div>
+
   </div>
 </div>
 
 <script>
-/* ── PINK / ROSE PARTICLE SYSTEM ── */
-(function(){
-  var c=document.getElementById('particles'),ctx=c.getContext('2d');
-  function resize(){c.width=innerWidth;c.height=innerHeight}
-  resize();window.addEventListener('resize',resize);
-  var cols=['240,196,196','196,136,154','253,245,240','212,149,154','224,168,176'];
-  var pts=[];
-  for(var i=0;i<85;i++){
-    pts.push({
-      x:Math.random()*innerWidth,y:Math.random()*innerHeight,
-      r:Math.random()*1.7+.25,sp:Math.random()*.28+.06,
-      dr:(Math.random()-.5)*.2,op:Math.random()*.44+.04,
-      dop:(Math.random()-.5)*.006,
-      col:cols[Math.floor(Math.random()*cols.length)]
+/* ═══════════════════════════════════════════
+   GSAP MASTER TIMELINE — 70s loop
+   CSS controls scene opacity via @keyframes.
+   GSAP controls all inner element reveals +
+   curtain wipes + Ken Burns. Both start at
+   t=0 and share the same 70s period, so they
+   stay perfectly in sync on every loop.
+═══════════════════════════════════════════ */
+
+var tl = gsap.timeline({ repeat: -1 });
+
+/* ── INITIAL HIDDEN STATES
+   Set everything invisible before first frame
+   so no flash before GSAP reveals ── */
+gsap.set(['#fan1','#fan2','#logoico','#lnm'],          { opacity: 0 });
+gsap.set(['#lhtl','#lsub'],                            { yPercent: 115 });
+gsap.set('#lrl',                                       { width: 0 });
+gsap.set(['#s2t','#s2h1','#s2h2'],                     { yPercent: 115 });
+gsap.set('#s2rl',                                      { width: 0 });
+gsap.set(['#s2sm'],                                    { opacity: 0, y: 14 });
+gsap.set(['#s3t','#s3h'],                              { yPercent: 115 });
+gsap.set(['#r1','#r2','#r3','#r4'],                    { opacity: 0, x: -28 });
+gsap.set(['#s4t','#s4h1','#s4h2'],                     { yPercent: 115 });
+gsap.set(['#s4sm'],                                    { opacity: 0, y: 14 });
+gsap.set('#s4rl',                                      { width: 0 });
+gsap.set(['#s5t','#s5h1','#s5h2'],                     { yPercent: 115 });
+gsap.set('#s5rl',                                      { width: 0 });
+gsap.set(['#s5sm'],                                    { opacity: 0, y: 14 });
+gsap.set(['#s6t','#s6h1','#s6h2','#s6pr'],             { yPercent: 115 });
+gsap.set(['#s6sm','#s6btn'],                           { opacity: 0 });
+gsap.set(['#s7q','#s7ico','#s7ou'],                    { opacity: 0 });
+gsap.set(['#s7oh','#s7on'],                            { yPercent: 115 });
+gsap.set('#s7rl',                                      { width: 0 });
+
+/* ── CURTAIN WIPE
+   Burgundy panel sweeps L→R across the full
+   screen at each scene transition ── */
+function wipe(t) {
+  tl.fromTo('#curt',
+    { clipPath: 'inset(0 100% 0 0)' },
+    { clipPath: 'inset(0 0% 0 0)', duration: 0.30, ease: 'power2.in' }, t
+  ).to('#curt',
+    { clipPath: 'inset(0 0 0 100%)', duration: 0.30, ease: 'power2.out' }, t + 0.30
+  );
+}
+wipe(7.3);  wipe(17.5); wipe(27.7);
+wipe(37.9); wipe(48.1); wipe(58.3);
+
+/* ── KEN BURNS via GSAP ── */
+tl.fromTo('#bg2', { scale: 1.12, xPercent: 0  }, { scale: 1.0, xPercent: -1.5, duration: 11, ease: 'none' }, 8);
+tl.fromTo('#bg4', { scale: 1.0,  xPercent: 1  }, { scale: 1.10, xPercent: -1,  duration: 11, ease: 'none' }, 28);
+tl.fromTo('#bg5', { scale: 1.10, xPercent: 0  }, { scale: 1.0,  xPercent: 1.5, duration: 11, ease: 'none' }, 38);
+tl.fromTo('#bg6', { scale: 1.0,  xPercent: -1 }, { scale: 1.10, xPercent: 1,   duration: 11, ease: 'none' }, 48);
+tl.fromTo('#bg7', { scale: 1.08, xPercent: 0  }, { scale: 1.0,  xPercent: -1,  duration: 12, ease: 'none' }, 58);
+
+/* ── SCRAMBLE TEXT "Riviera"
+   Random chars resolve left-to-right over ~1.9s ── */
+tl.set('#lnm', { opacity: 0 }, 0);
+tl.call(function() {
+  var T = 'Riviera', C = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  var el = document.getElementById('lnm');
+  gsap.set(el, { opacity: 1 });
+  var dur = 1900, s = null;
+  requestAnimationFrame(function f(ts) {
+    if (!s) s = ts;
+    var p = Math.min((ts - s) / dur, 1);
+    var settled = Math.floor(p * T.length * 1.5);
+    var out = '';
+    for (var i = 0; i < T.length; i++) {
+      out += (i < settled) ? T[i] : C[Math.floor(Math.random() * C.length)];
+    }
+    el.textContent = out;
+    if (p < 1) requestAnimationFrame(f); else el.textContent = T;
+  });
+}, null, 1.9);
+
+/* helper: split element text into .gsap-word spans, return them */
+function words(id) {
+  var el = document.getElementById(id);
+  if (!el) return [];
+  el.innerHTML = el.textContent.trim().split(/\s+/)
+    .map(function(w) { return '<span class="gsap-word">' + w + '</span>'; })
+    .join(' ');
+  return el.querySelectorAll('.gsap-word');
+}
+
+/* ═══ S1 — logo reveal  (visible ~1-8s) ═══ */
+tl.to('#fan1',   { opacity: 1, duration: 0.7,  ease: 'power2.out' }, 1.0);
+tl.to('#logoico',{ opacity: 1, scale: 1, y: 0, duration: 1.5, ease: 'expo.out',
+                   startAt: { scale: 0.86, y: 18, opacity: 0 } }, 1.35);
+tl.to('#lhtl',   { yPercent: 0, duration: 0.75, ease: 'expo.out' }, 1.7);
+tl.to('#fan2',   { opacity: 1, duration: 0.7,  ease: 'power2.out' }, 2.2);
+tl.to('#lrl',    { width: 90,  duration: 1.3,  ease: 'expo.out'  }, 2.85);
+tl.to('#lsub',   { yPercent: 0, duration: 0.8, ease: 'expo.out' }, 3.3);
+
+/* ═══ S2 — atmosfære  (visible ~8-17s) ═══ */
+/* Reset for clean re-entry on loop */
+tl.set(['#s2t','#s2h1','#s2h2'], { yPercent: 115 }, 7.8);
+tl.set(['#s2rl'], { width: 0 }, 7.8);
+tl.set(['#s2sm'], { opacity: 0, y: 14 }, 7.8);
+
+tl.to('#s2t',  { yPercent: 0, duration: 0.65, ease: 'expo.out' }, 8.35);
+tl.to('#s2h1', { yPercent: 0, duration: 1.05, ease: 'expo.out' }, 8.65);
+tl.to('#s2h2', { yPercent: 0, duration: 0.95, ease: 'expo.out' }, 9.25);
+tl.to('#s2rl', { width: 44,   duration: 1.1,  ease: 'expo.out' }, 9.95);
+tl.to('#s2sm', { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out' }, 10.45);
+
+/* ═══ S3 — rom  (visible ~18-27s) ═══ */
+tl.set(['#s3t','#s3h'], { yPercent: 115 }, 17.3);
+tl.set(['#r1','#r2','#r3','#r4'], { opacity: 0, x: -28 }, 17.3);
+
+tl.to('#s3t', { yPercent: 0, duration: 0.65, ease: 'expo.out' }, 18.35);
+tl.to('#s3h', { yPercent: 0, duration: 1.05, ease: 'expo.out' }, 18.65);
+tl.to(['#r1','#r2','#r3','#r4'],
+  { opacity: 1, x: 0, stagger: 0.28, duration: 0.65, ease: 'expo.out' }, 19.35);
+
+/* ═══ S4 — wellness  (visible ~28-37s) ═══ */
+tl.set(['#s4t','#s4h1','#s4h2'], { yPercent: 115 }, 27.5);
+tl.set(['#s4rl'], { width: 0 }, 27.5);
+tl.set(['#s4sm'], { opacity: 0, y: 14 }, 27.5);
+
+tl.to('#s4t',  { yPercent: 0, duration: 0.65, ease: 'expo.out' }, 28.4);
+tl.to('#s4h1', { yPercent: 0, duration: 1.05, ease: 'expo.out' }, 28.7);
+tl.to('#s4h2', { yPercent: 0, duration: 1.05, ease: 'expo.out' }, 29.15);
+tl.to('#s4sm', { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out' }, 29.85);
+tl.to('#s4rl', { width: 44,   duration: 1.1,  ease: 'expo.out' }, 30.35);
+
+/* ═══ S5 — restaurant  (visible ~38-47s) ═══ */
+tl.set(['#s5t','#s5h1','#s5h2'], { yPercent: 115 }, 37.7);
+tl.set(['#s5rl'], { width: 0 }, 37.7);
+tl.set(['#s5sm'], { opacity: 0, y: 14 }, 37.7);
+
+tl.to('#s5t',  { yPercent: 0, duration: 0.65, ease: 'expo.out' }, 38.4);
+tl.to('#s5h1', { yPercent: 0, duration: 1.1,  ease: 'expo.out' }, 38.7);
+tl.to('#s5h2', { yPercent: 0, duration: 1.1,  ease: 'expo.out' }, 39.2);
+tl.to('#s5rl', { width: 44,   duration: 1.1,  ease: 'expo.out' }, 39.85);
+tl.to('#s5sm', { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out' }, 40.35);
+
+/* ═══ S6 — tilbud  (visible ~48-57s) ═══ */
+tl.set(['#s6t','#s6h1','#s6h2','#s6pr'], { yPercent: 115 }, 47.9);
+tl.set(['#s6sm','#s6btn'], { opacity: 0 }, 47.9);
+
+tl.to('#s6t',  { yPercent: 0, duration: 0.65, ease: 'expo.out' }, 48.4);
+tl.to('#s6h1', { yPercent: 0, duration: 1.1,  ease: 'expo.out' }, 48.7);
+tl.to('#s6h2', { yPercent: 0, duration: 1.1,  ease: 'expo.out' }, 49.15);
+tl.to('#s6pr', { yPercent: 0, duration: 0.95, ease: 'expo.out' }, 49.75);
+tl.to('#s6sm', { opacity: 1, duration: 0.85, ease: 'power2.out' }, 50.25);
+tl.to('#s6btn',{ opacity: 1, scale: 1, duration: 0.9, ease: 'back.out(1.5)',
+                 startAt: { scale: 0.9, opacity: 0 } }, 50.85);
+
+/* ═══ S7 — outro  (visible ~58-70s) ═══ */
+tl.set(['#s7q','#s7ico','#s7ou'], { opacity: 0 }, 58.1);
+tl.set(['#s7oh','#s7on'], { yPercent: 115 }, 58.1);
+tl.set('#s7rl', { width: 0 }, 58.1);
+
+tl.to('#s7q',  { opacity: 1, y: 0, duration: 1.9, ease: 'power2.out',
+                 startAt: { y: 12 } }, 58.85);
+tl.to('#s7ico',{ opacity: 1, scale: 1, y: 0, duration: 1.4, ease: 'expo.out',
+                 startAt: { scale: 0.88, y: 16, opacity: 0 } }, 60.85);
+tl.to('#s7oh', { yPercent: 0, duration: 0.8, ease: 'expo.out' }, 61.25);
+tl.to('#s7on', { yPercent: 0, duration: 1.1, ease: 'expo.out' }, 61.65);
+tl.to('#s7rl', { width: 90,   duration: 1.4, ease: 'expo.out' }, 62.45);
+tl.to('#s7ou', { opacity: 1, duration: 0.9, ease: 'power2.out' }, 63.1);
+
+/* ── RESET S1 elements for next loop ── */
+tl.set(['#fan1','#fan2','#logoico'], { opacity: 0 }, 69.5);
+tl.set(['#lhtl','#lsub'],            { yPercent: 115 }, 69.5);
+tl.set('#lrl',                       { width: 0 }, 69.5);
+
+/* ═══════════════════════════════════════════
+   GLOWING PARTICLE SYSTEM
+   Pink, rose, cream — 90 particles, 25% glow
+═══════════════════════════════════════════ */
+(function() {
+  var cv = document.getElementById('pcv');
+  var cx = cv.getContext('2d');
+  function rs() { cv.width = innerWidth; cv.height = innerHeight; }
+  rs(); window.addEventListener('resize', rs);
+
+  var COLS = [
+    [240,196,196], [196,136,154], [253,245,240],
+    [212,149,154], [224,168,176], [230,185,192]
+  ];
+  var P = [];
+  for (var i = 0; i < 92; i++) {
+    var c = COLS[i % COLS.length];
+    P.push({
+      x: Math.random() * innerWidth,
+      y: Math.random() * innerHeight,
+      r: Math.random() * 1.9 + 0.2,
+      vy: Math.random() * 0.26 + 0.04,
+      vx: (Math.random() - 0.5) * 0.17,
+      op: Math.random() * 0.42 + 0.04,
+      dop: (Math.random() - 0.5) * 0.005,
+      col: c,
+      glow: i % 4 === 0  // every 4th particle has a halo
     });
   }
-  function draw(){
-    ctx.clearRect(0,0,c.width,c.height);
-    pts.forEach(function(p){
-      p.y-=p.sp;p.x+=p.dr;p.op+=p.dop;
-      if(p.op>.48){p.op=.48;p.dop*=-1}if(p.op<.02){p.op=.02;p.dop*=-1}
-      if(p.y<-5){p.y=c.height+5;p.x=Math.random()*c.width}
-      if(p.x<-5)p.x=c.width+5;if(p.x>c.width+5)p.x=-5;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle='rgba('+p.col+','+p.op.toFixed(3)+')';
-      ctx.fill();
+
+  (function draw() {
+    cx.clearRect(0, 0, cv.width, cv.height);
+    P.forEach(function(p) {
+      p.y -= p.vy; p.x += p.vx;
+      p.op += p.dop;
+      if (p.op > 0.46) { p.op = 0.46; p.dop *= -1; }
+      if (p.op < 0.02) { p.op = 0.02; p.dop *= -1; }
+      if (p.y < -6) { p.y = cv.height + 6; p.x = Math.random() * cv.width; }
+      if (p.x < -6) p.x = cv.width + 6;
+      if (p.x > cv.width + 6) p.x = -6;
+
+      cx.save();
+      if (p.glow) {
+        cx.shadowBlur = 10;
+        cx.shadowColor = 'rgba(' + p.col + ',0.55)';
+      }
+      cx.beginPath();
+      cx.arc(p.x, p.y, p.r, 0, 6.2832);
+      cx.fillStyle = 'rgba(' + p.col + ',' + p.op.toFixed(3) + ')';
+      cx.fill();
+      cx.restore();
     });
     requestAnimationFrame(draw);
-  }
-  draw();
-})();
-
-/* ── CHARACTER SPLIT — "Riviera" ── */
-(function(){
-  var el=document.getElementById('logo-name');
-  el.innerHTML='Riviera'.split('').map(function(ch,i){
-    return '<span class="cs" style="opacity:0;animation:charUp .55s ease '+(0.55+i*.075)+'s both">'+ch+'</span>';
-  }).join('');
+  })();
 })();
 </script>
 </body>
