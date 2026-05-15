@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="nb-NO">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    :root {
+      --color-submenu-active : #ffffff;
+      --color-submenu-background : #fac5c4;
+    }
+  </style>
+   <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PC5ZWZM');</script>
+    <!-- End Google Tag Manager -->   <style>
+:root {
+  --color-custom-1:#205779;--color-custom-2:#783aac;--color-custom-3:#fda546;--color-custom-4:#9ac359;--color-custom-5:#02057c;--color-custom-6:#7c0202;--color-custom-7:#e1b345;--color-custom-8:#45e171;--color-custom-9:#45e1db;
+}
+</style>  <meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Page not found - Riviera</title>
+	<meta property="og:locale" content="nb_NO" />
+	<meta property="og:title" content="Page not found - Riviera" />
+	<meta property="og:site_name" content="Riviera" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/hotelriviera.no\/#website","url":"https:\/\/hotelriviera.no\/","name":"Riviera","description":"Enjoy the riviera done differently","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/hotelriviera.no\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"nb-NO"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//contact-api.inguest.com' />
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//use.typekit.net' />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://hotelriviera.no/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='sage/main.css-css' href='https://hotelriviera.no/wp-content/themes/riviera/dist/styles/main_8176430d.css' type='text/css' media='all' />
+<link rel='stylesheet' id='lustfont-css' href='https://use.typekit.net/hoj0fag.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jqueryuicss-css' href='//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' type='text/css' media='all' />
+<script type="text/javascript" id="wpml-cookie-js-extra">
+/* <![CDATA[ */
+var wpml_cookies = {"wp-wpml_current_language":{"value":"no","expires":1,"path":"/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"no","expires":1,"path":"/"}};
+//# sourceURL=wpml-cookie-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hotelriviera.no/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=493000" id="wpml-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="NCB-datepicker-inline-style-theme-script-js-before">
+/* <![CDATA[ */
+const myWidgetTheme = { name: 'NCB test', generalWidget: { inlineStyles: '', datePicker: { general: { color: { background: '#2e2c2b', color: '#fff', accent: '#ccc', complementary: '#333', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '0px', border: 'none', gap: '12px' }, }, header: { color: { background: '#2e2c2b', color: '#ff5757', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '900', lineHeight: '1', }, style: { borderRadius: '0px', border: 'none', gap: '12px' }, }, label: { color: { background: 'transparent', color: '#000', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '0px', border: 'none', gap: '12px' }, }, date: { color: { background: 'transparent', color: '#fac5c4', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: '"Lust", Times New Roman', size: '3.5em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '0px', border: '1px solid rgba(0,0,0,0.25)', gap: '12px' }, }, iconColor: '#ff5757', }, links: { color: { background: 'rgba(0,0,0,0.5)', color: '#fff', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Helvetica', size: '0.75em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '3px', border: 'none', gap: '12px' }, }, toolBox: { color: { background: '#fff', color: '#000', accent: '#FF5758', complementary: '#fff', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '0px', border: '1px solid rgba(0,0,0,0.25)', gap: '12px' }, }, }, spaWidget: { color: { background: '#fff', color: '#000', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Helvetica', size: '16px', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1.4', }, style: { borderRadius: '0px', border: '1px solid #00000033', gap: '20px' }, }, common: { inlineStyles: '', color: { background: '#fff', color: '#000', accent: '#ccc', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito, sans-serif', size: '1em', style: 'normal', decoration: 'none', weight: '700', lineHeight: '16px', textTransform: 'uppercase', }, style: { borderRadius: '46px', border: '0', gap: '12px' }, }, calendar: { activeBulletExtras: 'transform:translate3d(0px,-1px,0);', inlineStyles: '', color: { background: '#fff', color: '#000', accent: 'linear-gradient(158deg,#f29396 0%,#fc5454 100%)', complementary: '#fff', disabled: 'rgba(0,0,0,.25)', }, font: { family: 'Helvetica', size: '16px', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1.4', }, style: { borderRadius: '0px', border: '1px solid #00000033', gap: '20px' }, }, button: { color: { background: 'linear-gradient(158deg,#f29396 0%,#fc5454 100%) !important', color: '#fff !important', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '400', lineHeight: '34px', textTransform: 'uppercase', }, style: { borderRadius: '4px', border: '0', gap: '12px' }, }, input: { inlineStyles: '', color: { background: '#fff', color: '#000', accent: '#ccc', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '700', lineHeight: '34px', textTransform: 'uppercase', }, style: { borderRadius: '46px', border: '0', gap: '12px' }, }, modal: { inlineStyles: '', color: { background: 'rgba(255,255,255,0.75)', color: '#000', accent: '#ccc', complementary: 'rgba(0,0,0,.66)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '700', lineHeight: '34px', textTransform: 'uppercase', }, style: { borderRadius: '46px', border: '0', gap: '12px' }, }, }; window.ncbWidgetTheme = myWidgetTheme;
+//# sourceURL=NCB-datepicker-inline-style-theme-script-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" id="NCB-wizard-inline-style-theme-script-js-before">
+/* <![CDATA[ */
+const sizes = { mobileS: 320, mobileM: 375, mobileL: 425, tablet: 768, laptop: 1024, laptopL: 1100, desktop: 1440, }; const myNcbTheme = { name: 'riviera', inlineGlobalStyles: '', adyenGlobalStyles: '', packageSection: { title: { textColor: '#005f6a', selectedTextColor: '#ff5757', fontSize: '25px', font: 'Nunito', }, description: { textColor: '#000', fontSize: '14px', font: 'Nunito', }, price: { textColor: '#000', fontSize: '22px', font: 'Nunito', }, button: { textColor: '#fff', backgroundColor: 'linear-gradient(158deg,#f29396,#fc5454)', fontSize: '14px', font: 'Nunito', }, card: { selectedBackgroundColor: '#ff57571a', selectedImageOverlayColor: '#ff5757', backgroundColor: '#fff', }, }, roomSection: { title: { textColor: '#2b6976', fontSize: '26px', font: 'Nunito', }, description: { textColor: '#000', fontSize: '14px', font: 'Nunito', }, link: { textColor: '#065360', fontSize: '20px', font: 'Nunito', underlineColor: '#2b697633', }, radioButton: { textColor: '#000', fontSize: '20px', font: 'Nunito', radioOutlineColor: '#ff5757', radioDotColor: '#ff5757', }, price: { textColor: '#000', fontSize: '22px', font: 'Nunito', infoColor: '#000', infoFont: 'Nunito', infoFontSize: '14px', }, button: { textColor: '#fff', backgroundColor: '#fff', fontSize: '14px', font: 'Nunito', }, list: { bestPriceFont: 'Nunito', bestPriceColor: '#fff', bestPriceFontSize: '12px', selectedImageOverlayColor: '#ff5757', titleColor: '#fff', titleFont: 'Nunito', titleFontSize: '18px', priceFont: 'Nunito', priceFontSize: '16px', priceColor: '#fff', }, mobileList: { font: 'Nunito, sans-serif', backgroundColor: 'white', selectedBackgroundColor: 'rgba(231, 93, 91, 0.2)', checkboxColor: '#ff5757', selectedCheckboxColor: '#ff5757', dividerColor: 'rgba(43, 105, 118, 0.1)', title: { textColor: 'black', selectedTextColor: '#F76F44', }, }, details: {}, }, productSection: { title: { textColor: '#fff', fontSize: '22px', font: 'Nunito', }, price: { textColor: '#fff', fontSize: '18px', font: 'Nunito', }, selectedImageOverlayColor: '#E75D5B', selectedCheckboxColor: '#E75D5B', }, checkoutSection: { confirmBookingButtonBackgroundColor: '#252525', customerInformation: { backgroundColor: 'white', title: { textColor: 'black', fontSize: '18px', font: 'Nunito, sans-serif', lineHeight: '34px', }, input: { font: 'Nunito, sans-serif', textColor: 'black', fontSize: '16px', lineHeight: '18px', backgroundColor: 'white', borderColor: '#E8E8E8', }, label: { font: 'Nunito, sans-serif', textColor: '#919191', fontSize: '12px', lineHeight: '14px', }, button: { backgroundColor: '#E75D5B', textColor: 'white', font: 'Nunito, sans-serif', fontSize: '18px', lineHeight: '34px', borderRadius: '50px', }, }, payment: { backgroundColor: 'white', color: '#E75D5B', skeleton: { title: { textColor: 'rgba(0, 0, 0, 0.2)', fontSize: '18px', font: 'Nunito, sans-serif', lineHeight: '34px', }, color: '#F2F2F2', textColor: '#C8C8C8', gradientColorFrom: 'rgba(255, 255, 255, 0.5)', gradientColorTo: 'rgba(255, 255, 255, 0)', }, }, loader: { backgroundColor: 'rgba(0, 0, 0, 0.8)', textColor: 'white', iconColor: '43, 105, 118', }, }, button: { background: { backgroundColor: 'linear-gradient(158deg,#f29396,#fc5454)', backgroundColorDisabled: '#e1e1e1', backgroundColorSecondary: '#005f6a', }, text: { textColor: '#ffffff', textColorDisabled: '#9e9e9e', fontSize: '16px', }, }, spaCategories: { background: { backgroundColor: '#ffffff', backgroundColorSelected: '#ff5757', backgroundColorHover: '#025f6a', }, text: { textColor: '#000000', textColorSelected: '#ffffff', textColorHover: '#ffffff', fontSize: '12px', }, }, spaGridItem: { backgroundColorSelected: '#E75D5B', checkboxColor: '#E75D5B', title: { textColor: '#ffffff', textColorSelected: '#ffffff', fontSize: '16px', }, price: { textColor: '#ffffff', textColorSelected: '#ffffff', fontSize: '15px', }, }, foodGridItem: { backgroundColorSelected: '#E75D5B', checkboxColor: '#E75D5B', title: { textColor: '#ffffff', textColorSelected: '#ffffff', fontSize: '16px', }, price: { textColor: '#ffffff', textColorSelected: '#ffffff', fontSize: '15px', }, }, addonGridItem: { backgroundColorSelected: '#E75D5B', checkboxColor: '#E75D5B', title: { textColor: '#ffffff', textColorSelected: '#ffffff', fontSize: '16px', }, price: { textColor: '#ffffff', textColorSelected: '#ffffff', fontSize: '15px', }, }, fakeImageColor: { fakeImgColor: '#065360', }, counter: { label: { fontSize: '14px', }, value: { fontSize: '16px', color: 'black', }, control: { backgroundColor: 'white', color: 'black', }, }, checkoutSummary: { item: { fontSize: '14px', fontFamily: 'Nunito', dotColor: 'black', }, expandButton: { fontSize: '15px', fontFamily: 'Nunito', color: 'black', backgroundColor: '#e9e9e9', }, details: { borderColor: '#ccc', }, changeButton: { fontSize: '12px', fontFamily: 'Nunito', color: '#2b6976', }, price: { fontSize: '14px', fontFamily: 'Nunito', color: 'black', }, roomHeading: { fontSize: '14px', fontFamily: 'Nunito', }, cancellationPolicy: { fontSize: '14px', fontFamily: 'Nunito', color: 'grey', }, wrapper: { background: 'rgba(255, 255, 255, 0.5)', borderColor: '#ccc', }, }, input: { color: '#f76f44', }, select: { color: '#252525', }, sectionHeading: { fontFamily: 'Nunito', fontSize: '26px', }, addonCustomizer: { customizer: { backgroundColor: '#f0f1f2', }, heading: { fontSize: '24px', fontFamily: 'Nunito', color: 'black', }, removeAddon: { fontFamily: 'Nunito', fontSize: '14px', color: '#707070', }, }, foodCustomizer: { customizer: { backgroundColor: '#f0f1f2', }, heading: { fontSize: '24px', fontFamily: 'Nunito', color: 'black', }, selectedSelections: { text: { fontSize: '16px', fontFamily: 'Nunito', color: 'black', }, button: { fontSize: '16px', fontFamily: 'Nunito', color: '#2b6976', backgroundColor: 'transparent', }, }, label: { fontSize: '12px', fontFamily: 'Nunito', color: '#919191', }, timeSlot: { color: 'black', backgroundColor: 'white', fontSize: '16px', fontFamily: 'Nunito', colorHover: 'white', backgroundColorHover: '#e75d5b', colorSelected: 'white', backgroundColorSelected: '#E75D5B', colorDisabled: '#9E9E9E', backgroundColorDisabled: '#E1E1E1', colorDisabledHover: '#9E9E9E', backgroundColorDisabledHover: '#E1E1E1', }, tableWillExpiry: { fontSize: '14px', fontFamily: 'Nunito', }, price: { color: 'black', fontSize: '16px', fontFamily: 'Nunito', }, }, spaCustomizer: { customizer: { backgroundColor: '#f0f1f2', }, heading: { fontSize: '24px', fontFamily: 'Nunito', color: 'black', }, selectedSelections: { text: { fontSize: '16px', fontFamily: 'Nunito', color: 'black', }, button: { fontSize: '16px', fontFamily: 'Nunito', color: '#2b6976', backgroundColor: 'transparent', }, }, label: { fontSize: '12px', fontFamily: 'Nunito', color: '#919191', }, timeSlot: { color: 'black', backgroundColor: 'white', fontSize: '16px', fontFamily: 'Nunito', colorHover: 'white', backgroundColorHover: '#e75d5b', colorSelected: 'white', backgroundColorSelected: '#E75D5B', colorDisabled: '#9E9E9E', backgroundColorDisabled: '#E1E1E1', colorDisabledHover: '#9E9E9E', backgroundColorDisabledHover: '#E1E1E1', }, backButton: { fontSize: '14px', fontFamily: 'Nunito', backgroundColor: 'transparent', color: '#707070', }, totalAmount: { amount: { borderColor: '#aeaeae', color: '#484848', fontSize: '16px', fontFamily: 'Nunito', }, price: { color: 'black', fontSize: '16px', fontFamily: 'Nunito', }, }, price: { color: 'black', fontSize: '16px', fontFamily: 'Nunito', }, }, gridPagination: { backgroundColor: '#808080', backgroundColorActive: '#000000', }, gridModal: { borderColor: 'white', closeColor: '#e4e5e6', }, cart: { heading: { fontSize: '16px', fontFamily: 'Nunito', color: '#000000', }, lastAdded: { fontFamily: 'Nunito', fontSize: '16px', color: '#000000', }, dropdown: { fontFamily: 'Nunito', fontSize: '14px', color: '#000000', }, link: { fontFamily: 'Nunito', fontSize: '18px', color: '#065360', }, summary: { closeButtonColor: 'white', headerColor: 'white', headerBackgroundColor: 'black', }, backgroundColor: 'white', }, multirooms: { borderColor: '#333333', backgroundColor: 'white', borderColorActive: '#333333', backgroundColorActive: 'transparent', summary: { title: { color: ' #2B6976', fontSize: '25px', fontFamily: 'Nunito', }, persons: { fontFamily: 'Nunito', fontSize: '16px', }, list: { fontSize: '16px', fontfamily: 'Nunito', }, label: { fontSize: '14px', fontfamily: 'Nunito', }, input: { fontSize: '15px', fontfamily: 'Nunito', }, price: { fontSize: '20px', fontfamily: 'Nunito', }, }, button: { fontSize: '15px', fontfamily: 'Nunito', color: 'black', backgroundColor: 'white', selectedColor: 'white', selectedBackgroundColor: 'black', hoverColor: 'white', hoverBackgroundColor: '#E75D5B', }, }, generalWidget: { inlineStyles: '', button: { color: { background: 'linear-gradient(158deg,#f29396 0%,#fc5454 100%) !important', color: '#fff !important', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '400', lineHeight: '34px', textTransform: 'uppercase', }, style: { borderRadius: '4px', border: '0', gap: '12px' }, }, datePicker: { general: { color: { background: '#2e2c2b', color: '#fff', accent: '#ccc', complementary: '#333', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '0px', border: 'none', gap: '12px' }, }, header: { color: { background: '#2e2c2b', color: '#ff5757', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '900', lineHeight: '1', }, style: { borderRadius: '0px', border: 'none', gap: '12px' }, }, label: { color: { background: 'transparent', color: '#000', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '0px', border: 'none', gap: '12px' }, }, date: { color: { background: 'transparent', color: '#fac5c4', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: '"Lust", Times New Roman', size: '3.5em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '0px', border: '1px solid rgba(0,0,0,0.25)', gap: '12px' }, }, iconColor: '#ff5757', links: { color: { background: 'rgba(0,0,0,0.5)', color: '#fff', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '0.75em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '3px', border: 'none', gap: '12px' }, }, toolBox: { color: { background: '#fff', color: '#000', accent: '#FF5758', complementary: '#fff', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1', }, style: { borderRadius: '0px', border: '1px solid rgba(0,0,0,0.25)', gap: '12px' }, }, }, spaWidget: { color: { background: '#fff', color: '#000', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '16px', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1.4', }, style: { borderRadius: '0px', border: '1px solid #00000033', gap: '20px' }, }, common: { inlineStyles: '', color: { background: '#fff', color: '#000', accent: '#ccc', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito, sans-serif', size: '1em', style: 'normal', decoration: 'none', weight: '700', lineHeight: '16px', textTransform: 'uppercase', }, style: { borderRadius: '46px', border: '0', gap: '12px' }, }, calendar: { activeBulletExtras: 'transform:translate3d(0px,-1px,0);', inlineStyles: '', color: { background: '#fff', color: '#000', accent: 'linear-gradient(158deg,#f29396 0%,#fc5454 100%)', complementary: '#fff', disabled: 'rgba(0,0,0,.25)', }, font: { family: 'Nunito', size: '16px', style: 'normal', decoration: 'none', weight: 'normal', lineHeight: '1.4', }, style: { borderRadius: '0px', border: '1px solid #00000033', gap: '20px' }, }, button: { color: { background: 'linear-gradient(158deg,#f29396 0%,#fc5454 100%) !important', color: '#fff !important', accent: 'rgba(0,0,0,.5)', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '400', lineHeight: '34px', textTransform: 'uppercase', }, style: { borderRadius: '4px', border: '0', gap: '12px' }, }, input: { inlineStyles: '', color: { background: '#fff', color: '#000', accent: '#ccc', complementary: 'rgba(0,0,0,.75)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '700', lineHeight: '34px', textTransform: 'uppercase', }, style: { borderRadius: '46px', border: '0', gap: '12px' }, }, modal: { inlineStyles: '', color: { background: 'rgba(255,255,255,0.75)', color: '#000', accent: '#ccc', complementary: 'rgba(0,0,0,.66)', }, font: { family: 'Nunito', size: '1em', style: 'normal', decoration: 'none', weight: '700', lineHeight: '34px', textTransform: 'uppercase', }, style: { borderRadius: '46px', border: '0', gap: '12px' }, }, size: { mobileS: sizes.mobileS + 'px', mobileM: sizes.mobileM + 'px', mobileL: sizes.mobileL + 'px', tablet: sizes.tablet + 'px', laptop: sizes.laptop + 'px', laptopL: sizes.laptopL + 'px', desktop: sizes.desktop + 'px', }, }, }; window.ncbTheme = myNcbTheme;
+//# sourceURL=NCB-wizard-inline-style-theme-script-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hotelriviera.no/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://hotelriviera.no/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://hotelriviera.no/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hotelriviera.no/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<meta name="generator" content="WPML ver:4.9.3 stt:1,38;" />
+<script>(function(u,w){var e=document.createElement("script");e.async=true;e.src=u+"?w="+w+"&cb="+Date.now();document.head.appendChild(e);})("https://book.hotelriviera.no/assets/widget/widget.js",true)</script><!-- HFCM by 99 Robots - Snippet # 1: ImBox -->
+<!-- ImBox -->
+<script type="text/javascript">
+var _sid = '2695';
+(function() {
+var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+se.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'files.imbox.io/app/dist/initWidget.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+})();
+</script>
+<!-- //ImBox Script -->
+<!-- /end HFCM by 99 Robots -->
+<link rel="icon" href="https://hotelriviera.no/wp-content/uploads/2022/01/cropped-riviera-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://hotelriviera.no/wp-content/uploads/2022/01/cropped-riviera-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://hotelriviera.no/wp-content/uploads/2022/01/cropped-riviera-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://hotelriviera.no/wp-content/uploads/2022/01/cropped-riviera-favicon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.strawberry-chat-widget .rcw-header,
+.strawberry-chat-widget .rcw-launcher {
+    background: var(--color-gradient-light_coral-coral);
+}
+
+.strawberry-chat-widget .rcw-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.strawberry-chat-widget .rcw-client .rcw-message-text {
+    background: var(--color-gradient-pink);
+}
+
+.strawberry-chat-widget button.rcw-launcher {
+    background: var(--color-gradient-light_coral-coral) !important;
+    padding: 0 !important;
+    border-radius: 9999px !important;
+    margin: 10px 0 0 0 !important;
+}
+
+.strawberry-chat-widget .rcw-open-launcher {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 0;
+    /*padding: 1px 6px !important;*/
+    /*margin-top: 10px !important;*/
+}
+
+.strawberry-chat-widget .rcw-close-launcher {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.strawberry-chat-widget .rcw-send {
+    padding: 0 10px !important;
+    height: 40px !important;
+    margin: 0 !important;
+}
+
+.strawberry-chat-widget .rcw-response .rcw-message-text {
+    max-width: 270px;
+}
+
+.strawberry-chat-widget .rcw-response .rcw-message-text ul {
+    white-space: normal;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .strawberry-chat-widget button.rcw-close-button {
+        background: transparent;
+    }
+}		</style>
+		</head>
+  <body class="error404 wp-theme-rivieraresources standard-menu app-data index-data 404-data" style="" data-ncb-status="on">
+     <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC5ZWZM"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->         <header class="main-header white-background btn-wrapper btn-wrapper--gradient-light_coral-coral black-color main-header--" data-module="main-header">
+<div
+class="main-header__brand main-header__brand-- svg-white gradient-pink-background"
+data-scroll-target="header"
+data-scrolled="false">
+<a class="main-header__brand-link" href="https://hotelriviera.no/">
+  <svg version="1.1" x="0px" y="0px" viewBox="0 0 584.31 410.31" style="enable-background:new 0 0 584.31 410.31;" xml:space="preserve">
+<g>
+	<path d="M125.15,275.71c0-8.75-3.55-17.12-9.85-23.19c-6.47-6.23-15.15-9.62-24.12-9.42H75.62v88.84H90.4V309h1.42
+		c1.89-0.07,3.77-0.26,5.64-0.56l13.83,23.5h17.23l-17.35-29.26C119.98,296.54,125.21,286.45,125.15,275.71z M91.68,294.25H90.4
+		v-36.39h0.74c11,0,19.22,7.68,19.22,17.85C110.4,286.06,102.34,294.06,91.68,294.25z"/>
+	<rect x="153.75" y="243.1" width="14.76" height="88.84"/>
+	<polygon points="261.14,243.1 245.46,243.1 227.91,296.17 210,243.28 209.93,243.1 194.5,243.1 225.06,331.75 225.12,331.94 
+		230.95,331.94 261.02,243.41 	"/>
+	<polygon points="379.85,257.85 379.85,243.1 332.98,243.1 332.98,331.94 379.85,331.94 379.85,317.18 347.73,317.18 347.73,301.13 
+		374.89,301.13 374.89,286.25 347.73,286.25 347.73,257.85 	"/>
+	<path d="M455.04,275.71c0-8.75-3.56-17.12-9.86-23.19c-6.47-6.23-15.15-9.62-24.12-9.42H405.5v88.84h14.82V309h1.42
+		c1.9-0.07,3.79-0.26,5.66-0.56l13.82,23.5h17.24l-17.36-29.26C449.9,296.53,455.11,286.44,455.04,275.71z M421.56,294.25h-1.24
+		v-36.39h0.74c11,0,19.22,7.68,19.22,17.85C440.28,286.06,432.22,294.06,421.56,294.25L421.56,294.25z"/>
+	<path d="M507.54,243.1h-7.07l-30.07,88.41l-0.13,0.37h15.5l4-12.52h29l4,12.33l0.06,0.19h15.57l-30.8-88.66L507.54,243.1z
+		 M494.4,304.6l9.73-28.64l9.92,28.64L494.4,304.6z"/>
+	<path d="M142.87,153.09c-34.19,0-60.35,3.66-82.3,11.52c-24.68,8.83-43.74,23-58.26,43.3L0,211.14l6.85-0.11l0,0h2.17l0.59-0.82
+		c12.55-17.55,27.69-29.53,47.42-37.5l-38.35,38.33l8.33-0.22l42.46-42.46c4.67-1.37,9.56-2.57,14.69-3.6l-45.61,45.62l8.33-0.22
+		l47.09-47.1c3.48-0.52,7.08-0.97,10.79-1.36l-48.7,49.34l8.33-0.22l49.26-49.9c3.78-0.28,7.69-0.5,11.72-0.66L75.18,211.1
+		l8.33-0.21l50.21-50.87c3-0.06,6-0.1,9.15-0.1c0.85,0,1.69,0,2.54,0l-50.44,51.12l8.33-0.22l50.1-50.71
+		c3.87,0.14,7.68,0.35,11.42,0.63l-49.65,50.3l8.32-0.22l48.74-49.38c3.57,0.37,7.09,0.82,10.53,1.33l-47.74,48.35l8.33-0.21
+		l46.38-47c3.51,0.67,6.94,1.38,10.3,2.13l-45,45l8.32-0.22l43.14-43.13c3.38,0.92,6.67,1.92,9.87,3l-40.17,40.35l8.33-0.22
+		l37.82-38c3.11,1.19,6.11,2.46,9,3.81l-34.15,34.41l8.33-0.22l31.27-31.46c2.76,1.44,5.41,2.96,7.95,4.56l-26.95,27.12l8.33-0.22
+		l23.5-23.65c2.67,1.88,5.17,3.85,7.51,5.91l-16.91,18l8.32-0.22l12.86-13.8c4.09,4.05,7.71,8.54,10.8,13.4l0.63,1l8.75-0.42
+		l-1.84-2.9C257.98,173.66,206.8,153.09,142.87,153.09z"/>
+	<path d="M577.45,211.23l6.86,0.11l-2.31-3.23c-14.52-20.31-33.58-34.47-58.26-43.3c-22-7.86-48.11-11.52-82.3-11.52
+		c-63.94,0-115.11,20.57-136.89,55l-1.83,2.9l8.75,0.42l0.62-1c3.09-4.86,6.72-9.35,10.81-13.4l12.86,13.76l8.33,0.22l-16.91-18
+		c2.4-2.09,4.91-4.07,7.51-5.91l23.5,23.65l8.33,0.22l-26.95-27.12c2.53-1.6,5.19-3.12,7.94-4.56l31.27,31.46l8.33,0.22
+		l-34.17-34.38c2.9-1.35,5.92-2.62,9-3.81l37.81,38l8.33,0.22l-40.17-40.34c3.2-1.08,6.48-2.09,9.87-3l43.13,43.13l8.33,0.22l-45-45
+		c3.33-0.78,6.76-1.49,10.29-2.13l46.38,47l8.33,0.21l-47.73-48.35c3.44-0.51,7-1,10.53-1.33l48.77,49.4l8.33,0.22l-49.66-50.3
+		c3.75-0.28,7.56-0.49,11.43-0.63l50.06,50.71l8.33,0.22l-50.4-51.06h2.54c3.12,0,6.16,0,9.14,0.09l50.22,50.87l8.33,0.21
+		l-50.19-50.88c4,0.16,7.9,0.38,11.71,0.66l49.27,49.9l8.33,0.22l-48.71-49.34c3.72,0.39,7.32,0.84,10.79,1.36L538.09,211l8.33,0.22
+		l-46.27-46.28c5.16,1.03,10.05,2.23,14.68,3.6L557.3,211l8.33,0.22l-38.37-38.37c19.73,8,34.87,19.95,47.42,37.5l0.58,0.82h2.17
+		l0,0L577.45,211.23z"/>
+	<path d="M92.77,7.44L92.77,7.44l1.56,1.51l1-0.17c21.29-3.54,40.46-1.3,60.05,7h-54.26l6,5.74h60.06
+		c4.24,2.31,8.55,4.92,12.92,7.84h-65.4l6,5.74h67.54c2.83,2.09,5.7,4.31,8.59,6.67l-69.32,0.44l6,5.74l70.13-0.45
+		c2.86,2.48,5.77,5.09,8.74,7.82l-71.44,0.46l6.05,5.74l71.47-0.46c2.15,2.07,4.32,4.18,6.54,6.4c0.6,0.6,1.18,1.2,1.77,1.81
+		l-71.79,0.46l6,5.73l71.21-0.45c2.57,2.8,5.05,5.64,7.46,8.52l-70.45,0.45l6,5.74l69.06-0.45c2.17,2.77,4.26,5.57,6.28,8.39
+		l-67.36,0.44l6,5.73l65.26-0.42c1.93,2.91,3.77,5.84,5.54,8.79h-62.44l6,5.74h59.96c1.67,3.02,3.25,6.06,4.74,9.11l-55.74,0.11
+		l6,5.74l52.39-0.11c1.33,3.02,2.6,6.05,3.8,9.08l-47.38,0.14l6,5.74l43.44-0.14c1,3,2,5.9,2.8,8.85l-37.72,0.11l6,5.74l33.22-0.11
+		c0.77,3.14,1.46,6.28,2,9.42l-25.28-0.18l6,5.74l20.31,0.16c0.67,4.67,1.09,9.33,1.28,14l0,0v140.6h13.85V191.26l0,0
+		c0.18-4.68,0.59-9.36,1.24-14l20.47-0.17l6-5.74l-25.52,0.19c0.58-3.22,1.27-6.44,2.06-9.67l33,0.11l6-5.74l-37.5-0.12
+		c0.84-2.95,1.76-5.9,2.77-8.84l43.25,0.13l6.05-5.73l-47.21-0.14c1.16-3.04,2.42-6.07,3.77-9.08l52.24,0.1l6.05-5.73l-55.62-0.12
+		c1.49-3.05,3-6.09,4.72-9.11h59.81l6.05-5.73h-62.58c1.76-2.95,3.6-5.88,5.53-8.79l65.19,0.42l6-5.74l-67.31-0.43
+		c2-2.83,4.09-5.62,6.26-8.39l69,0.44l6-5.73l-70.44-0.46c2.4-2.87,4.88-5.72,7.45-8.52l71.2,0.46l6-5.74l-71.79-0.46
+		c0.6-0.6,1.18-1.21,1.78-1.81c2.21-2.21,4.38-4.33,6.53-6.4l71.48,0.46l6-5.73l-71.44-0.46c2.96-2.74,5.88-5.35,8.75-7.83
+		l70.12,0.46l6-5.74l-69.08-0.44c2.9-2.35,5.76-4.57,8.59-6.66h67.54l6-5.74h-65.4c4.38-2.92,8.69-5.54,12.93-7.85h60l6.05-5.73
+		h-54.21c19.58-8.32,38.75-10.55,60-7l1,0.16l1.56-1.51l0,0l4.93-4.77l-3.92-0.65c-24.63-4.09-48.12-0.63-71.82,10.58
+		c-21.08,10-42.16,25.87-66.33,50.05c-30.25,30.24-50.27,64.65-58.36,99.52H296l0,0c-2.2,9.44-3.51,19.06-3.91,28.74
+		c-1.33-32.63-13.81-79.55-62.27-128c-24.18-24.18-45.26-40.08-66.34-50C139.87,1.32,116.4-2.14,91.75,1.96l-3.92,0.65l4.93,4.76
+		L92.77,7.44z"/>
+	<polygon points="211.53,389.42 199.51,389.42 199.51,370.32 193.02,370.32 193.02,409.57 199.51,409.57 199.51,395.94 
+		211.53,395.94 211.53,409.57 218.05,409.57 218.05,370.32 211.53,370.32 	"/>
+	<path d="M251.7,369.64c-5.32,0-10.41,2.15-14.13,5.95c-7.74,8.03-7.74,20.75,0,28.78c7.61,7.8,20.1,7.95,27.9,0.34
+		c0.11-0.11,0.23-0.23,0.34-0.34c7.78-8.02,7.78-20.76,0-28.78C262.1,371.78,257.01,369.64,251.7,369.64z M261.18,399.77
+		c-2.48,2.59-5.9,4.06-9.48,4.08c-7.54-0.13-13.56-6.34-13.45-13.88c-0.05-3.66,1.39-7.18,4-9.75c2.46-2.6,5.89-4.07,9.47-4.06
+		c7.68,0.28,13.68,6.73,13.41,14.42c-0.12,3.45-1.52,6.72-3.93,9.19H261.18z"/>
+	<polygon points="282.16,376.84 289.74,376.84 289.74,409.57 296.26,409.57 296.26,376.84 303.49,376.84 303.49,370.32 
+		282.16,370.32 	"/>
+	<polygon points="323.37,409.57 344.07,409.57 344.07,403.06 329.89,403.06 329.89,395.96 341.88,395.96 341.88,389.39 
+		329.89,389.39 329.89,376.84 344.07,376.84 344.07,370.32 323.37,370.32 	"/>
+	<polygon points="367.87,370.32 361.32,370.32 361.32,409.57 381.95,409.57 381.95,403.06 367.87,403.06 	"/>
+</g>
+</svg>
+</a>
+</div>
+
+
+<div class="main-header__desktop-menu">
+  <nav class="main-header-nav">
+          <div class="menu-primary-navigation-left-no-container"><ul id="menu-primary-navigation-left-no" class="nav"><li id="menu-item-3335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3335"><a href="https://hotelriviera.no/pakker-tilbud/">PAKKER &#038; TILBUD</a>
+<ul class="sub-menu">
+	<li id="menu-item-14178" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14178"><a href="https://hotelriviera.no/pakker/17-mai-pa-riviera/">17.MAI &#8211; OVERNATTING &amp; BRUNSJ</a></li>
+	<li id="menu-item-14217" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14217"><a href="https://hotelriviera.no/pakker/early-bird-spar-30-pa-sommeren/">EARLY BIRD &#8211; SPAR -30% PÅ SOMMEREN</a></li>
+	<li id="menu-item-14209" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14209"><a href="https://hotelriviera.no/pakker/stay-longer-save-more/">STAY LONGER, SAVE MORE</a></li>
+	<li id="menu-item-14195" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14195"><a href="https://hotelriviera.no/pakker/riviera-signature/">RIVIERA SIGNATURE</a></li>
+	<li id="menu-item-14188" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14188"><a href="https://hotelriviera.no/pakker/bobler-staycation/">BOBLER &amp; STAYCATION</a></li>
+	<li id="menu-item-3317" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-3317"><a href="https://hotelriviera.no/pakker/riviera-sundays/">RIVIERA SUNDAYS  &#8211; FRA 1795,- FOR 2 PERSONER</a></li>
+	<li id="menu-item-5865" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-5865"><a href="https://hotelriviera.no/pakker/riviera-romantikk/">TID SAMMEN &#8211; SIGNATURPAKKE RIVIERA LOVE</a></li>
+	<li id="menu-item-3319" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-3319"><a href="https://hotelriviera.no/pakker/riviera-golden-hour/">RIVIERA ESCAPE &#8211; STAY, SPA OG 3-RETTERS</a></li>
+	<li id="menu-item-3320" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-3320"><a href="https://hotelriviera.no/pakker/riviera-stay/">RIVIERA STAY</a></li>
+	<li id="menu-item-11323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11323"><a href="https://hotelriviera.no/dagspa/">DAGSPAPAKKER</a></li>
+	<li id="menu-item-14189" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14189"><a href="https://hotelriviera.no/pakker/17-mai-med-brunsj-og-spa/">17.MAI MED BRUNSJ OG SPA</a></li>
+</ul>
+</li>
+<li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-263"><a href="https://hotelriviera.no/hotelrom-suiter/">ROM</a>
+<ul class="sub-menu">
+	<li id="menu-item-3322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3322"><a href="https://hotelriviera.no/rooms-suites/">ROM &#038; SUITER</a></li>
+</ul>
+</li>
+<li id="menu-item-4931" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4931"><a href="https://hotelriviera.no/events-meeting-rooms/">MEETINGS</a>
+<ul class="sub-menu">
+	<li id="menu-item-11605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11605"><a href="https://hotelriviera.no/konferansepakker/">KONFERANSEPAKKER</a></li>
+	<li id="menu-item-11577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11577"><a href="https://hotelriviera.no/foresporsel-konferanse/">FORESPØRSEL KONFERANSE</a></li>
+</ul>
+</li>
+<li id="menu-item-4933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4933"><a href="https://hotelriviera.no/parties-celebrations/">CELEBRATIONS</a></li>
+<li id="menu-item-389" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-389"><a href="https://hotelriviera.no/mat-drikke/">MAT &#038; DRIKKE</a>
+<ul class="sub-menu">
+	<li id="menu-item-6815" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6815"><a href="https://hotelriviera.munu.shop">BORDRESERVASJON</a></li>
+	<li id="menu-item-13791" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13791"><a href="https://hotelriviera.no/wp-content/uploads/2026/04/MENY-LUNSJ-FEB-26.pdf">LUNSJMENY</a></li>
+	<li id="menu-item-13790" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13790"><a href="https://hotelriviera.no/wp-content/uploads/2026/04/MENY-MIDDAG-FEB-26.pdf">MIDDAGSMENY</a></li>
+	<li id="menu-item-13309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13309"><a href="https://hotelriviera.no/wp-content/uploads/2025/07/PIZZA-MENY-14-JULI.pdf">PIZZAMENY</a></li>
+	<li id="menu-item-11842" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11842"><a href="https://hotelriviera.no/wp-content/uploads/2024/10/Vinkart-Hotel-Riviera.pdf">VINKART</a></li>
+	<li id="menu-item-11837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11837"><a href="https://hotelriviera.no/wp-content/uploads/2026/04/Cocktail-og-vinmeny-RIVIERA-06.01.26.pdf">RIVIERA BARMENY</a></li>
+</ul>
+</li>
+<li id="menu-item-14169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14169"><a href="https://hotelriviera.no/velvaere-spa/">Pool &#038; Wellness</a></li>
+</ul></div>
+          </nav>
+</div>
+
+
+  
+    
+    
+    
+
+
+    
+  
+  
+  <div class="main-header__options main-header__options--">
+    
+    <div class="main-header__booking-button btn-wrapper--gradient-light_coral-coral">
+              <a class="btn" href="/book" target="">Bestill her</a>
+        <ul class="book-dropdown">
+          <li><a class="" href="/book">Bestill opphold</a></li>
+          <li><a class="" href="/book/?guid=3c6a4ad7-5465-4801-8947-bc0f59cf0025&amp;title=Dagspa">Bestill dagspa</a></li>
+        </ul>
+          </div>
+
+    
+    <div class="main-header__burger">
+      <div id="menuBurger" class="burger">
+    <span class="black-background top-bar"></span>
+    <span class="black-background mid-bar"></span>
+    <span class="black-background bottom-bar"></span>
+</div>    </div>
+
+    
+    <div class="main-header__lang desktop">
+      <span class="lang-link" data-active="1">
+      <a class="lang-link__link 
+      
+      " href="https://hotelriviera.no/">no</a>
+    </span>
+      <span class="lang-link" data-active="0">
+      <a class="lang-link__link 
+      
+      " href="https://hotelriviera.no/en/">en</a>
+    </span>
+      </div>
+
+  </div>
+</header>
+<aside id="mobileMenuTakeover" class="takeover-menu">
+  <div class="takeover-menu__image-wrapper">
+          <img
+      class="takeover-menu__image"
+      src="https://hotelriviera.no/wp-content/uploads/2023/02/5S0A6557-fix-683x1024.jpg"
+      width="683"
+      height="1024"
+      alt="#"
+      loading="lazy" />
+      </div>
+  <div class="takeover-menu__content">
+    <div class="takeover-menu__top-section">
+      <div class="menu-mobile-navigation-container">
+                          <div class="menu-mobile-navigation-container"><ul id="menu-mobile-navigation" class="nav"><li id="menu-item-328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-328"><a href="https://hotelriviera.no/hotelrom-suiter/">ROM</a><span class="mobile-menu-toggle-btn"></span>
+<ul class="sub-menu">
+	<li id="menu-item-3343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3343"><a href="https://hotelriviera.no/rooms-suites/">ROM &#038; SUITER</a><span class="mobile-menu-toggle-btn"></span></li>
+</ul>
+</li>
+<li id="menu-item-3344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3344"><a href="https://hotelriviera.no/pakker-tilbud/">PAKKER &#038; TILBUD</a><span class="mobile-menu-toggle-btn"></span>
+<ul class="sub-menu">
+	<li id="menu-item-14177" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14177"><a href="https://hotelriviera.no/pakker/17-mai-pa-riviera/">17.MAI &#8211; OVERNATTING &amp; BRUNSJ</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-14183" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14183"><a href="https://hotelriviera.no/pakker/17-mai-med-brunsj-og-spa/">17.MAI MED BRUNSJ OG SPA</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-14215" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14215"><a href="https://hotelriviera.no/pakker/early-bird-spar-30-pa-sommeren/">EARLY BIRD &#8211; SPAR -30% PÅ SOMMEREN</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-14201" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14201"><a href="https://hotelriviera.no/pakker/stay-longer-save-more/">STAY LONGER, SAVE MORE</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-14196" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14196"><a href="https://hotelriviera.no/pakker/riviera-signature/">RIVIERA SIGNATURE</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-14224" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14224"><a href="https://hotelriviera.no/pakker/riviera-golden-hour/">Riviera ESCAPE</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-14190" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-14190"><a href="https://hotelriviera.no/pakker/bobler-staycation/">BOBLER &amp; STAYCATION</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-3345" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-3345"><a href="https://hotelriviera.no/pakker/riviera-sundays/">RIVIERA SUNDAYS &#8211; FRA 1795,- FOR 2 PERSONER</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-5898" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-5898"><a href="https://hotelriviera.no/pakker/riviera-romantikk/">TID SAMMEN &#8211; SIGNATURPAKKE RIVIERA LOVE</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-3348" class="menu-item menu-item-type-post_type menu-item-object-packages menu-item-3348"><a href="https://hotelriviera.no/pakker/riviera-stay/">RIVIERA STAY</a><span class="mobile-menu-toggle-btn"></span></li>
+</ul>
+</li>
+<li id="menu-item-4935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4935"><a href="https://hotelriviera.no/events-meeting-rooms/">MEETINGS</a><span class="mobile-menu-toggle-btn"></span>
+<ul class="sub-menu">
+	<li id="menu-item-11606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11606"><a href="https://hotelriviera.no/konferansepakker/">KONFERANSEPAKKER</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-11578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11578"><a href="https://hotelriviera.no/foresporsel-konferanse/">FORESPØRSEL KONFERANSE</a><span class="mobile-menu-toggle-btn"></span></li>
+</ul>
+</li>
+<li id="menu-item-4934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4934"><a href="https://hotelriviera.no/parties-celebrations/">CELEBRATIONS</a><span class="mobile-menu-toggle-btn"></span></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-395"><a href="https://hotelriviera.no/mat-drikke/">MAT &#038; DRIKKE</a><span class="mobile-menu-toggle-btn"></span>
+<ul class="sub-menu">
+	<li id="menu-item-7467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7467"><a href="https://hotelriviera.munu.shop">BORDBESTILLING</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-13785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13785"><a href="https://hotelriviera.no/wp-content/uploads/2026/04/MENY-LUNSJ-FEB-26.pdf">LUNSJMENY</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-13784" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13784"><a href="https://hotelriviera.no/wp-content/uploads/2026/04/MENY-MIDDAG-FEB-26.pdf">MIDDAGSMENY</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-11838" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11838"><a href="https://hotelriviera.no/wp-content/uploads/2026/04/Cocktail-og-vinmeny-RIVIERA-06.01.26.pdf">RIVIERA BARMENY</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-13308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13308"><a href="https://hotelriviera.no/wp-content/uploads/2025/07/PIZZA-MENY-14-JULI.pdf">PIZZAMENY</a><span class="mobile-menu-toggle-btn"></span></li>
+</ul>
+</li>
+<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-393"><a href="https://hotelriviera.no/velvaere-spa/">Pool &#038; Wellness</a><span class="mobile-menu-toggle-btn"></span>
+<ul class="sub-menu">
+	<li id="menu-item-12224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12224"><a href="https://hotelriviera.no/velvaere-spa/">POOL &#038; WELLNESS</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-6584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6584"><a href="https://hotelriviera.no/dagspa/">BESTILL DAGSPA</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-7442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7442"><a href="https://emea.spatime.com/rih366/63073514/offering/63459325">BESTILL SPABEHANDLINGER</a><span class="mobile-menu-toggle-btn"></span></li>
+</ul>
+</li>
+<li id="menu-item-4128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4128"><a href="https://hotelriviera.no/gavekort/">GAVEKORT</a><span class="mobile-menu-toggle-btn"></span></li>
+<li id="menu-item-8057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8057"><a href="https://hotelriviera.no/apningstider/">ÅPNINGSTIDER</a><span class="mobile-menu-toggle-btn"></span></li>
+<li id="menu-item-11715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11715"><a href="https://lost.faundit.com/hotel-riviera-moss">GLEMTE DU NOE? LOST &#038; FOUND SERVICE</a><span class="mobile-menu-toggle-btn"></span></li>
+<li id="menu-item-11285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11285"><a href="https://hotelriviera.no/legg-til-i-verket-gjestehavn/">LEGG TIL I VERKET GJESTEHAVN</a><span class="mobile-menu-toggle-btn"></span></li>
+<li id="menu-item-9448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9448"><a href="https://hotelriviera.no/presse/">PRESSE</a><span class="mobile-menu-toggle-btn"></span></li>
+<li id="menu-item-392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-392"><a href="https://hotelriviera.no/om-hotellet/">OM OSS</a><span class="mobile-menu-toggle-btn"></span></li>
+<li id="menu-item-1835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1835"><a href="https://hotelriviera.no/om-hotellet/jobb-hos-oss/">JOBB HOS OSS</a><span class="mobile-menu-toggle-btn"></span></li>
+<li id="menu-item-6215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6215"><a href="https://hotelriviera.no/badebyen-moss/">BADEBYEN MOSS</a><span class="mobile-menu-toggle-btn"></span>
+<ul class="sub-menu">
+	<li id="menu-item-6216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6216"><a href="https://hotelriviera.no/verket-moss/">VERKET MOSS</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-8552" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8552"><a href="https://www.verketscene.no">HVA SKJER PÅ VERKET SCENE?</a><span class="mobile-menu-toggle-btn"></span></li>
+	<li id="menu-item-7079" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7079"><a href="https://www.visitoestfold.com/moss/">HVA SKJER I MOSS?</a><span class="mobile-menu-toggle-btn"></span></li>
+</ul>
+</li>
+</ul></div>
+                
+        
+                          <div class="takeover-menu__cta-wrapper">
+            <a
+            class="takeover-menu__cta"
+            href="https://hotelriviera.no/pakker/riviera-sundays/"
+            target="">
+            <span class="takeover-menu__cta-label coral-color">RIVIERA SUNDAYS</span>
+            <div class="takeover-menu__cta-text coral-color">DEAL</div>
+            <span class="takeover-menu__cta-label white-color">bestill nå</span>
+            </a>
+          </div>
+              </div>
+    </div>
+
+    
+      <div class="takeover__lang-wrapper">
+        <div class="takeover__lang mobile">
+          <span class="lang-link" data-active="1">
+      <a class="lang-link__link 
+      
+      " href="https://hotelriviera.no/">no</a>
+    </span>
+      <span class="lang-link" data-active="0">
+      <a class="lang-link__link 
+      
+      " href="https://hotelriviera.no/en/">en</a>
+    </span>
+          </div>
+      </div>
+
+    <div class="takeover-menu__bottom-wrapper">
+      <div class="takeover-menu__mid-section ">
+              </div>
+      <footer class="takeover-menu__footer">
+                  <div class="takeover-menu__company-info">
+            Hotel Riviera<br>Bernt Ankers gate 2, 1534 Moss
+          </div>
+                          <div class="takeover-menu__partners">
+                          <div class="takeover-menu__partner">
+                <a href="https://nordichotels.com/">                                      <img src="https://hotelriviera.no/wp-content/uploads/2023/02/Untitled-1-copy-300x75.png" width="300" height="75" alt="#" loading="lazy"/>
+                                  </a>              </div>
+                      </div>
+              </footer>
+    </div>
+</aside>
+    <div class="wrap site-container" role="document">
+      <div class="content">
+        <main class="main">
+            
+  
+    <div class="four-o-four" style="background-image:url(https://hotelriviera.no/wp-content/uploads/2022/02/riviera_404-1024x1024.jpg);">
+      <div class="four-o-four__text"><h3 style="text-align: center;"><strong>It’s not you, it’s us&#8230;</strong></h3>
+<h4 style="text-align: center;">The page you&#8217;re searching for haven&#8217;t arrived to the Riviera yet.</h4>
+<h4 style="text-align: center;"><a href="https://hotelriviera.no/">Please head back to the Riviera start page</a></h4>
+</div>
+  </div>
+    
+          </main>
+              </div>
+    </div>
+        <footer class="main-footer pink-background">
+  <div class="container container--small main-footer__container">
+    <section class="main-footer__section main-footer__section--custom">
+      <div class="main-footer__logo svg-gradient-light_coral-coral">
+      <svg version="1.1" x="0px" y="0px" viewBox="0 0 584.31 410.31" style="enable-background:new 0 0 584.31 410.31;" xml:space="preserve">
+<g>
+	<path d="M125.15,275.71c0-8.75-3.55-17.12-9.85-23.19c-6.47-6.23-15.15-9.62-24.12-9.42H75.62v88.84H90.4V309h1.42
+		c1.89-0.07,3.77-0.26,5.64-0.56l13.83,23.5h17.23l-17.35-29.26C119.98,296.54,125.21,286.45,125.15,275.71z M91.68,294.25H90.4
+		v-36.39h0.74c11,0,19.22,7.68,19.22,17.85C110.4,286.06,102.34,294.06,91.68,294.25z"/>
+	<rect x="153.75" y="243.1" width="14.76" height="88.84"/>
+	<polygon points="261.14,243.1 245.46,243.1 227.91,296.17 210,243.28 209.93,243.1 194.5,243.1 225.06,331.75 225.12,331.94 
+		230.95,331.94 261.02,243.41 	"/>
+	<polygon points="379.85,257.85 379.85,243.1 332.98,243.1 332.98,331.94 379.85,331.94 379.85,317.18 347.73,317.18 347.73,301.13 
+		374.89,301.13 374.89,286.25 347.73,286.25 347.73,257.85 	"/>
+	<path d="M455.04,275.71c0-8.75-3.56-17.12-9.86-23.19c-6.47-6.23-15.15-9.62-24.12-9.42H405.5v88.84h14.82V309h1.42
+		c1.9-0.07,3.79-0.26,5.66-0.56l13.82,23.5h17.24l-17.36-29.26C449.9,296.53,455.11,286.44,455.04,275.71z M421.56,294.25h-1.24
+		v-36.39h0.74c11,0,19.22,7.68,19.22,17.85C440.28,286.06,432.22,294.06,421.56,294.25L421.56,294.25z"/>
+	<path d="M507.54,243.1h-7.07l-30.07,88.41l-0.13,0.37h15.5l4-12.52h29l4,12.33l0.06,0.19h15.57l-30.8-88.66L507.54,243.1z
+		 M494.4,304.6l9.73-28.64l9.92,28.64L494.4,304.6z"/>
+	<path d="M142.87,153.09c-34.19,0-60.35,3.66-82.3,11.52c-24.68,8.83-43.74,23-58.26,43.3L0,211.14l6.85-0.11l0,0h2.17l0.59-0.82
+		c12.55-17.55,27.69-29.53,47.42-37.5l-38.35,38.33l8.33-0.22l42.46-42.46c4.67-1.37,9.56-2.57,14.69-3.6l-45.61,45.62l8.33-0.22
+		l47.09-47.1c3.48-0.52,7.08-0.97,10.79-1.36l-48.7,49.34l8.33-0.22l49.26-49.9c3.78-0.28,7.69-0.5,11.72-0.66L75.18,211.1
+		l8.33-0.21l50.21-50.87c3-0.06,6-0.1,9.15-0.1c0.85,0,1.69,0,2.54,0l-50.44,51.12l8.33-0.22l50.1-50.71
+		c3.87,0.14,7.68,0.35,11.42,0.63l-49.65,50.3l8.32-0.22l48.74-49.38c3.57,0.37,7.09,0.82,10.53,1.33l-47.74,48.35l8.33-0.21
+		l46.38-47c3.51,0.67,6.94,1.38,10.3,2.13l-45,45l8.32-0.22l43.14-43.13c3.38,0.92,6.67,1.92,9.87,3l-40.17,40.35l8.33-0.22
+		l37.82-38c3.11,1.19,6.11,2.46,9,3.81l-34.15,34.41l8.33-0.22l31.27-31.46c2.76,1.44,5.41,2.96,7.95,4.56l-26.95,27.12l8.33-0.22
+		l23.5-23.65c2.67,1.88,5.17,3.85,7.51,5.91l-16.91,18l8.32-0.22l12.86-13.8c4.09,4.05,7.71,8.54,10.8,13.4l0.63,1l8.75-0.42
+		l-1.84-2.9C257.98,173.66,206.8,153.09,142.87,153.09z"/>
+	<path d="M577.45,211.23l6.86,0.11l-2.31-3.23c-14.52-20.31-33.58-34.47-58.26-43.3c-22-7.86-48.11-11.52-82.3-11.52
+		c-63.94,0-115.11,20.57-136.89,55l-1.83,2.9l8.75,0.42l0.62-1c3.09-4.86,6.72-9.35,10.81-13.4l12.86,13.76l8.33,0.22l-16.91-18
+		c2.4-2.09,4.91-4.07,7.51-5.91l23.5,23.65l8.33,0.22l-26.95-27.12c2.53-1.6,5.19-3.12,7.94-4.56l31.27,31.46l8.33,0.22
+		l-34.17-34.38c2.9-1.35,5.92-2.62,9-3.81l37.81,38l8.33,0.22l-40.17-40.34c3.2-1.08,6.48-2.09,9.87-3l43.13,43.13l8.33,0.22l-45-45
+		c3.33-0.78,6.76-1.49,10.29-2.13l46.38,47l8.33,0.21l-47.73-48.35c3.44-0.51,7-1,10.53-1.33l48.77,49.4l8.33,0.22l-49.66-50.3
+		c3.75-0.28,7.56-0.49,11.43-0.63l50.06,50.71l8.33,0.22l-50.4-51.06h2.54c3.12,0,6.16,0,9.14,0.09l50.22,50.87l8.33,0.21
+		l-50.19-50.88c4,0.16,7.9,0.38,11.71,0.66l49.27,49.9l8.33,0.22l-48.71-49.34c3.72,0.39,7.32,0.84,10.79,1.36L538.09,211l8.33,0.22
+		l-46.27-46.28c5.16,1.03,10.05,2.23,14.68,3.6L557.3,211l8.33,0.22l-38.37-38.37c19.73,8,34.87,19.95,47.42,37.5l0.58,0.82h2.17
+		l0,0L577.45,211.23z"/>
+	<path d="M92.77,7.44L92.77,7.44l1.56,1.51l1-0.17c21.29-3.54,40.46-1.3,60.05,7h-54.26l6,5.74h60.06
+		c4.24,2.31,8.55,4.92,12.92,7.84h-65.4l6,5.74h67.54c2.83,2.09,5.7,4.31,8.59,6.67l-69.32,0.44l6,5.74l70.13-0.45
+		c2.86,2.48,5.77,5.09,8.74,7.82l-71.44,0.46l6.05,5.74l71.47-0.46c2.15,2.07,4.32,4.18,6.54,6.4c0.6,0.6,1.18,1.2,1.77,1.81
+		l-71.79,0.46l6,5.73l71.21-0.45c2.57,2.8,5.05,5.64,7.46,8.52l-70.45,0.45l6,5.74l69.06-0.45c2.17,2.77,4.26,5.57,6.28,8.39
+		l-67.36,0.44l6,5.73l65.26-0.42c1.93,2.91,3.77,5.84,5.54,8.79h-62.44l6,5.74h59.96c1.67,3.02,3.25,6.06,4.74,9.11l-55.74,0.11
+		l6,5.74l52.39-0.11c1.33,3.02,2.6,6.05,3.8,9.08l-47.38,0.14l6,5.74l43.44-0.14c1,3,2,5.9,2.8,8.85l-37.72,0.11l6,5.74l33.22-0.11
+		c0.77,3.14,1.46,6.28,2,9.42l-25.28-0.18l6,5.74l20.31,0.16c0.67,4.67,1.09,9.33,1.28,14l0,0v140.6h13.85V191.26l0,0
+		c0.18-4.68,0.59-9.36,1.24-14l20.47-0.17l6-5.74l-25.52,0.19c0.58-3.22,1.27-6.44,2.06-9.67l33,0.11l6-5.74l-37.5-0.12
+		c0.84-2.95,1.76-5.9,2.77-8.84l43.25,0.13l6.05-5.73l-47.21-0.14c1.16-3.04,2.42-6.07,3.77-9.08l52.24,0.1l6.05-5.73l-55.62-0.12
+		c1.49-3.05,3-6.09,4.72-9.11h59.81l6.05-5.73h-62.58c1.76-2.95,3.6-5.88,5.53-8.79l65.19,0.42l6-5.74l-67.31-0.43
+		c2-2.83,4.09-5.62,6.26-8.39l69,0.44l6-5.73l-70.44-0.46c2.4-2.87,4.88-5.72,7.45-8.52l71.2,0.46l6-5.74l-71.79-0.46
+		c0.6-0.6,1.18-1.21,1.78-1.81c2.21-2.21,4.38-4.33,6.53-6.4l71.48,0.46l6-5.73l-71.44-0.46c2.96-2.74,5.88-5.35,8.75-7.83
+		l70.12,0.46l6-5.74l-69.08-0.44c2.9-2.35,5.76-4.57,8.59-6.66h67.54l6-5.74h-65.4c4.38-2.92,8.69-5.54,12.93-7.85h60l6.05-5.73
+		h-54.21c19.58-8.32,38.75-10.55,60-7l1,0.16l1.56-1.51l0,0l4.93-4.77l-3.92-0.65c-24.63-4.09-48.12-0.63-71.82,10.58
+		c-21.08,10-42.16,25.87-66.33,50.05c-30.25,30.24-50.27,64.65-58.36,99.52H296l0,0c-2.2,9.44-3.51,19.06-3.91,28.74
+		c-1.33-32.63-13.81-79.55-62.27-128c-24.18-24.18-45.26-40.08-66.34-50C139.87,1.32,116.4-2.14,91.75,1.96l-3.92,0.65l4.93,4.76
+		L92.77,7.44z"/>
+	<polygon points="211.53,389.42 199.51,389.42 199.51,370.32 193.02,370.32 193.02,409.57 199.51,409.57 199.51,395.94 
+		211.53,395.94 211.53,409.57 218.05,409.57 218.05,370.32 211.53,370.32 	"/>
+	<path d="M251.7,369.64c-5.32,0-10.41,2.15-14.13,5.95c-7.74,8.03-7.74,20.75,0,28.78c7.61,7.8,20.1,7.95,27.9,0.34
+		c0.11-0.11,0.23-0.23,0.34-0.34c7.78-8.02,7.78-20.76,0-28.78C262.1,371.78,257.01,369.64,251.7,369.64z M261.18,399.77
+		c-2.48,2.59-5.9,4.06-9.48,4.08c-7.54-0.13-13.56-6.34-13.45-13.88c-0.05-3.66,1.39-7.18,4-9.75c2.46-2.6,5.89-4.07,9.47-4.06
+		c7.68,0.28,13.68,6.73,13.41,14.42c-0.12,3.45-1.52,6.72-3.93,9.19H261.18z"/>
+	<polygon points="282.16,376.84 289.74,376.84 289.74,409.57 296.26,409.57 296.26,376.84 303.49,376.84 303.49,370.32 
+		282.16,370.32 	"/>
+	<polygon points="323.37,409.57 344.07,409.57 344.07,403.06 329.89,403.06 329.89,395.96 341.88,395.96 341.88,389.39 
+		329.89,389.39 329.89,376.84 344.07,376.84 344.07,370.32 323.37,370.32 	"/>
+	<polygon points="367.87,370.32 361.32,370.32 361.32,409.57 381.95,409.57 381.95,403.06 367.87,403.06 	"/>
+</g>
+</svg>
+      </div>
+      <div class="main-footer__social">
+                              <a class="main-footer__social__link main-footer__social__link--instagram svg-black black-color" href="https://instagram.com/hotelriviera.no">
+              <svg width="30px" height="30px" viewBox="0 0 30 30">
+<path fill-rule="evenodd" d="M24.643,29.27 L5.356,29.27 C2.939,29.27 0.972,27.60 0.972,24.643 L0.972,5.356 C0.972,2.939 2.939,0.972 5.356,0.972 L24.643,0.972 C27.60,0.972 29.27,2.939 29.27,5.356 L29.27,24.643 C29.27,27.60 27.60,29.27 24.643,29.27 ZM7.986,2.725 L5.356,2.725 C3.905,2.725 2.726,3.905 2.726,5.356 L2.726,9.739 L7.986,9.739 L7.986,2.725 ZM27.273,5.356 C27.273,3.905 26.94,2.725 24.643,2.725 L9.739,2.725 L9.739,9.739 L10.418,9.739 C11.646,8.658 13.238,7.986 15.0,7.986 C16.762,7.986 18.356,8.662 19.589,9.739 L27.273,9.739 L27.273,5.356 ZM9.739,15.0 C9.739,17.900 12.99,20.260 15.0,20.260 C17.900,20.260 20.260,17.900 20.260,15.0 C20.260,12.99 17.900,9.739 15.0,9.739 C12.99,9.739 9.739,12.99 9.739,15.0 ZM27.273,11.493 L21.38,11.493 C21.642,12.529 22.13,13.717 22.13,15.0 C22.13,18.867 18.867,22.13 15.0,22.13 C11.132,22.13 7.986,18.867 7.986,15.0 C7.986,13.716 8.358,12.529 8.962,11.493 L2.726,11.493 L2.726,24.643 C2.726,26.93 3.905,27.273 5.356,27.273 L24.643,27.273 C26.94,27.273 27.273,26.93 27.273,24.643 L27.273,11.493 ZM22.898,4.479 L24.636,4.479 C25.124,4.479 25.520,4.876 25.520,5.363 L25.520,7.101 C25.520,7.589 25.124,7.986 24.636,7.986 L22.898,7.986 C22.410,7.986 22.13,7.589 22.13,7.101 L22.13,5.363 C22.13,4.876 22.410,4.479 22.898,4.479 Z"/>
+</svg>            </a>
+                      <a class="main-footer__social__link main-footer__social__link--facebook svg-black black-color" href="https://facebook.com/hotelriviera.no">
+              <svg width="15px" height="32px" viewBox="0 0 15 32">
+<path fill-rule="evenodd" d="M14.875,11.165 L14.264,14.205 C14.61,15.207 13.99,15.991 12.73,15.991 L9.999,15.991 L9.999,29.999 C9.999,31.103 9.159,31.997 8.50,31.997 L5.31,31.997 C3.922,31.997 3.18,31.100 3.18,29.997 L3.18,15.991 L2.12,15.991 C0.903,15.991 0.0,15.93 0.0,13.989 L0.0,10.988 C0.0,9.885 0.903,8.987 2.12,8.987 L3.18,8.987 L3.18,6.1 C3.18,2.716 5.692,0.43 8.989,0.12 C9.12,0.10 9.32,0.1 9.56,0.1 L13.82,0.1 C13.638,0.1 13.999,0.446 13.999,0.999 L13.999,6.0 C13.999,6.552 13.638,7.2 13.82,7.2 L10.63,7.2 L10.61,8.987 L13.80,8.987 C13.647,8.987 14.168,9.226 14.511,9.643 C14.854,10.59 14.987,10.614 14.875,11.165 ZM9.92,10.988 C9.79,10.989 9.68,10.996 9.54,10.996 C9.54,10.996 9.54,10.996 9.53,10.996 C8.498,10.996 8.48,10.547 8.48,9.994 L8.48,9.988 C8.48,9.988 8.48,9.988 8.48,9.988 C8.48,9.988 8.48,9.988 8.48,9.988 L8.50,6.1 C8.50,5.448 8.501,5.1 9.56,5.1 L12.75,5.1 L12.75,2.0 L9.94,2.0 C9.77,2.1 9.63,2.9 9.46,2.9 C6.832,2.9 5.31,3.800 5.31,6.1 C5.31,6.56 5.8,6.104 5.0,6.157 L5.0,9.833 C5.8,9.885 5.31,9.933 5.31,9.988 C5.31,10.270 4.913,10.522 4.724,10.703 C4.550,10.888 4.305,11.4 4.25,11.4 C3.997,11.4 3.973,10.990 3.945,10.988 L2.12,10.988 L2.12,13.989 L4.25,13.989 C4.581,13.989 5.31,14.437 5.31,14.990 C5.31,15.45 5.8,15.92 5.0,15.145 L5.0,29.999 L8.50,29.997 L8.50,15.0 C8.50,14.996 8.48,14.993 8.48,14.990 C8.48,14.437 8.498,13.989 9.54,13.989 L12.73,13.989 C12.148,13.989 12.276,13.885 12.290,13.812 L12.858,10.988 L9.92,10.988 Z"/>
+</svg>            </a>
+                      <a class="main-footer__social__link main-footer__social__link--linkedin svg-black black-color" href="https://www.linkedin.com/company/hotel-riviera-moss/">
+              <svg width="30px" height="30px" viewBox="0 0 45.96 44.98">
+  <path d="M5.39,0A5.09,5.09,0,0,0,0,5.12a5,5,0,0,0,5.28,5.12,5.51,5.51,0,0,0,4-1.49A5,5,0,0,0,10.73,5.1,5.08,5.08,0,0,0,5.39,0ZM7.85,7.32a3.61,3.61,0,0,1-2.57.92A3.06,3.06,0,0,1,2,5.12,3.09,3.09,0,0,1,5.39,2,3.08,3.08,0,0,1,8.73,5.12,3,3,0,0,1,7.85,7.32Z"/><path d="M1,45h9v-33H1Zm2-31H8V43H3Z"/><path d="M33.65,11.93a11.7,11.7,0,0,0-8.2,2.79l-.28-2.79H15V45H25V27.61a10.19,10.19,0,0,1,.49-2.71c1.2-2.59,2.83-2.59,5.29-2.59C33.57,22.31,36,25,36,28.1V45H46V26.31C46,16.43,39.58,11.93,33.65,11.93ZM44,43H38V28.1c0-4.23-3.31-7.8-7.22-7.8-2.52,0-5.36,0-7.1,3.75A11.6,11.6,0,0,0,23,27.61V43H17v-29h6.36l.41,4h1.64l.29-.47c.67-1.07,2.78-3.57,8-3.57,5,0,10.31,3.87,10.31,12.37Z"/>
+</svg>            </a>
+                        </div>
+		</section>
+                            <section class="main-footer__section">
+              <div class="main-footer__section__wrap black-link">
+              <h3>Kontakt</h3>
+<p>Hotel Riviera<br />
+Bernt Ankers gate 2<br />
+1534 Moss<br />
++47 69 70 17 00<br />
+<a href="mailto:hello@riviera.no">hello@riviera.no</a></p>
+
+              </div>
+          </section>
+                                <section class="main-footer__section">
+              <div class="main-footer__section__wrap black-link">
+              <h3><a href="https://hotelriviera.no/om-hotellet/">Vårt perspektiv</a><br />
+<a href="https://hotelriviera.no/om-hotellet/jobb-hos-oss/">Jobb på Hotel Riviera</a><br />
+<a href="https://hotelriviera.no/privacy-policy">Personvern</a><br />
+<a href="https://hotelriviera.no/apenhetsloven/">Åpenhetsloven</a><br />
+<a href="https://www.strawberry.no/samfunnsansvar/etisk-handel/#varslingskanal/">Varslingskanal</a><br />
+<a href="https://hotelriviera.no/brukervilkar/">Vilkår &amp; Betingelser</a><br />
+<a href="https://hotelriviera.no/nyhetsbrev/">Nyhetsbrev</a><br />
+<a href="https://hotelriviera.no/presse/">Presse</a></h3>
+
+              </div>
+          </section>
+                                  </div>
+      <div class="main-footer__partners">
+            
+        <div class="main-footer__partner-logo-wrap">
+          <img class="main-footer__partner-logo" src="https://hotelriviera.no/wp-content/uploads/2022/02/nordic_resort_hotels_logo-120x28.png" alt="nordic_hotels_and_resorts" width="120" height="28"/>
+        </div>
+            
+        <div class="main-footer__partner-logo-wrap">
+          <img class="main-footer__partner-logo" src="https://hotelriviera.no/wp-content/uploads/2022/02/NHGgold-120x88.png" alt="" width="120" height="88"/>
+        </div>
+          </div>
+        <div class="main-footer__decor">
+            <img 
+      class="main-footer__decor__image"
+      srcset="https://hotelriviera.no/wp-content/uploads/2022/01/1J3B9091-fix-c-copy-520x200.jpg 520w,https://hotelriviera.no/wp-content/uploads/2022/01/1J3B9091-fix-c-copy-1600x200.jpg 1600w"
+      sizes="(max-width: 520px) 520px, 1600px"
+      src="https://hotelriviera.no/wp-content/uploads/2022/01/1J3B9091-fix-c-copy-1600x200.jpg" 
+      width="1600" 
+      height="200"
+      alt="Page footer decor" />
+    </div>
+  </footer>
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/riviera/resources/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--petroleum: #005f6a;--wp--preset--color--coral: #ff5757;--wp--preset--color--gold: #c2ac85;--wp--preset--color--blue: #516a93;--wp--preset--color--aqua: #6db4b7;--wp--preset--color--lava: #33302d;--wp--preset--color--yellow: #ffe896;--wp--preset--color--pink: #fac5c4;--wp--preset--color--sand: #e9c9c3;--wp--preset--color--gradient-white-coral: linear-gradient(158deg,rgba(255, 255, 255, 1) 0%,rgba(255, 87, 87, 1) 60%);--wp--preset--color--gradient-yellow-coral: linear-gradient(158deg,rgba(255, 232, 150, 1) 0%,rgba(255, 87, 87, 1) 100%);--wp--preset--color--split-pink-white: linear-gradient(0deg,#ffffff 50%,#fac5c4 50%);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--gradient-soft-coral: linear-gradient(158deg,#f29396 0%,#fc5454 100%);--wp--preset--gradient--gradient-white-coral: linear-gradient(158deg,rgba(255, 255, 255, 1) 0%,rgba(255, 87, 87, 1) 60%);--wp--preset--gradient--gradient-yellow-coral: linear-gradient(158deg,rgba(255, 232, 150, 1) 0%,rgba(255, 87, 87, 1) 100%);--wp--preset--gradient--split-white-pink: linear-gradient(0deg,#ffffff 50%,#fac5c4 50%);--wp--preset--gradient--split-pink-white: linear-gradient(0deg,#fac5c4 50%,#ffffff 50%);--wp--preset--font-size--small: 0.8rem;--wp--preset--font-size--medium: 1.5rem;--wp--preset--font-size--large: 2rem;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--xlarge: 3rem;--wp--preset--font-size--huge: 5rem;--wp--preset--font-size--flex: 9rem;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<script type="text/javascript" src="https://contact-api.inguest.com/bundles/revinatecontactapi/js/revinate-form.js?v=1" id="revinate-form-js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" id="jqueryui-js"></script>
+<script type="text/javascript" id="sage/main.js-js-extra">
+/* <![CDATA[ */
+var ajaxobject = {"ajaxurl":"https://hotelriviera.no/wp-admin/admin-ajax.php","nextNonce":"420fb7263c"};
+//# sourceURL=sage%2Fmain.js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hotelriviera.no/wp-content/themes/riviera/dist/scripts/main_8176430d.js" id="sage/main.js-js"></script>
+<script type="text/javascript" id="NCB-configuration-script-js-before">
+/* <![CDATA[ */
+window.ncbConfiguration = {tenant_id:"riviera",client_id:"Adeprimo",enterprise_id:"ce805c3a-96ed-406b-99a0-af6b0106b17a",configuration_id:"8774249a-b6df-4444-a846-af6b0106b95e",hotel_id:"ce805c3a-96ed-406b-99a0-af6b0106b17a",service_id:"f881b6ba-f9ee-4ee6-8e0d-af6b0106b5f5",adyen_client_id:"live_EOZDSIQARBFZTDAJCVDWJCN2EUUR6LQE",};
+//# sourceURL=NCB-configuration-script-js-before
+/* ]]> */
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://hotelriviera.no/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://hotelriviera.no/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+    
+    <svg id="svg-gradient-palette" viewBox="0 0 600 600" data-module="svg-gradient-palette">
+  <linearGradient id="svg-white-black" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#000000" offset="1" />
+    </linearGradient><linearGradient id="svg-black-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#000000" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-coral" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#ff5757" offset="1" />
+    </linearGradient><linearGradient id="svg-coral-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#ff5757" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-gold" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#c2ac85" offset="1" />
+    </linearGradient><linearGradient id="svg-gold-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#c2ac85" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-blue" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#516a93" offset="1" />
+    </linearGradient><linearGradient id="svg-blue-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#516a93" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-aqua" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#6db4b7" offset="1" />
+    </linearGradient><linearGradient id="svg-aqua-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#6db4b7" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-lava" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#33302d" offset="1" />
+    </linearGradient><linearGradient id="svg-lava-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#33302d" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-yellow" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#ffe896" offset="1" />
+    </linearGradient><linearGradient id="svg-yellow-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#ffe896" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-pink" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#fac5c4" offset="1" />
+    </linearGradient><linearGradient id="svg-pink-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#fac5c4" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-sand" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="#e9c9c3" offset="1" />
+    </linearGradient><linearGradient id="svg-sand-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#e9c9c3" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-svg-gradient-white-coral" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="url(#svg-white-coral)" offset="1" />
+    </linearGradient><linearGradient id="svg-svg-gradient-white-coral-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="url(#svg-white-coral)" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient><linearGradient id="svg-white-svg-gradient-yellow-coral" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="#FFFFFF" offset="0" />
+      <stop stop-color="url(#svg-yellow-coral)" offset="1" />
+    </linearGradient><linearGradient id="svg-svg-gradient-yellow-coral-white" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop stop-color="url(#svg-yellow-coral)" offset="0" />
+      <stop stop-color="#FFFFFF" offset="1" />
+    </linearGradient>
+  <linearGradient id="svg-yellow-coral" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop stop-color="#ffe896" offset="0" />
+    <stop stop-color="#ff5757" offset="1" />
+  </linearGradient>
+  <linearGradient id="svg-light_coral-coral" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop stop-color="#f7a399" offset="0" />
+    <stop stop-color="#f14f71" offset="1" />
+  </linearGradient>
+</svg>            <gh-chat></gh-chat>
+  </body>
+</html>
