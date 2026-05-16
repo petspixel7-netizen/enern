@@ -43,7 +43,7 @@ SILVER    = (200, 200, 210)
 # position   = "bottom" | "center"
 SCENES = [
     (
-        "room-d.jpg", 6.0,
+        "room-e.jpg", 6.0,
         "VELKOMMEN TIL",
         "HOTEL RIVIERA",
         "Luksus ved havet",
@@ -75,7 +75,7 @@ SCENES = [
         "bottom",
     ),
     (
-        "room-e.jpg", 5.5,
+        "room1.jpg", 5.5,
         "DE BESTE SUITER",
         "EKSKLUSIVE SUITER",
         "Håndplukket design og eksklusiv komfort",
@@ -83,7 +83,7 @@ SCENES = [
         "bottom",
     ),
     (
-        "room-a.jpg", 5.0,
+        "room-c.jpg", 5.0,
         "ELEGANTE ROM",
         "DITT HJEM BORTE",
         "Scandinavisk design møter internasjonal luksus",
