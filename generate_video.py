@@ -43,7 +43,7 @@ SILVER    = (200, 200, 210)
 # position   = "bottom" | "center"
 SCENES = [
     (
-        "banner.jpg", 6.0,
+        "room-d.jpg", 6.0,
         "VELKOMMEN TIL",
         "HOTEL RIVIERA",
         "Luksus ved havet",
@@ -67,15 +67,23 @@ SCENES = [
         "bottom",
     ),
     (
-        "room-a.jpg", 5.5,
+        "room-f.jpg", 5.5,
+        "SOSIALT & EKSKLUSIVT",
+        "BAR & LOUNGE",
+        "Møt kvelden i vakre omgivelser",
+        "Håndlagde cocktails · Norsk øl · Vinkjeller",
+        "bottom",
+    ),
+    (
+        "room-e.jpg", 5.5,
         "DE BESTE SUITER",
-        "LUKSUS & RO",
+        "EKSKLUSIVE SUITER",
         "Håndplukket design og eksklusiv komfort",
         "32 suiter · King-size · Privat balkong · Badstue",
         "bottom",
     ),
     (
-        "room-c.jpg", 5.0,
+        "room-a.jpg", 5.0,
         "ELEGANTE ROM",
         "DITT HJEM BORTE",
         "Scandinavisk design møter internasjonal luksus",
@@ -83,11 +91,11 @@ SCENES = [
         "bottom",
     ),
     (
-        "offer.jpg", 5.5,
-        "POOL & AKTIVITETER",
-        "LIV VED POOLEN",
-        "Refreshing cocktails og uendelig avslapning",
-        "Infinity pool · Poolbar · Loungeområde",
+        "room-b.jpg", 5.5,
+        "NORSK SJØMAT",
+        "SMAKEN AV HAVET",
+        "Ferske råvarer rett fra fjorden til bordet",
+        "Blåskjell · Kveite · Hummer · Kongekrabbe",
         "bottom",
     ),
     (
@@ -99,15 +107,7 @@ SCENES = [
         "bottom",
     ),
     (
-        "wellness.jpg", 5.0,
-        "PANORAMAUTSIKT",
-        "NATUR & STILLHET",
-        "Magiske omgivelser rundt hvert hjørne",
-        "Fjord · Skog · Fjell — Alt på ett sted",
-        "bottom",
-    ),
-    (
-        "outro.jpg", 6.5,
+        "room3.jpg", 6.5,
         "RESERVER I DAG",
         "BOOK NÅ",
         "Begrenset tilgjengelighet i høysesongen",
@@ -232,10 +232,10 @@ def build_overlay(
 
     # Fonts
     try:
-        font_tag      = ImageFont.truetype(FONT_BOLD,   40)
-        font_headline = ImageFont.truetype(FONT_BOLD,   112)
-        font_subline  = ImageFont.truetype(FONT_ITALIC, 58)
-        font_detail   = ImageFont.truetype(FONT_LIGHT,  40)
+        font_tag      = ImageFont.truetype(FONT_BOLD,   44)
+        font_headline = ImageFont.truetype(FONT_BOLD,   130)
+        font_subline  = ImageFont.truetype(FONT_ITALIC, 64)
+        font_detail   = ImageFont.truetype(FONT_LIGHT,  42)
     except Exception:
         font_tag = font_headline = font_subline = font_detail = ImageFont.load_default()
 
