@@ -140,23 +140,18 @@ def get_zoomed(base: np.ndarray, t: float, duration: float, zoom_in: bool) -> Im
 # ── Vignette (pre-built) ─────────────────────────────────────────────────────
 
 def build_vignette() -> np.ndarray:
-    """RGBA vignette mask: dark edges, transparent center."""
-    vig = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(vig)
-    cx, cy = W // 2, H // 2
-    max_r = (cx**2 + cy**2) ** 0.5
-    steps = 80
-    for i in range(steps, 0, -1):
-        ratio = i / steps
-        alpha = int(160 * (ratio ** 1.8))
-        rx = int(cx * ratio)
-        ry = int(cy * ratio)
-        draw.ellipse(
-            [(cx - rx, cy - ry), (cx + rx, cy + ry)],
-            outline=(0, 0, 0, alpha),
-            width=max(1, int(max_r / steps * 3)),
-        )
-    return np.array(vig)
+    """RGBA vignette mask: subtle dark edges, bright center."""
+    xs = np.linspace(-1, 1, W)
+    ys = np.linspace(-1, 1, H)
+    xx, yy = np.meshgrid(xs, ys)
+    # Elliptical distance, normalized so corners = 1.0
+    dist = np.sqrt((xx ** 2) + (yy ** 2) / 0.85)
+    # Smooth falloff: only darken beyond 60% of radius
+    strength = np.clip((dist - 0.6) / 0.55, 0, 1) ** 1.6
+    alpha = (strength * 180).astype(np.uint8)
+    rgba = np.zeros((H, W, 4), dtype=np.uint8)
+    rgba[..., 3] = alpha
+    return rgba
 
 
 VIGNETTE = build_vignette()
@@ -237,10 +232,10 @@ def build_overlay(
 
     # Fonts
     try:
-        font_tag      = ImageFont.truetype(FONT_BOLD,   34)
-        font_headline = ImageFont.truetype(FONT_BOLD,   100)
-        font_subline  = ImageFont.truetype(FONT_ITALIC, 52)
-        font_detail   = ImageFont.truetype(FONT_LIGHT,  36)
+        font_tag      = ImageFont.truetype(FONT_BOLD,   40)
+        font_headline = ImageFont.truetype(FONT_BOLD,   112)
+        font_subline  = ImageFont.truetype(FONT_ITALIC, 58)
+        font_detail   = ImageFont.truetype(FONT_LIGHT,  40)
     except Exception:
         font_tag = font_headline = font_subline = font_detail = ImageFont.load_default()
 
