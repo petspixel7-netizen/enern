@@ -1,0 +1,41 @@
+market: "BTC-15M"
+dry_run: true
+log_level: "INFO"
+
+datafeed:
+  mode: "websocket"
+  ws_url: "wss://clob.polymarket.com/ws"
+  rest_url: "https://clob.polymarket.com"
+  orderbook_path: "/book"
+  poll_interval_seconds: 1.0
+  backoff_max_seconds: 15
+
+execution:
+  rest_url: "https://clob.polymarket.com"
+  order_path: "/orders"
+  order_status_path: "/orders/{order_id}"
+  cancel_path: "/orders/{order_id}"
+  request_timeout_seconds: 10
+  order_ttl_seconds: 15
+  max_requotes: 1
+  slippage_bps: 5
+
+strategy:
+  trigger_mode: "dump"
+  move_window_seconds: 3
+  move_pct_threshold: 10
+  sum_target: 0.95
+  sum_target_max: 0.99
+  profit_lock_bps: 0
+  leg2_timeout_seconds: 180
+  leg2_timeout_action: "defensive_hedge"
+
+risk:
+  bankroll_usd: 50.0
+  max_usd_per_leg: 1.5
+  max_active_positions: 1
+  cooldown_seconds: 120
+  max_orders_per_hour: 30
+  daily_loss_limit_usd: 5.0
+  circuit_breaker_failures: 3
+  circuit_breaker_cooldown_seconds: 1800

@@ -1,82 +1,107 @@
-# Pollymarket 24/7 bot
+# Polymarket Event-Driven Dip/Hedge Bot (Python 3.11)
 
-En lettvekts Python-bot som kan kjøre kontinuerlig mot Pollymarkets offentlige API.
-Strategien er enkel: den sjekker markedene for mulige arbitrage/edge-basert
-tilbakekjøp mellom "yes"- og "no"-priser og legger inn ordre om differansen
-oppfyller en minimumskrav i basispunkter.
+A Windows-friendly, event-driven Polymarket CLOB bot that only trades when a configurable
+movement trigger occurs. It executes a 2-leg dip/hedge strategy on short-duration crypto
+markets (e.g., BTC 15m UP/DOWN). The bot is idle otherwise.
 
-> **Merk:** Handler krever `POLLYMARKET_API_KEY`. Uten API-nøkkel kjører boten i
-> "read-only"-modus, henter markeder og logger signaler. Bekreft alltid mot
-> Pollymarkets dokumentasjon og test i `--dry-run` før reell handel.
+## Strategy Summary
 
-## Køring
+1. **Leg1 (Dip/Pump Trigger)**
+   - Detects a fast price movement inside a rolling window (default 3 seconds).
+   - When a dump or pump threshold is crossed (default 10%), it buys the moved side.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-# Ingen eksterne avhengigheter nødvendig
+2. **Leg2 (Hedge)**
+   - Buys the opposite side only when:
+     - `leg1EntryPrice + oppositeBestAsk <= sumTarget` **OR**
+     - `profitLockBps` condition is met.
+   - If Leg2 times out (default 180s), it either:
+     - Places a defensive hedge at `sumTargetMax`, or
+     - Skips and waits for the next cycle (configurable).
+
+## Quickstart (Windows)
+
+```powershell
+# From repository root
+.\scripts\run_windows.ps1
+```
+
+## Dry-run first
+
+Dry-run is enabled by default in `config.yaml` and can be forced with CLI:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
 python main.py --dry-run
 ```
 
-Flagg:
-- `--dry-run`: logger signaler uten å sende ordre
-- `--poll-interval`: sekunder mellom hver syklus (default 30)
-- `--min-edge-bps`: minste edge i basispunkter som må til før en handel
-- `--max-orders`: maks antall ordre per syklus
-- `--request-timeout`: HTTP-timeout i sekunder
-- `--max-retries`: hvor mange ganger klienten prøver ved feil
-- `--bankroll`: total bankroll som risiko kalkuleres fra
-- `--risk-per-trade-pct`: prosent av bankroll risikert per handel (0.005 = 0.5 %)
-- `--max-trades-per-day`: maks handler per UTC-dag
-- `--daily-loss-limit-pct`: stopp grunnet daglig tap
-- `--max-consecutive-losses`: pause etter X tap på rad
-- `--cooldown-hours`: hvor lenge pausen varer
-- `--hourly-scan`: kjør edge-deteksjon én gang i timen
-- `--market-cooldown-hours`: minstetid mellom handler per marked
+## How to set .env
 
-Nøkler kan settes som env-variabler:
-
-```
-POLLYMARKET_API_KEY=din-nøkkel
-POLLYMARKET_API_BASE=https://clob.polymarket.com
-POLLYMARKET_POLL_INTERVAL=60
-POLLYMARKET_MIN_EDGE_BPS=75
-POLLYMARKET_MAX_ORDERS_PER_CYCLE=2
-POLLYMARKET_REQUEST_TIMEOUT=20
-POLLYMARKET_MAX_RETRIES=5
-RISK_PER_TRADE_PCT=0.005
-MAX_TRADES_PER_DAY=10
-DAILY_LOSS_LIMIT_PCT=0.02
-MAX_CONSECUTIVE_LOSSES=3
-COOLDOWN_HOURS=24
-HOURLY_SCAN=true
-MARKET_COOLDOWN_HOURS=3
-POLLYBOT_BANKROLL=1000
+```powershell
+Copy-Item -Path .env.example -Destination .env -Force
+notepad .env
 ```
 
-> Risiko-parametre er fastlåst og følger medium-profilen: 0,5 % risiko pr
-> handel, maks 10 handler per dag, daglig tapstak på 2 %, pause etter 3
-> tap på rad med 24 timers cooldown. Ordrestørrelse beregnes alltid som
-> `bankroll * RISK_PER_TRADE_PCT` (ingen faste beløp).
+Add your Polymarket API credentials:
 
-## Kjøre 24/7
+```
+POLYMARKET_API_KEY="your_key"
+POLYMARKET_API_SECRET="your_secret"
+```
 
-- **tmux/screen:** start boten i en session, koble til ved behov.
-- **systemd:** lag en servicefil som peker til `python /path/main.py` og sett
-  `Restart=always` for å håndtere restarts.
-- **Docker:** pakk koden i en minimal container og bruk `restart: always` i
-  Compose/Kubernetes.
+## How to select market
 
-## Struktur
+Update `config.yaml` or override on the CLI:
 
-- `pollybot/config.py`: leser innstillinger fra miljø/CLI.
-- `pollybot/client.py`: enkel HTTP-klient for Pollymarkets API.
-- `pollybot/strategy.py`: heuristikk som finner potensielle handler.
-- `pollybot/service.py`: orkestrerer sykluser og ordreutsending.
-- `main.py`: CLI/entrypoint.
+```powershell
+python main.py --market BTC-15M
+```
 
-## Videre arbeid
-- Bygg ekte risikostyring (størrelse per handel, stop-loss, caps per event).
-- Legg til persistens (f.eks. SQLite) for utførte handler og PnL.
-- Integrer robuste API-klienter (websocket streaming, signer, osv.).
+## Safety/risk notes
+
+- **Bankroll:** $50 assumed, with strict risk caps per leg (default $1.50).
+- **Max active positions:** 1 at a time.
+- **Cooldown:** 120 seconds after a completed 2-leg cycle.
+- **Daily loss limit:** $5.00 (trading stops for the day).
+- **Circuit breaker:** after 3 consecutive failed fills or API errors, pause for 30 minutes.
+- **Order policy:** LIMIT + GTC at best ask (or better) with slippage guard.
+
+## Configuration
+
+All parameters live in `config.yaml`. CLI flags override config values.
+
+```powershell
+python main.py --market BTC-15M --max-usd-per-leg 1.25 --move-pct-threshold 8
+```
+
+## Project layout
+
+```
+main.py
+config.yaml
+bot/
+  config.py
+  datafeed.py
+  execution.py
+  logger.py
+  risk.py
+  strategy.py
+  service.py
+  types.py
+scripts/
+  run_windows.ps1
+logs/
+  trades.jsonl
+  trades.csv
+```
+
+## Datafeed notes
+
+- WebSocket is preferred if available (`datafeed.mode: websocket`).
+- If WebSocket is unavailable, switch to `polling` in `config.yaml`.
+- The adapter layer in `bot/datafeed.py` shows where to plug official CLOB endpoints.
+
+## Execution notes
+
+- The execution adapter uses REST endpoints and includes placeholders to plug
+  Polymarket's official signing and order endpoints.
+- Dry-run mode logs all actions without placing orders.
